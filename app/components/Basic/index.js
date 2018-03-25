@@ -20,6 +20,9 @@ class Basic extends React.Component {
           </div>
         </div>
         <Divider style={{marginTop: 0}}/>
+        {/*
+            ****COLOURS PALETTE****
+        */}
         <h2>colour palette</h2>
         <h3>primary colours</h3>
         <Color color={'#00a9e0'} style={{marginRight: '24px'}}/>
@@ -49,6 +52,27 @@ class Basic extends React.Component {
             {`color: darken(#2C2E37, 15%);`}
           </code>
         </div>
+        {/*
+            ****TYPOGRAPHY****
+        */}
+        <Divider/>
+        <h2>Typography</h2>
+        <p>
+          For consistency 'Roboto' will be the default font choice. According to Google Font Analytics, it is popular in the US,
+          Russia, Japan, India and Brazil amongst others. In the year (March 2017 - March 2018) it was viewed over 2 trillion times
+          and is featured on ~20 millions websites.
+        </p>
+        <p>
+          Roboto covers all Latin, Greek and Cyrillic characters as defined in Unicode 7.0
+        </p>
+        <h3>definitions</h3>
+        <p>Roboto Regular // Base Font Size // 14px</p>
+        <h6>Roboto Medium // HEADING 6 // 14px</h6>
+        <h5>Roboto Medium // HEADING 5 // 16px</h5>
+        <h4>Roboto Medium // HEADING 4 // 18px</h4>
+        <h3>Roboto Medium // HEADING 3 // 22px</h3>
+        <h2>Roboto Medium // HEADING 2 // 24px</h2>
+        <h1>Roboto Medium // HEADING 1 // 26px</h1>
       </div>
     );
   }
