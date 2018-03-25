@@ -19,7 +19,7 @@ class Basic extends React.Component {
             style guide: midnight theme
           </div>
         </div>
-        <Divider />
+        <Divider style={{marginTop: 0}}/>
         <h2>colour palette</h2>
         <h3>primary colours</h3>
         <Color color={'#00a9e0'} style={{marginRight: '24px'}}/>
