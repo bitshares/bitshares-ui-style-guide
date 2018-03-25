@@ -1,6 +1,6 @@
 import React from 'react';
 import {HashRouter as Router, Route, Link} from 'react-router-dom';
-import Dark from './Dark';
+import Dark from './Dark/index';
 import './style.less';
 
 const App = () => {

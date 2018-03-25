@@ -1,0 +1,42 @@
+@bg-color: '#fff';
+@text-color: '#000';
+
+* {
+  color: @text-color;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+body {
+  background-color: @bg-color;
+}
+
+.container {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  background-color: @bg-color;
+  padding: 20px 50px;
+}
+
+.header {
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .header-logo {
+    width: 100px;
+    img {
+      width: 100%;
+    }
+  }
+
+  .header-description {
+    font-size: 32px;
+    line-height: 32px;
+    color: #5c5d5d;
+    text-transform: uppercase;
+  }
+
+}
