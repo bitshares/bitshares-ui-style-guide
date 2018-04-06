@@ -34,6 +34,10 @@ const config = {
   
   resolve: {
     extensions: ['.js', '.jsx'],
+    modules: [
+      path.resolve('./app'),
+      path.resolve('./node_modules')
+    ]
   },
 
   module: {

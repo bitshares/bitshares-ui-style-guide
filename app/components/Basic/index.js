@@ -4,6 +4,11 @@ import {
   Color,
   IconExample
 } from '../Helper/index';
+
+import {
+  Button
+} from 'bitshares-ui-style-guide';
+
 import logo from '../../assets/images/bitshares-logo.png';
 import './styles.less';
 
@@ -82,7 +87,7 @@ class Basic extends React.Component {
         <p>
           The full list of icons you can find there: <a href="https://ant.design/components/icon/">https://ant.design/components/icon</a>
         </p>
-        <p>
+        <div>
           <IconExample type="step-backward" />
           <IconExample type="step-forward" />
           <IconExample type="fast-backward" />
@@ -107,8 +112,37 @@ class Basic extends React.Component {
           <IconExample type="left-circle-o" />
           <IconExample type="double-right" />
           <IconExample type="double-left" />
-        </p>
+        </div>
         <Divider/>
+        <h2>Buttons</h2>
+
+        <h3>Primary</h3>
+        <Button type="primary">Regular</Button> <Button type="primary" disabled={true}>Disabled</Button>
+        <div>
+          <code>
+            {`<Button type="primary">Regular</Button>`}
+          </code>
+        </div>
+
+        <h3>Default</h3>
+        <Button>Default</Button> <Button type="primary" disabled={true}>Disabled</Button>
+        <div>
+          <code>
+            {`<Button>Default</Button>`}
+          </code>
+        </div>
+
+        <h3>Contextual Buttons</h3>
+        <p>
+          There may be cases where providing a contextual button will reinforce what the user is about to do.<br/>
+          This approach however should be used both carefully and sparingly.
+        </p>
+        <Button type="danger">Danger</Button>
+        <div>
+          <code>
+            {`<Button type="danger">Danger</Button>`}
+          </code>
+        </div>
 
       </div>
     );
