@@ -58,7 +58,10 @@ const config = {
             }, {
                 loader: "css-loader" // translates CSS into CommonJS
             }, {
-                loader: "less-loader" // compiles Less to CSS
+              loader: "less-loader", // compiles Less to CSS
+              options: {
+                javascriptEnabled: true
+              }
             }]
         },
       {

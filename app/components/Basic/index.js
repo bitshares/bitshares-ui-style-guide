@@ -1,7 +1,8 @@
 import React from 'react';
 import {
   Divider,
-  Color
+  Color,
+  IconExample
 } from '../Helper/index';
 import logo from '../../assets/images/bitshares-logo.png';
 import './styles.less';
@@ -73,6 +74,42 @@ class Basic extends React.Component {
         <h3>Roboto Medium // HEADING 3 // 22px</h3>
         <h2>Roboto Medium // HEADING 2 // 24px</h2>
         <h1>Roboto Medium // HEADING 1 // 26px</h1>
+        {/*
+            ****ICONOGRAPHY****
+        */}
+        <Divider/>
+        <h2>ICONOGRAPHY</h2>
+        <p>
+          The full list of icons you can find there: <a href="https://ant.design/components/icon/">https://ant.design/components/icon</a>
+        </p>
+        <p>
+          <IconExample type="step-backward" />
+          <IconExample type="step-forward" />
+          <IconExample type="fast-backward" />
+          <IconExample type="fast-forward" />
+          <IconExample type="shrink" />
+          <IconExample type="arrows-alt" />
+          <IconExample type="down" />
+          <IconExample type="up" />
+          <IconExample type="left" />
+          <IconExample type="right" />
+          <IconExample type="caret-up" />
+          <IconExample type="caret-down" />
+          <IconExample type="caret-left" />
+          <IconExample type="caret-right" />
+          <IconExample type="up-circle" />
+          <IconExample type="down-circle" />
+          <IconExample type="left-circle" />
+          <IconExample type="right-circle" />
+          <IconExample type="up-circle-o" />
+          <IconExample type="down-circle-o" />
+          <IconExample type="right-circle-o" />
+          <IconExample type="left-circle-o" />
+          <IconExample type="double-right" />
+          <IconExample type="double-left" />
+        </p>
+        <Divider/>
+
       </div>
     );
   }
