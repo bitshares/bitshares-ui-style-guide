@@ -16,7 +16,8 @@ import {
   Upload,
   Checkbox,
   Switch,
-  Radio
+  Radio,
+  Table,
 } from 'bitshares-ui-style-guide';
 
 import logo from '../../assets/images/bitshares-logo.png';
@@ -65,6 +66,50 @@ const props2 = {
     }
   },
 };
+
+const tableColumns = [{
+  title    : 'asset',
+  dataIndex: 'asset',
+  key      : 'asset',
+  render   : (text) => text
+}, {
+  title    : 'price',
+  dataIndex: 'price',
+  key      : 'price',
+  render   : (text) => text
+}, {
+  title    : 'change',
+  dataIndex: 'change',
+  key      : 'change',
+  render   : (text) => text
+}, {
+  title    : 'volume',
+  dataIndex: 'volume',
+  key      : 'volume',
+  render   : (text) => text
+}];
+
+const tableData = [
+  {
+    key: 'open.btc:bitUSD',
+    asset: 'open.btc:bitUSD',
+    price: '8,734.00',
+    change: '9.12%',
+    volume: '117.0k'
+  }, {
+    key: 'open.btc:bitEUR',
+    asset: 'open.btc:bitEUR',
+    price: '2345.00',
+    change: '-3.12%',
+    volume: '50.0k'
+  }, {
+    key: 'open.btc:bitCNY',
+    asset: 'open.btc:bitCNY',
+    price: '0,23',
+    change: '10%',
+    volume: '120.0k'
+  }
+];
 
 class Basic extends React.Component {
 
@@ -370,7 +415,17 @@ class Basic extends React.Component {
           </Col>
         </Row>
 
+        <Divider/>
 
+        <h2>tables</h2>
+
+        <h3>table with pagination</h3>
+
+        <Table columns={tableColumns} dataSource={tableData}/>
+
+        <h3>table without pagination</h3>
+
+        <Table columns={tableColumns} dataSource={tableData} pagination={false}/>
 
       </div>
     );

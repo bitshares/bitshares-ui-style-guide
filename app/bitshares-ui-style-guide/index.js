@@ -9,6 +9,7 @@ import Upload from './Upload';
 import Checkbox from './Checkbox';
 import Radio from './Radio';
 import Switch from './Switch';
+import Table from './Table';
 import Icon from './Icon';
 
 export {
@@ -20,6 +21,7 @@ export {
   Checkbox,
   Radio,
   Switch,
+  Table,
   Icon,
   /* default ANT components */
   Row,
