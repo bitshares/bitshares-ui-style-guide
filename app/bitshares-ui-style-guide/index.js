@@ -6,6 +6,8 @@ import Button from './Button';
 import Input from './Input';
 import Select from './Select';
 import Upload from './Upload';
+import Checkbox from './Checkbox';
+import Radio from './Radio';
 import Icon from './Icon';
 
 export {
@@ -14,6 +16,8 @@ export {
   Input,
   Select,
   Upload,
+  Checkbox,
+  Radio,
   Icon,
   /* default ANT components */
   Row,

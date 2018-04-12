@@ -14,6 +14,8 @@ import {
   Form,
   Select,
   Upload,
+  Checkbox,
+  Radio
 } from 'bitshares-ui-style-guide';
 
 import logo from '../../assets/images/bitshares-logo.png';
@@ -328,6 +330,27 @@ class Basic extends React.Component {
               <p className="ant-upload-text">Click or drag file to this area to upload</p>
               <p className="ant-upload-hint">Allowed files include .png, .jpg, .pdf</p>
             </Upload.Dragger>
+          </Col>
+        </Row>
+
+        <h3>checkbox & radio buttons</h3>
+
+        <Row>
+          <Col span={11}>
+            <Form.Item label="Which do you invest in?">
+              <Checkbox>Bitshares</Checkbox>
+              <Checkbox>Bitcoin</Checkbox>
+              <Checkbox>Bitcoin Cash</Checkbox>
+            </Form.Item>
+          </Col>
+          <Col span={11} offset={2}>
+            <Form.Item label="Choose your favourite">
+              <Radio.Group>
+                <Radio value={'bitshares'}>Bitshares</Radio>
+                <Radio value={'bitcoin'}>Bitcoin</Radio>
+                <Radio value={'bitcoin cash'}>Bitcoin Cash</Radio>
+              </Radio.Group>
+            </Form.Item>
           </Col>
         </Row>
 
