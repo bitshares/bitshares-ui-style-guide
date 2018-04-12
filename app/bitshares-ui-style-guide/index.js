@@ -10,6 +10,7 @@ import Checkbox from './Checkbox';
 import Radio from './Radio';
 import Switch from './Switch';
 import Table from './Table';
+import Tabs from './Tabs';
 import Icon from './Icon';
 
 export {
@@ -23,6 +24,7 @@ export {
   Switch,
   Table,
   Icon,
+  Tabs,
   /* default ANT components */
   Row,
   Col,

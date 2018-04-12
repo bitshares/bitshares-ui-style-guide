@@ -18,6 +18,7 @@ import {
   Switch,
   Radio,
   Table,
+  Tabs,
 } from 'bitshares-ui-style-guide';
 
 import logo from '../../assets/images/bitshares-logo.png';
@@ -426,6 +427,16 @@ class Basic extends React.Component {
         <h3>table without pagination</h3>
 
         <Table columns={tableColumns} dataSource={tableData} pagination={false}/>
+
+        <Divider/>
+
+        <h2>Tabs</h2>
+
+        <Tabs defaultActiveKey="1">
+          <Tabs.TabPane tab="Tab #1" key="1">Content of Tab Pane 1</Tabs.TabPane>
+          <Tabs.TabPane tab="Tab #2" key="2">Content of Tab Pane 2</Tabs.TabPane>
+          <Tabs.TabPane tab="Tab #3" key="3">Content of Tab Pane 3</Tabs.TabPane>
+        </Tabs>
 
       </div>
     );
