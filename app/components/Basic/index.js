@@ -15,6 +15,7 @@ import {
   Select,
   Upload,
   Checkbox,
+  Switch,
   Radio
 } from 'bitshares-ui-style-guide';
 
@@ -353,6 +354,23 @@ class Basic extends React.Component {
             </Form.Item>
           </Col>
         </Row>
+
+        <h3>Switches</h3>
+
+        <Row>
+          <Col span={2}>
+            <Form.Item label="Switch On">
+              <Switch defaultChecked/>
+            </Form.Item>
+          </Col>
+          <Col span={11} offset={2}>
+            <Form.Item label="Switch Off">
+              <Switch />
+            </Form.Item>
+          </Col>
+        </Row>
+
+
 
       </div>
     );
