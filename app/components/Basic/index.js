@@ -6,7 +6,12 @@ import {
 } from '../Helper/index';
 
 import {
-  Button
+  Button,
+  Input,
+  Row,
+  Col,
+  Form,
+  Select
 } from 'bitshares-ui-style-guide';
 
 import logo from '../../assets/images/bitshares-logo.png';
@@ -143,6 +148,121 @@ class Basic extends React.Component {
             {`<Button type="danger">Danger</Button>`}
           </code>
         </div>
+
+        <Divider/>
+
+        <h2>form fields</h2>
+
+        <h3>text input</h3>
+
+        <Row>
+          <Col span={11}>
+            <Input type="text" placeholder="Placeholder"/>
+            <p>Default (empty)</p>
+            <p>
+              <code>{`<Input type="text" placeholder="Placeholder"/>`}</code>
+            </p>
+          </Col>
+          <Col span={11} offset={2}>
+            <Input type="text" defaultValue="Entered Text"/>
+            <p>Default (Filled)</p>
+            <p>
+              <code>{`<Input type="text" value="Entered Text"/>`}</code>
+            </p>
+          </Col>
+        </Row>
+
+        <Row>
+          <Col span={11}>
+            <Input type="text" defaultValue="Edited, but unsaved field" unsaved={true}/>
+            <p>Input revisited from another tab</p>
+          </Col>
+        </Row>
+        <div>
+          <code>{`<Input type="text" value="Edited, but unsaved field" unsaved={true}/>`}</code>
+        </div>
+
+        <h3>text input</h3>
+
+        <Row>
+          <Col span={11}>
+
+            <Form.Item label="Input Label">
+              <Input type="text" placeholder="Input"/>
+            </Form.Item>
+
+            <p>
+              <code>{`<Input type="text" placeholder="Placeholder"/>`}</code>
+            </p>
+          </Col>
+
+          <Col span={11} offset={2}>
+
+            <Form.Item label="Input Label" validateStatus="error" help="Validation error text helper">
+              <Input type="text" placeholder="Input"/>
+            </Form.Item>
+
+            <p>
+              <code>{`<Input type="text" value="Entered Text"/>`}</code>
+            </p>
+          </Col>
+        </Row>
+
+        <Row>
+          <Col span={11}>
+            <Form.Item label="Input Group">
+              <Input.Group compact>
+                <Input style={{width: 'calc(100% - 50px)'}} type="text" placeholder="Placeholder" />
+                <Button style={{width: '50px'}} type="primary" icon="copy"/>
+              </Input.Group>
+            </Form.Item>
+          </Col>
+          <Col span={11} offset={2}>
+
+          </Col>
+        </Row>
+
+        <h3>Select input</h3>
+
+        <Row>
+          <Col span={11}>
+            <Select placeholder="Select option" style={{width: '100%'}}>
+              <Select.Option value={'Option #1'}>Option #1</Select.Option>
+              <Select.Option value={'Option #2'}>Option #2</Select.Option>
+              <Select.Option disabled value={'Option #3'}>Option #3</Select.Option>
+              <Select.Option value={'Option #4'}>Option #4</Select.Option>
+            </Select>
+          </Col>
+          <Col span={11} offset={2}>
+            <Select defaultValue='Option #1' placeholder="Select currency" style={{width: '100%'}}>
+              <Select.Option value={'Option #1'}>Option #1</Select.Option>
+              <Select.Option value={'Option #2'}>Option #2</Select.Option>
+              <Select.Option disabled value={'Option #3'}>Option #3</Select.Option>
+              <Select.Option value={'Option #4'}>Option #4</Select.Option>
+            </Select>
+          </Col>
+        </Row>
+
+        <h3>Select & typeahead</h3>
+
+        <Row>
+          <Col span={11}>
+            <Select placeholder={"Select asset"} showSearch optionFilterProp="children"  style={{width: '100%'}} filterOption={(input, option) => option.props.children.toLowerCase().indexOf(input.toLowerCase()) >= 0}>
+              <Select.Option value={'Bitshares'}>Bitshares</Select.Option>
+              <Select.Option value={'Bitcoin'}>Bitcoin</Select.Option>
+              <Select.Option disabled value={'BitGold'}>BitGold</Select.Option>
+              <Select.Option value={'Bitcoin Cash'}>Bitcoin Cash</Select.Option>
+            </Select>
+          </Col>
+          <Col span={11} offset={2}>
+            <Select defaultValue={"Bitshares"} showSearch optionFilterProp="children"  style={{width: '100%'}} filterOption={(input, option) => option.props.children.toLowerCase().indexOf(input.toLowerCase()) >= 0}>
+              <Select.Option value={'Bitshares'}>Bitshares</Select.Option>
+              <Select.Option value={'Bitcoin'}>Bitcoin</Select.Option>
+              <Select.Option disabled value={'BitGold'}>BitGold</Select.Option>
+              <Select.Option value={'Bitcoin Cash'}>Bitcoin Cash</Select.Option>
+            </Select>
+          </Col>
+        </Row>
 
       </div>
     );

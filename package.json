@@ -38,6 +38,7 @@
     "antd": "^3.4.0",
     "cross-env": "5.1.4",
     "normalize.css": "^8.0.0",
+    "prop-types": "^15.6.1",
     "react": "16.2.0",
     "react-dom": "16.2.0",
     "react-hot-loader": "4.0.0",
