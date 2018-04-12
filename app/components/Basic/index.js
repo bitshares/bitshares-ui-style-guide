@@ -15,7 +15,9 @@ import {
   Select,
   Upload,
   Checkbox,
+  InputNumber,
   Switch,
+  Slider,
   Radio,
   Table,
   Tabs,
@@ -23,6 +25,8 @@ import {
 
 import logo from '../../assets/images/bitshares-logo.png';
 import './styles.less';
+
+/* * * * * * * UPLOAD * * * * * * */
 
 const props = {
   action: '//jsonplaceholder.typicode.com/posts/',
@@ -68,6 +72,10 @@ const props2 = {
   },
 };
 
+/* * * * * * * UPLOAD END * * * * * * */
+
+/* * * * * * * TABLE * * * * * * */
+
 const tableColumns = [{
   title    : 'asset',
   dataIndex: 'asset',
@@ -112,7 +120,36 @@ const tableData = [
   }
 ];
 
+/* * * * * * * TABLE END * * * * * * */
+
+/* * * * * * * SLIDER * * * * * * */
+
+const sliderMarks = {
+  0: '0',
+  50: '50',
+  80: '80',
+  100: '100',
+};
+
+/* * * * * * * SLIDER END * * * * * * */
+
 class Basic extends React.Component {
+
+  state = {
+    sliderValue: 1,
+  };
+
+  onSliderChange(value) {
+    this.setState({
+      sliderValue: value
+    })
+  }
+
+  constructor(props) {
+    super(props);
+
+    this.onSliderChange = this.onSliderChange.bind(this);
+  }
 
   render() {
     return (
@@ -437,6 +474,39 @@ class Basic extends React.Component {
           <Tabs.TabPane tab="Tab #2" key="2">Content of Tab Pane 2</Tabs.TabPane>
           <Tabs.TabPane tab="Tab #3" key="3">Content of Tab Pane 3</Tabs.TabPane>
         </Tabs>
+
+        <Divider/>
+
+        <h2>Slider</h2>
+
+        <Row>
+          <Col span={11}>
+            <h3>Single Slider</h3>
+            <Slider />
+          </Col>
+          <Col span={11} offset={2}>
+            <h3>Range Slider</h3>
+            <Slider range defaultValue={[20, 50]}/>
+          </Col>
+        </Row>
+
+        <Row>
+          <Col span={11}>
+            <h3>Slider Input</h3>
+            <Row>
+              <Col span={16}>
+                <Slider onChange={this.onSliderChange} value={this.state.sliderValue}/>
+              </Col>
+              <Col span={6} offset={2}>
+                <InputNumber min={1} max={100} value={this.state.sliderValue} onChange={this.onSliderChange}/>
+              </Col>
+            </Row>
+          </Col>
+          <Col span={11} offset={2}>
+            <h3>Stepped Slider</h3>
+            <Slider marks={sliderMarks}/>
+          </Col>
+        </Row>
 
       </div>
     );
