@@ -15,6 +15,7 @@ import Tabs from './Tabs';
 import Slider from './Slider';
 import Breadcrumb from './Breadcrumb';
 import Modal from './Modal';
+import Layout from './Layout';
 import Icon from './Icon';
 
 export {
@@ -28,6 +29,7 @@ export {
   InputNumber,
   Breadcrumb,
   Modal,
+  Layout,
   Radio,
   Switch,
   Table,
