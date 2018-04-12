@@ -25,7 +25,6 @@ import {
 } from 'bitshares-ui-style-guide';
 
 import logo from '../../assets/images/bitshares-logo.png';
-import './styles.less';
 
 /* * * * * * * UPLOAD * * * * * * */
 

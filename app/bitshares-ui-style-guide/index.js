@@ -1,7 +1,10 @@
-import "./styles.less";
+import "./dark.less";
+import "./light.less";
+import "./midnight.less";
 
 import {Row, Col, Form} from 'antd';
 
+import BodyClassName from './BodyClassName';
 import Button from './Button';
 import Input from './Input';
 import Select from './Select';
@@ -20,6 +23,7 @@ import Icon from './Icon';
 
 export {
   /* wrapped ANT components */
+  BodyClassName,
   Button,
   Input,
   Slider,

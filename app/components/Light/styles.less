@@ -1,12 +1,14 @@
-.darkTheme {
+.lightTheme {
   @import "../Basic/styles";
   @import "../Helper/styles";
 
   background-color: @bg-color;
+  @helper-basic-text-color: @text-color;
+
   color: @text-color;
   font-size: 14px;
   line-height: 18px;
 
-  @bg-color: #191a20;
+  @bg-color: orange;
   @text-color: #fff;
 }

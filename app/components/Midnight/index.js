@@ -1,14 +1,14 @@
 import React from 'react';
-import Basic from '../Basic';
+import Basic from '../Basic/index';
 import {BodyClassName} from 'bitshares-ui-style-guide';
 
 import './styles.less';
 
-class Dark extends React.Component {
+class Midnight extends React.Component {
 
   render() {
     return (
-      <BodyClassName className="darkTheme">
+      <BodyClassName className="midnightTheme">
         <Basic />
       </BodyClassName>
     );
@@ -16,4 +16,4 @@ class Dark extends React.Component {
 
 }
 
-export default Dark;
+export default Midnight;
