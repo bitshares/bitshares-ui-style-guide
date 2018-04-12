@@ -8,14 +8,60 @@ import {
 import {
   Button,
   Input,
+  Icon,
   Row,
   Col,
   Form,
-  Select
+  Select,
+  Upload,
 } from 'bitshares-ui-style-guide';
 
 import logo from '../../assets/images/bitshares-logo.png';
 import './styles.less';
+
+const props = {
+  action: '//jsonplaceholder.typicode.com/posts/',
+  onChange({ file, fileList }) {
+    if (file.status !== 'uploading') {
+      console.log(file, fileList);
+    }
+  },
+  defaultFileList: [{
+    uid: 1,
+    name: 'xxx.png',
+    status: 'done',
+    reponse: 'Server Error 500', // custom error message to show
+    url: 'http://www.baidu.com/xxx.png',
+  }, {
+    uid: 2,
+    name: 'yyy.png',
+    status: 'done',
+    url: 'http://www.baidu.com/yyy.png',
+  }, {
+    uid: 3,
+    name: 'zzz.png',
+    status: 'error',
+    reponse: 'Server Error 500', // custom error message to show
+    url: 'http://www.baidu.com/zzz.png',
+  }],
+};
+
+const props2 = {
+  name: 'file',
+  multiple: true,
+  action: '//jsonplaceholder.typicode.com/posts/',
+  onChange(info) {
+    const status = info.file.status;
+    if (status !== 'uploading') {
+      console.log(info.file, info.fileList);
+    }
+    if (status === 'done') {
+      message.success(`${info.file.name} file uploaded successfully.`);
+    } else if (status === 'error') {
+      message.error(`${info.file.name} file upload failed.`);
+    }
+  },
+};
 
 class Basic extends React.Component {
 
@@ -261,6 +307,27 @@ class Basic extends React.Component {
               <Select.Option disabled value={'BitGold'}>BitGold</Select.Option>
               <Select.Option value={'Bitcoin Cash'}>Bitcoin Cash</Select.Option>
             </Select>
+          </Col>
+        </Row>
+
+        <Row>
+          <Col span={11}>
+            <h3>Upload by click</h3>
+            <Upload {...props}>
+              <Button>
+                <Icon type="upload" /> Upload
+              </Button>
+            </Upload>
+          </Col>
+          <Col span={11} offset={2}>
+            <h3>Upload drag & drop</h3>
+            <Upload.Dragger {...props2}>
+              <p className="ant-upload-drag-icon">
+                <Icon type="inbox" />
+              </p>
+              <p className="ant-upload-text">Click or drag file to this area to upload</p>
+              <p className="ant-upload-hint">Allowed files include .png, .jpg, .pdf</p>
+            </Upload.Dragger>
           </Col>
         </Row>
 
