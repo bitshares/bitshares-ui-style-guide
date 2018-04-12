@@ -14,6 +14,7 @@ import Table from './Table';
 import Tabs from './Tabs';
 import Slider from './Slider';
 import Breadcrumb from './Breadcrumb';
+import Modal from './Modal';
 import Icon from './Icon';
 
 export {
@@ -26,6 +27,7 @@ export {
   Checkbox,
   InputNumber,
   Breadcrumb,
+  Modal,
   Radio,
   Switch,
   Table,

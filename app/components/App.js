@@ -2,6 +2,7 @@ import React from 'react';
 import {HashRouter as Router, Route, Link} from 'react-router-dom';
 import './style.less';
 import Dark from './Dark/index';
+import Modal from './Basic/modal';
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
         )}>
         </Route>
         <Route path='/dark' component={Dark} />
+        <Route path='/modal' component={Modal} />
       </div>
     </Router>
   );
