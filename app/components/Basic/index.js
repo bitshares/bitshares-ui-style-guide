@@ -16,6 +16,7 @@ import {
   Upload,
   Checkbox,
   InputNumber,
+  Breadcrumb,
   Switch,
   Slider,
   Radio,
@@ -507,6 +508,17 @@ class Basic extends React.Component {
             <Slider marks={sliderMarks}/>
           </Col>
         </Row>
+
+        <Divider/>
+
+        <h2>breadcrumbs</h2>
+
+        <Breadcrumb>
+          <Breadcrumb.Item><a href="javascript:void(0)">Dashboard</a></Breadcrumb.Item>
+          <Breadcrumb.Item><a href="javascript:void(0)">My Account</a></Breadcrumb.Item>
+          <Breadcrumb.Item><a href="javascript:void(0)">Permissions</a></Breadcrumb.Item>
+          <Breadcrumb.Item>Owner Permissions</Breadcrumb.Item>
+        </Breadcrumb>
 
       </div>
     );

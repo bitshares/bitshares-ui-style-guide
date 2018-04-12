@@ -13,6 +13,7 @@ import InputNumber from './InputNumber';
 import Table from './Table';
 import Tabs from './Tabs';
 import Slider from './Slider';
+import Breadcrumb from './Breadcrumb';
 import Icon from './Icon';
 
 export {
@@ -24,6 +25,7 @@ export {
   Upload,
   Checkbox,
   InputNumber,
+  Breadcrumb,
   Radio,
   Switch,
   Table,
