@@ -2,7 +2,7 @@
   "name": "bitshares-ui-style-guide",
   "version": "1.0.0",
   "description": "Welcome to bitshares ui style-guide",
-  "main": "webpack.config.js",
+  "main": "app/main.js",
   "directories": {
     "test": "tests"
   },
