@@ -2,7 +2,7 @@
   "name": "bitshares-ui-style-guide",
   "version": "1.0.0",
   "description": "Welcome to bitshares ui style-guide",
-  "main": "app/main.js",
+  "main": "app/bitshares-ui-style-guide/index.js",
   "directories": {
     "test": "tests"
   },
