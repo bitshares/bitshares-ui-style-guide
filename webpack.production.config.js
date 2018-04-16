@@ -3,19 +3,35 @@ const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const path = require('path');
 
 const config = {
   devtool: 'cheap-module-source-map',
 
   entry: [
-    './main.js',
-    './assets/scss/main.scss',
+    './main.js'
   ],
 
   context: resolve(__dirname, 'app'),
 
   externals: {
-    react: 'React'
+    react: {
+      'commonjs': 'react',
+      'commonjs2': 'react',
+      'amd': 'react',
+      'root': 'React'
+    },
+    'react-dom': {
+      'commonjs': 'react-dom',
+      'commonjs2': 'react-dom',
+      'amd': 'react-dom',
+      'root': 'ReactDOM'
+    },
+    'antd': {
+      'commonjs': 'antd',
+      'commonjs2': 'antd',
+      'amd': 'antd'
+    }
   },
 
   output: {
@@ -49,6 +65,10 @@ const config = {
 
   resolve: {
     extensions: ['.js', '.jsx'],
+    modules: [
+      path.resolve('./app'),
+      path.resolve('./node_modules')
+    ]
   },
 
   module: {
@@ -64,7 +84,19 @@ const config = {
           options: {
             javascriptEnabled: true
           }
-        }]
+        }].concat(ExtractTextPlugin.extract({
+          fallback: 'style-loader',
+          use: [
+            'css-loader',
+            {
+              loader: 'less-loader',
+              options: {
+                javascriptEnabled: true
+              }
+            },
+          ],
+          publicPath: '../'
+        }))
       },
       {
         test: /\.jsx?$/,

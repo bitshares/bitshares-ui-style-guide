@@ -2,7 +2,7 @@
   "name": "bitshares-ui-style-guide",
   "version": "1.0.0",
   "description": "Welcome to bitshares ui style-guide",
-  "main": "app/bitshares-ui-style-guide/index.js",
+  "main": "dist/main.js",
   "directories": {
     "test": "tests"
   },
@@ -12,6 +12,8 @@
     "normalize.css": "^8.0.0",
     "prop-types": "^15.6.1",
     "react": "16.2.0",
+    "react-datepicker": "^1.4.1",
+    "react-datepicker2": "^1.0.0-alpha1",
     "react-dom": "16.2.0",
     "react-hot-loader": "4.0.0",
     "react-router-dom": "4.2.2"
