@@ -1,38 +1,10 @@
 {
   "name": "bitshares-ui-style-guide",
-  "version": "1.0",
-  "description": "Style-Guide for bitshares-ui",
-  "main": "index.js",
-  "scripts": {
-    "start": "webpack-dev-server",
-    "clean": "rimraf dist",
-    "production": "cross-env npm run clean && webpack --config webpack.production.config.js --progress --profile --colors",
-    "lint": "eslint ./app/**/**.js",
-    "test": "jest",
-    "test:watch": "jest --watch",
-    "coverage": "jest --coverage",
-    "precommit": "cross-env npm run lint && npm test",
-    "prepush": "cross-env npm run lint && npm test"
-  },
-  "author": "Kliment Petrov <kleopetroff@gmail.com>",
-  "license": "MIT",
-  "jest": {
-    "setupFiles": [
-      "<rootDir>/config/jest/shim.js"
-    ],
-    "collectCoverageFrom": [
-      "app/**/*.{js,jsx,ts,tsx}"
-    ],
-    "moduleNameMapper": {
-      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/config/jest/assetsTransformer.js",
-      "\\.(css|less)$": "<rootDir>/config/jest/assetsTransformer.js"
-    },
-    "testMatch": [
-      "**/?(*.)(spec|test).js?(x)"
-    ],
-    "transform": {
-      "\\.js$": "babel-jest"
-    }
+  "version": "1.0.0",
+  "description": "Welcome to bitshares ui style-guide",
+  "main": "webpack.config.js",
+  "directories": {
+    "test": "tests"
   },
   "dependencies": {
     "antd": "^3.4.1",
@@ -83,5 +55,40 @@
     "url-loader": "1.0.0",
     "webpack": "3.11.0",
     "webpack-dev-server": "2.9.6"
+  },
+  "scripts": {
+    "start": "webpack-dev-server",
+    "clean": "rimraf dist",
+    "production": "cross-env npm run clean && webpack --config webpack.production.config.js --progress --profile --colors",
+    "lint": "eslint ./app/**/**.js",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "coverage": "jest --coverage",
+    "precommit": "cross-env npm run lint && npm test",
+    "prepush": "cross-env npm run lint && npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com-gibbs:gibbsfromncis/bitshares-ui-style-guide.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "jest": {
+    "setupFiles": [
+      "<rootDir>/config/jest/shim.js"
+    ],
+    "collectCoverageFrom": [
+      "app/**/*.{js,jsx,ts,tsx}"
+    ],
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/config/jest/assetsTransformer.js",
+      "\\.(css|less)$": "<rootDir>/config/jest/assetsTransformer.js"
+    },
+    "testMatch": [
+      "**/?(*.)(spec|test).js?(x)"
+    ],
+    "transform": {
+      "\\.js$": "babel-jest"
+    }
   }
 }
