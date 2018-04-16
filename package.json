@@ -1,7 +1,7 @@
 {
-  "name": "react-webpack-boilerplate",
-  "version": "2.1.0",
-  "description": "Minimalistic ES6 React boilerplate",
+  "name": "bitshares-ui-style-guide",
+  "version": "1.0",
+  "description": "Style-Guide for bitshares-ui",
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server",
