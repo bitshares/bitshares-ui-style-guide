@@ -9,7 +9,7 @@ const config = {
   devtool: 'cheap-module-source-map',
 
   entry: [
-    './main.js'
+    './bitshares-ui-style-guide/index.js'
   ],
 
   context: resolve(__dirname, 'app'),
