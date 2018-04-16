@@ -14,10 +14,17 @@ const config = {
 
   context: resolve(__dirname, 'app'),
 
+  externals: {
+    react: 'React'
+  },
+
   output: {
-    filename: 'bundle.js',
+    filename: '[name].js',
     path: resolve(__dirname, 'dist'),
     publicPath: '',
+    library: 'bitshares',
+    libraryTarget: 'umd',
+    umdNamedDefine: true
   },
 
   plugins: [
@@ -47,21 +54,22 @@ const config = {
   module: {
     loaders: [
       {
+        test: /\.less$/,
+        use: [{
+          loader: "style-loader" // creates style nodes from JS strings
+        }, {
+          loader: "css-loader" // translates CSS into CommonJS
+        }, {
+          loader: "less-loader", // compiles Less to CSS
+          options: {
+            javascriptEnabled: true
+          }
+        }]
+      },
+      {
         test: /\.jsx?$/,
         exclude: /node_modules/,
         loader: 'babel-loader',
-      },
-      {
-        test: /\.scss$/,
-        exclude: /node_modules/,
-        use: ExtractTextPlugin.extract({
-          fallback: 'style-loader',
-          use: [
-            'css-loader',
-            { loader: 'sass-loader', query: { sourceMap: false } },
-          ],
-          publicPath: '../'
-        }),
       },
       {
         test: /\.(png|jpg|gif)$/,
