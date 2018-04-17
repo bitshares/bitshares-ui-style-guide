@@ -421,14 +421,15 @@ body.lightTheme {
 
 // Table
 // --
-@table-header-bg: @accent-3;
+@table-header-bg: @primary-color;
+@table-header-color: @white-6;
 @table-header-sort-bg: @accent-4;
 @table-header-text-transform: uppercase;
-@table-header-border-bottom: 1px solid @dark-6;
+@table-header-border-bottom: 1px solid @accent-1;
 @table-body-border-bottom: none;
-@table-row-hover-bg: @accent-3;
-@table-row-odd-bg: @accent-4;
-@table-row-even-bg: @dark-6;
+@table-row-hover-bg: @primary-1;
+@table-row-odd-bg: @accent-1;
+@table-row-even-bg: @white-6;
 @table-selected-row-bg: @primary-color;
 @table-expanded-row-bg: @primary-color;
 @table-padding-vertical: 6px;
@@ -478,6 +479,9 @@ body.lightTheme {
 
 // Tabs
 // ---
+@tabs-border-width: 1px;
+@tabs-border-style: solid;
+@tabs-border-color: @accent-2;
 @tabs-card-head-background: @background-color-light;
 @tabs-card-height: 40px;
 @tabs-card-active-color: @primary-color;
@@ -742,6 +746,7 @@ span.ant-switch {
       > tr {
         > th {
           > span {
+            color: @table-header-color;
             text-transform: @table-header-text-transform;
           }
           border-bottom: @table-header-border-bottom;
@@ -771,6 +776,9 @@ span.ant-switch {
 // ---
 
 .ant-tabs {
+  &-bar {
+    border-bottom: @tabs-border-width @tabs-border-style @tabs-border-color !important;
+  }
   .ant-tabs-tab {
     text-transform: @tabs-tab-text-transform;
   }
