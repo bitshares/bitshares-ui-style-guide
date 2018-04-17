@@ -98,7 +98,7 @@ body.darkTheme {
 // ---
 
 // Background color for `<body>`
-@body-background        : #fff;
+@body-background        : @dark-6;
 // Base background color for most components
 @component-background   : @dark-6;
 @font-family-no-number  : "Chinese Quote", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -159,7 +159,7 @@ body.darkTheme {
 @ease-in-out-quint   : cubic-bezier(0.86, 0, 0.07, 1);
 
 // Border color
-@border-color-base      : @accent-1;  // base border outline a component
+@border-color-base      : @accent-2;  // base border outline a component
 @border-color-split     : hsv(0, 0, 91%);  // split border inside a component
 @border-width-base      : 1px;            // width of the border for a component
 @border-style-base      : solid;          // style of a components border
@@ -223,12 +223,20 @@ body.darkTheme {
 @btn-group-border       : @primary-5;
 
 // Checkbox
-@checkbox-size          : 16px;
-@checkbox-color         : @primary-color;
+@checkbox-size                 : 16px;
+@checkbox-color                : @primary-color;
+@checkbox-border-color         : @accent-2;
+@checkbox-bg                   : @dark-6;
+@checkbox-flag-color           : @primary-color;
+@checkbox-checked-bg            : @dark-6;
+@checkbox-checked-border-color  : @primary-color;
 
 // Radio
 @radio-size             : 16px;
+@radio-dot-radius       : 10px;
 @radio-dot-color        : @primary-color;
+@radio-border-color     : @accent-2;
+@radio-bg               : @dark-6;
 
 // Radio buttons
 @radio-button-bg           : @btn-default-bg;
@@ -625,6 +633,41 @@ a {
     pointer-events: none;
   }
 }
+
+// ant-radio
+// ---
+
+.ant-radio {
+  span.ant-radio-inner {
+    border-color: @radio-border-color;
+    background: @radio-bg;
+    &:after {
+      border-radius: @radio-dot-radius;
+    }
+  }
+}
+
+// ant-checkbox
+// ---
+
+.ant-checkbox {
+  span.ant-checkbox-inner {
+    border-color: @checkbox-border-color;
+    background-color: @checkbox-bg;
+  }
+  &.ant-checkbox-checked {
+    span.ant-checkbox-inner {
+      border-color: @checkbox-checked-border-color;
+      background-color: @checkbox-checked-bg;
+      &:after {
+        border-color: @checkbox-flag-color;
+      }
+    }
+  }
+}
+
+// ant-btn
+// ---
 
 .ant-btn {
   text-transform: uppercase;
