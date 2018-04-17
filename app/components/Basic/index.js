@@ -294,19 +294,9 @@ class Basic extends React.Component {
           </div>
         } style={{width: '300px'}}/>
         <Button type="primary">Regular</Button> <Button type="primary" disabled={true}>Disabled</Button>
-        <div>
-          <code>
-            {`<Button type="primary">Regular</Button>`}
-          </code>
-        </div>
 
         <h3>Default</h3>
         <Button>Default</Button> <Button disabled={true}>Disabled</Button>
-        <div>
-          <code>
-            {`<Button>Default</Button>`}
-          </code>
-        </div>
 
         <h3>Contextual Buttons</h3>
         <p>
@@ -314,11 +304,7 @@ class Basic extends React.Component {
           This approach however should be used both carefully and sparingly.
         </p>
         <Button type="danger">Danger</Button>
-        <div>
-          <code>
-            {`<Button type="danger">Danger</Button>`}
-          </code>
-        </div>
+
 
         <Divider/>
 
@@ -330,16 +316,11 @@ class Basic extends React.Component {
           <Col span={11}>
             <Input type="text" placeholder="Placeholder"/>
             <p>Default (empty)</p>
-            <p>
-              <code>{`<Input type="text" placeholder="Placeholder"/>`}</code>
-            </p>
           </Col>
           <Col span={11} offset={2}>
             <Input type="text" defaultValue="Entered Text"/>
             <p>Default (Filled)</p>
-            <p>
-              <code>{`<Input type="text" value="Entered Text"/>`}</code>
-            </p>
+
           </Col>
         </Row>
 
@@ -349,9 +330,6 @@ class Basic extends React.Component {
             <p>Input revisited from another tab</p>
           </Col>
         </Row>
-        <div>
-          <code>{`<Input type="text" value="Edited, but unsaved field" unsaved={true}/>`}</code>
-        </div>
 
         <h3>text input</h3>
 
@@ -362,9 +340,6 @@ class Basic extends React.Component {
               <Input type="text" placeholder="Input"/>
             </Form.Item>
 
-            <p>
-              <code>{`<Input type="text" placeholder="Placeholder"/>`}</code>
-            </p>
           </Col>
 
           <Col span={11} offset={2}>
@@ -373,9 +348,6 @@ class Basic extends React.Component {
               <Input type="text" placeholder="Input"/>
             </Form.Item>
 
-            <p>
-              <code>{`<Input type="text" value="Entered Text"/>`}</code>
-            </p>
           </Col>
         </Row>
 
@@ -461,14 +433,14 @@ class Basic extends React.Component {
         <Row>
           <Col span={11}>
             <Form.Item label="Which do you invest in?">
-              <Checkbox>Bitshares</Checkbox>
+              <Checkbox checked>Bitshares</Checkbox>
               <Checkbox>Bitcoin</Checkbox>
               <Checkbox>Bitcoin Cash</Checkbox>
             </Form.Item>
           </Col>
           <Col span={11} offset={2}>
             <Form.Item label="Choose your favourite">
-              <Radio.Group>
+              <Radio.Group defaultValue="bitshares">
                 <Radio value={'bitshares'}>Bitshares</Radio>
                 <Radio value={'bitcoin'}>Bitcoin</Radio>
                 <Radio value={'bitcoin cash'}>Bitcoin Cash</Radio>
