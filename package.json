@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Welcome to bitshares ui style-guide",
   "main": "dist/main.js",
+  "jsnext:main": "app/bitshares-ui-style-guide/index.js",
   "directories": {
     "test": "tests"
   },
