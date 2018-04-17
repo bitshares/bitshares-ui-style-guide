@@ -521,15 +521,16 @@ body.lightTheme {
 @switch-sm-height: 16px;
 @switch-sm-checked-margin-left: -(@switch-sm-height - 3px);
 @switch-disabled-opacity: 0.4;
-@switch-color: #fff;
+@switch-color: @accent-3;
 @switch-checked-color: @success-color;
-@switch-bg: @accent-2;
-@switch-checked-bg: @accent-2;
+@switch-bg: @accent-1;
+@switch-checked-bg: @accent-1;
 @switch-border-radius: 0px;
 @switch-dot-border-radius: 0px;
 @switch-dot-size: 16px;
 @switch-dot-margin-top: 1px;
 @switch-dot-margin-left: 2px;
+@switch-dot-shadow: none;
 
 // Pagination
 // ---
@@ -711,8 +712,9 @@ a {
 
 span.ant-switch {
   border-radius: @switch-border-radius !important;
-  background-color: @switch-bg;
+  background-color: @switch-bg !important;
   &:after {
+    box-shadow: @switch-dot-shadow !important;
     border-radius: @switch-dot-border-radius !important;
     background-color: @switch-color !important;
     margin-left: @switch-dot-margin-left;
@@ -721,7 +723,7 @@ span.ant-switch {
     margin-top: @switch-dot-margin-top !important;
   }
   &.ant-switch-checked {
-    background-color: @switch-checked-bg;
+    background-color: @switch-checked-bg !important;
     &:after {
       background-color: @switch-checked-color !important;
       height: @switch-dot-size;
