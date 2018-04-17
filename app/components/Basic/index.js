@@ -539,7 +539,7 @@ class Basic extends React.Component {
 
         <h2>Modal</h2>
 
-        <iframe src="#/modal" frameBorder={0} width={'100%'} height={'500px'} style={{border: '2px solid #33343a'}}/>
+        <iframe src="#/modal/darkTheme" frameBorder={0} width={'100%'} height={'500px'} style={{border: '2px solid #33343a'}}/>
 
       </div>
     );

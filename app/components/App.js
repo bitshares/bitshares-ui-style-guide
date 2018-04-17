@@ -24,7 +24,7 @@ const App = () => {
         <Route path='/dark' component={Dark}/>
         <Route path='/light' component={Light}/>
         <Route path='/midnight' component={Midnight}/>
-        <Route path='/modal' component={Modal}/>
+        <Route path='/modal/:theme' component={Modal}/>
       </div>
     </Router>
   );

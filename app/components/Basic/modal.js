@@ -2,7 +2,7 @@ import React from 'react';
 
 import bg from 'assets/images/bitshares-screenshot-bg.png';
 
-import {Modal as Mdl} from 'bitshares-ui-style-guide';
+import {Modal as Mdl, BodyClassName} from 'bitshares-ui-style-guide';
 
 class Modal extends React.Component {
 
@@ -14,13 +14,13 @@ class Modal extends React.Component {
     };
 
     return (
-      <div>
+      <BodyClassName className={this.props.match.params.theme}>
         <img src={bg} style={style}/>
         <Mdl title="Modal Example"
              visible={true}>
           <p>The quick agile trader exchanged ZCASH for BTS</p>
         </Mdl>
-      </div>
+      </BodyClassName>
     );
   }
 

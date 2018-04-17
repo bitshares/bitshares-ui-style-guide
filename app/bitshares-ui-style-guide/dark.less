@@ -161,7 +161,7 @@ body.darkTheme {
 
 // Border color
 @border-color-base      : @accent-2;  // base border outline a component
-@border-color-split     : hsv(0, 0, 91%);  // split border inside a component
+@border-color-split     : @accent-4;  // split border inside a component
 @border-width-base      : 1px;            // width of the border for a component
 @border-style-base      : solid;          // style of a components border
 
@@ -377,6 +377,8 @@ body.darkTheme {
 // Modal
 // --
 @modal-mask-bg: rgba(0, 0, 0, 0.65);
+@modal-close-x-color: @primary-color;
+@modal-close-x-color-hover: @primary-4;
 
 // Progress
 // --
@@ -765,6 +767,32 @@ span.ant-switch {
   >span:last-child {
     .ant-breadcrumb-separator {
       display: none;
+    }
+  }
+}
+
+// ant-modal
+// ---
+
+.ant-modal {
+  &-close-x {
+    color: @modal-close-x-color;
+    transition: .3s;
+    &:hover {
+      color: @modal-close-x-color-hover;
+    }
+  }
+  &-footer {
+    > div {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: flex-end;
+      button {
+        margin: 0 6px;
+        &:last-child {
+          margin-left: 0 !important;
+        }
+      }
     }
   }
 }
