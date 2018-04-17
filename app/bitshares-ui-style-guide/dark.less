@@ -501,7 +501,15 @@ body.darkTheme {
 @switch-sm-height: 16px;
 @switch-sm-checked-margin-left: -(@switch-sm-height - 3px);
 @switch-disabled-opacity: 0.4;
-@switch-color: @primary-color;
+@switch-color: #fff;
+@switch-checked-color: @success-color;
+@switch-bg: @accent-2;
+@switch-checked-bg: @accent-2;
+@switch-border-radius: 0px;
+@switch-dot-border-radius: 0px;
+@switch-dot-size: 16px;
+@switch-dot-margin-top: 1px;
+@switch-dot-margin-left: 2px;
 
 // Pagination
 // ---
@@ -662,6 +670,31 @@ a {
       &:after {
         border-color: @checkbox-flag-color;
       }
+    }
+  }
+}
+
+// ant-switch
+// ---
+
+span.ant-switch {
+  border-radius: @switch-border-radius !important;
+  background-color: @switch-bg;
+  &:after {
+    border-radius: @switch-dot-border-radius !important;
+    background-color: @switch-color !important;
+    margin-left: @switch-dot-margin-left;
+    height: @switch-dot-size !important;
+    width: @switch-dot-size !important;
+    margin-top: @switch-dot-margin-top !important;
+  }
+  &.ant-switch-checked {
+    background-color: @switch-checked-bg;
+    &:after {
+      background-color: @switch-checked-color !important;
+      height: @switch-dot-size;
+      width: @switch-dot-size;
+      margin-top: @switch-dot-margin-top;
     }
   }
 }
