@@ -2,7 +2,8 @@ import React from 'react';
 import {
   Divider,
   Color,
-  IconExample
+  IconExample,
+  Example,
 } from '../Helper/index';
 
 import {
@@ -182,16 +183,25 @@ class Basic extends React.Component {
         <h2>colour palette</h2>
 
         <h3>primary colours</h3>
+
+        <Example label="example uses" content="Links, buttons, tabs & navigation components" style={{width: '300px'}}/>
+
         { this.props.colorPalette.primary.map((color, i) => (
           <Color {...color} key={i}/>
         ))}
 
         <h3>helper colours</h3>
+
+        <Example label="example uses" content="User feedback & positive / negative % change" style={{width: '300px'}}/>
+
         { this.props.colorPalette.helper.map((color, i) => (
           <Color {...color} key={i}/>
         ))}
 
         <h3>accent colours</h3>
+
+        <Example label="example uses" content="Borders, highlights, shadows" style={{width: '300px'}}/>
+
         { this.props.colorPalette.accent.map((color, i) => (
           <Color {...color} key={i}/>
         ))}
@@ -216,6 +226,13 @@ class Basic extends React.Component {
         */}
         <Divider/>
         <h2>Typography</h2>
+        <Example label="note" content={
+          <div>
+            <p>For edge cases there is an argument to use Noto Sans which offers support for:</p>
+            <p>Tall language scripts requiring extra line height to accommodate larger glyphs, such as Arabic, Hindi, Telugu, Thai and Vietnamese.</p>
+            <p>Dense languge scripts requiring extra line height to accommodate larger glyphs, including Chinese, Japanese and Korean</p>
+          </div>
+        } style={{width: '300px'}}/>
         <p>
           For consistency 'Roboto' will be the default font choice. According to Google Font Analytics, it is popular in the US,
           Russia, Japan, India and Brazil amongst others. In the year (March 2017 - March 2018) it was viewed over 2 trillion times
@@ -270,6 +287,12 @@ class Basic extends React.Component {
         <h2>Buttons</h2>
 
         <h3>Primary</h3>
+        <Example label="example uses" content={
+          <div>
+            <p>Combine primary and secondary styles to provide a visual weighting to choices E.g.</p>
+            <Button type="primary">submit</Button> <Button>reset</Button>
+          </div>
+        } style={{width: '300px'}}/>
         <Button type="primary">Regular</Button> <Button type="primary" disabled={true}>Disabled</Button>
         <div>
           <code>

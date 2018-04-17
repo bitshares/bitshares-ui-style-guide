@@ -6,6 +6,10 @@
 @helper-code-text-color: #9a9a9b;
 @helper-code-background: #191a1f;
 
+@helper-example-border-color: #333333;
+@helper-example-label-color: #9a9a9b;
+@helper-example-content-color: #9a9a9b;
+
 .helper {
   &-divider {
     width: 100%;
@@ -29,6 +33,26 @@
     padding: 18px;
     i {
       font-size: 18px;
+    }
+  }
+  &-example {
+    border-left: 5px solid @helper-example-border-color;
+    padding-left: 12px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    float: right;
+    &-label {
+      font-weight: 400;
+      color: @helper-example-label-color;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+    &-content {
+      font-weight: 400;
+      color: @helper-example-content-color;
+      p {
+        line-height: 1.6;
+      }
     }
   }
 }
