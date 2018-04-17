@@ -1,5 +1,5 @@
 import React from 'react';
-import {HashRouter as Router, Route, Link} from 'react-router-dom';
+import {HashRouter as Router, Route} from 'react-router-dom';
 import './style.less';
 
 import Dark from './Dark';
@@ -8,19 +8,13 @@ import Midnight from './Midnight';
 
 import Modal from './Basic/modal';
 
+import Home from './Home';
+
 const App = () => {
   return (
     <Router>
-      <div>
-        <Route path='/' exact component={() => (
-          <div>
-            Bitshares StyleGuide
-            <Link to={'/dark'}>Dark</Link>
-            <Link to={'/light'}>Light</Link>
-            <Link to={'/midnight'}>Midnight</Link>
-          </div>
-        )}>
-        </Route>
+      <div className="root">
+        <Route path='/' exact component={Home}/>
         <Route path='/dark' component={Dark}/>
         <Route path='/light' component={Light}/>
         <Route path='/midnight' component={Midnight}/>
