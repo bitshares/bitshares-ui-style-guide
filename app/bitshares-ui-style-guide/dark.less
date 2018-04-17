@@ -9,18 +9,62 @@ body.darkTheme {
 @blue-3: color(~`colorPalette("@{blue-6}", 3)`);
 @blue-4: color(~`colorPalette("@{blue-6}", 4)`);
 @blue-5: color(~`colorPalette("@{blue-6}", 5)`);
-@blue-6: #1890ff;
+@blue-6: #00A9E0;
 @blue-7: color(~`colorPalette("@{blue-6}", 7)`);
 @blue-8: color(~`colorPalette("@{blue-6}", 8)`);
 @blue-9: color(~`colorPalette("@{blue-6}", 9)`);
 @blue-10: color(~`colorPalette("@{blue-6}", 10)`);
 
+@green-1: color(~`colorPalette("@{blue-6}", 1)`);
+@green-2: color(~`colorPalette("@{blue-6}", 2)`);
+@green-3: color(~`colorPalette("@{blue-6}", 3)`);
+@green-4: color(~`colorPalette("@{blue-6}", 4)`);
+@green-5: color(~`colorPalette("@{blue-6}", 5)`);
+@green-6: #39B54A;
+@green-7: color(~`colorPalette("@{blue-6}", 7)`);
+@green-8: color(~`colorPalette("@{blue-6}", 8)`);
+@green-9: color(~`colorPalette("@{blue-6}", 9)`);
+@green-10: color(~`colorPalette("@{blue-6}", 10)`);
+
+@red-1: color(~`colorPalette("@{red-6}", 1)`);
+@red-2: color(~`colorPalette("@{red-6}", 2)`);
+@red-3: color(~`colorPalette("@{red-6}", 3)`);
+@red-4: color(~`colorPalette("@{red-6}", 4)`);
+@red-5: color(~`colorPalette("@{red-6}", 5)`);
+@red-6: #E6001F;
+@red-7: color(~`colorPalette("@{red-6}", 7)`);
+@red-8: color(~`colorPalette("@{red-6}", 8)`);
+@red-9: color(~`colorPalette("@{red-6}", 9)`);
+@red-10: color(~`colorPalette("@{red-6}", 10)`);
+
+@gold-1: color(~`colorPalette("@{gold-6}", 1)`);
+@gold-2: color(~`colorPalette("@{gold-6}", 2)`);
+@gold-3: color(~`colorPalette("@{gold-6}", 3)`);
+@gold-4: color(~`colorPalette("@{gold-6}", 4)`);
+@gold-5: color(~`colorPalette("@{gold-6}", 5)`);
+@gold-6: #faad14;
+@gold-7: color(~`colorPalette("@{gold-6}", 7)`);
+@gold-8: color(~`colorPalette("@{gold-6}", 8)`);
+@gold-9: color(~`colorPalette("@{gold-6}", 9)`);
+@gold-10: color(~`colorPalette("@{gold-6}", 10)`);
+
+@dark-1: color(~`colorPalette("@{dark-6}", 1)`);
+@dark-2: color(~`colorPalette("@{dark-6}", 2)`);
+@dark-3: color(~`colorPalette("@{dark-6}", 3)`);
+@dark-4: color(~`colorPalette("@{dark-6}", 4)`);
+@dark-5: color(~`colorPalette("@{dark-6}", 5)`);
+@dark-6: #2A2A2A;
+@dark-7: color(~`colorPalette("@{dark-6}", 7)`);
+@dark-8: color(~`colorPalette("@{dark-6}", 8)`);
+@dark-9: color(~`colorPalette("@{dark-6}", 9)`);
+@dark-10: color(~`colorPalette("@{dark-6}", 10)`);
+
+
 // The prefix to use on all css classes from ant.
 @ant-prefix             : ant;
 
 // -------- Colors -----------
-//@primary-color          : @blue-6;
-@primary-color          : #2C2E37;
+@primary-color          : @blue-6;
 @info-color             : @blue-6;
 @success-color          : @green-6;
 @processing-color       : @primary-color;
@@ -50,7 +94,7 @@ body.darkTheme {
 // Base background color for most components
 @component-background   : #fff;
 @font-family-no-number  : "Chinese Quote", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
-@font-family            : "Monospaced Number", @font-family-no-number;
+@font-family            : Roboto Medium, "Monospaced Number", @font-family-no-number;
 @code-family            : Consolas, Menlo, Courier, monospace;
 @heading-color          : fade(#000, 85%);
 @text-color             : fade(#000, 65%);
@@ -62,8 +106,8 @@ body.darkTheme {
 @font-size-lg           : @font-size-base + 2px;
 @font-size-sm           : 12px;
 @line-height-base       : 1.5;
-@border-radius-base     : 4px;
-@border-radius-sm       : 2px;
+@border-radius-base     : 0px;
+@border-radius-sm       : 0px;
 
 // vertical paddings
 @padding-lg    : 24px; // containers
@@ -141,17 +185,17 @@ body.darkTheme {
 @btn-primary-color      : #fff;
 @btn-primary-bg         : @primary-color;
 
-@btn-default-color      : @text-color;
-@btn-default-bg         : #fff;
-@btn-default-border     : @border-color-base;
+@btn-default-color      : @primary-color;
+@btn-default-bg         : @dark-6;
+@btn-default-border     : @primary-color;
 
 @btn-danger-color       : @error-color;
-@btn-danger-bg          : @background-color-base;
-@btn-danger-border      : @border-color-base;
+@btn-danger-bg          : @dark-6;
+@btn-danger-border      : @error-color;
 
-@btn-disable-color      : @disabled-color;
-@btn-disable-bg         : @disabled-bg;
-@btn-disable-border     : @border-color-base;
+@btn-disable-color      : @blue-9;
+@btn-disable-bg         : @dark-6;
+@btn-disable-border     : @blue-9;
 
 @btn-padding-base       : 0 @padding-md - 1px;
 @btn-font-size-lg       : @font-size-lg;
@@ -476,3 +520,10 @@ body.darkTheme {
 @slider-dot-border-color-active:      tint(@primary-color, 50%);
 @slider-disabled-color:               @disabled-color;
 @slider-disabled-background-color:    @component-background;
+
+.ant-btn {
+  text-transform: uppercase;
+  span {
+    font-weight: @btn-font-weight;
+  }
+}

@@ -24,6 +24,8 @@ import {
   Tabs,
 } from 'bitshares-ui-style-guide';
 
+import PropTypes from 'prop-types';
+
 import logo from '../../assets/images/bitshares-logo.png';
 
 /* * * * * * * UPLOAD * * * * * * */
@@ -135,6 +137,10 @@ const sliderMarks = {
 
 class Basic extends React.Component {
 
+  static propTypes = {
+    colorPalette: PropTypes.object,
+  };
+
   state = {
     sliderValue: 1,
   };
@@ -167,19 +173,22 @@ class Basic extends React.Component {
             ****COLOURS PALETTE****
         */}
         <h2>colour palette</h2>
+
         <h3>primary colours</h3>
-        <Color color={'#00a9e0'} style={{marginRight: '24px'}}/>
-        <Color color={'#fff'} textColor={'#000'} style={{margin: '0 24px'}}/>
-        <Color color={'#2c2e37'} style={{margin: '0 24px'}}/>
-        <Color color={'#191a1f'} style={{margin: '0 24px', borderWidth: '1px'}}/>
+        { this.props.colorPalette.primary.map((color) => (
+          <Color {...color}/>
+        ))}
+
         <h3>helper colours</h3>
-        <Color color={'#39b54a'} style={{marginRight: '24px'}}/>
-        <Color color={'#e6001f'} style={{margin: '0 24px'}}/>
+        { this.props.colorPalette.helper.map((color) => (
+          <Color {...color}/>
+        ))}
+
         <h3>accent colours</h3>
-        <Color color={'#bababa'} style={{marginRight: '24px'}}/>
-        <Color color={'#656565'} style={{margin: '0 24px'}}/>
-        <Color color={'#38393f'} style={{margin: '0 24px'}}/>
-        <Color color={'#121212'} style={{margin: '0 24px', borderWidth: '1px'}}/>
+        { this.props.colorPalette.accent.map((color) => (
+          <Color {...color}/>
+        ))}
+
         <h3>calculated colours</h3>
         <span>
           Using SCSS, it is possible to use calculated colours, for example hover effect that are in keeping with existing branding.
