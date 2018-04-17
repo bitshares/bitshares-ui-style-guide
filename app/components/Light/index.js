@@ -28,7 +28,7 @@ class Light extends React.Component {
   render() {
     return (
       <BodyClassName className="lightTheme">
-        <Basic history={this.props.history} colorPalette={this.colorPalette} themeName={'Light'}/>
+        <Basic history={this.props.history} theme="lightTheme" colorPalette={this.colorPalette} themeName={'Light'}/>
       </BodyClassName>
     );
   }

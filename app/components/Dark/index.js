@@ -29,7 +29,7 @@ class Dark extends React.Component {
   render() {
     return (
       <BodyClassName className="darkTheme">
-        <Basic history={this.props.history} colorPalette={this.colorPalette} themeName={'Dark'}/>
+        <Basic history={this.props.history} colorPalette={this.colorPalette} theme="darkTheme" themeName={'Dark'}/>
       </BodyClassName>
     );
   }
