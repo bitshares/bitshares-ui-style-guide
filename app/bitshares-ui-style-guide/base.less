@@ -200,45 +200,6 @@ sub { bottom: -.25em; }
 sup { top: -.5em; }
 
 //
-// Links
-//
-
-a {
-  color: @link-color;
-  background-color: transparent; // remove the gray background on active links in IE 10.
-  text-decoration: @link-decoration;
-  outline: none;
-  cursor: pointer;
-  transition: color .3s;
-  -webkit-text-decoration-skip: objects; // remove gaps in links underline in iOS 8+ and Safari 8+.
-
-  &:focus {
-    text-decoration: underline;
-    text-decoration-skip: ink;
-  }
-
-  &:hover {
-    color: @link-hover-color;
-  }
-
-  &:active {
-    color: @link-active-color;
-  }
-
-  &:active,
-  &:hover {
-    outline: 0;
-    text-decoration: @link-hover-decoration;
-  }
-
-  &[disabled] {
-    color: @disabled-color;
-    cursor: not-allowed;
-    pointer-events: none;
-  }
-}
-
-//
 // Code
 //
 

@@ -138,8 +138,9 @@ body.darkTheme {
 
 // LINK
 @link-color             : @primary-color;
-@link-hover-color       : color(~`colorPalette("@{link-color}", 5)`);
-@link-active-color      : color(~`colorPalette("@{link-color}", 7)`);
+@link-hover-color       : @blue-5;
+@link-active-color      : @primary-color;
+@link-visited-color     : @primary-color;
 @link-decoration        : none;
 @link-hover-decoration  : none;
 
@@ -158,7 +159,7 @@ body.darkTheme {
 @ease-in-out-quint   : cubic-bezier(0.86, 0, 0.07, 1);
 
 // Border color
-@border-color-base      : hsv(0, 0, 85%);  // base border outline a component
+@border-color-base      : @accent-1;  // base border outline a component
 @border-color-split     : hsv(0, 0, 91%);  // split border inside a component
 @border-width-base      : 1px;            // width of the border for a component
 @border-style-base      : solid;          // style of a components border
@@ -528,6 +529,102 @@ body.darkTheme {
 @slider-dot-border-color-active:      tint(@primary-color, 50%);
 @slider-disabled-color:               @disabled-color;
 @slider-disabled-background-color:    @component-background;
+
+// Upload
+// ---
+
+@upload-item-name-color: #fff;
+
+@upload-drag-container-bg: @accent-4;
+@upload-drag-container-border-width: 1px;
+@upload-drag-container-border-color: @accent-2;
+@upload-drag-container-border-style: dashed;
+@upload-drag-container-padding: 24px;
+
+@upload-drag-container-icon-color: @primary-color;
+@upload-drag-container-icon-size: 24px;
+
+@upload-drag-container-text-color: @accent-2;
+@upload-drag-container-text-size: 14px;
+
+@upload-drag-container-hint-color: @accent-2;
+@upload-drag-container-hint-size: 11px;
+
+
+/* * * * * * * * * * * COMPONENTS REWRITE (additional changes to components) * * * * * * * * * */
+
+
+// ant-upload
+// ---
+
+.ant-upload {
+  .ant-upload-list-item-name, a.ant-upload-list-item-name {
+    color: @upload-item-name-color;
+  }
+}
+
+.ant-upload-drag-container {
+  text-align: center;
+
+  padding: @upload-drag-container-padding;
+  background: @upload-drag-container-bg;
+  border: @upload-drag-container-border-width @upload-drag-container-border-style @upload-drag-container-border-color;
+
+  .ant-upload-drag-icon {
+    i {
+      color: @upload-drag-container-icon-color;
+      font-size: @upload-drag-container-icon-size;
+    }
+  }
+
+  .ant-upload-text {
+    font-size: @upload-drag-container-text-size;
+    color: @upload-drag-container-text-color;
+  }
+
+  .ant-upload-hint {
+    font-size: @upload-drag-container-hint-size;
+    color: @upload-drag-container-hint-color;
+  }
+}
+
+// a
+// ---
+
+a {
+  color: @link-color;
+  background-color: transparent; // remove the gray background on active links in IE 10.
+  text-decoration: @link-decoration;
+  outline: none;
+  cursor: pointer;
+  transition: color .3s;
+  -webkit-text-decoration-skip: objects; // remove gaps in links underline in iOS 8+ and Safari 8+.
+
+  &:focus {
+    text-decoration: underline;
+    text-decoration-skip: ink;
+  }
+
+  &:hover {
+    color: @link-hover-color;
+  }
+
+  &:active {
+    color: @link-active-color;
+  }
+
+  &:active,
+  &:hover {
+    outline: 0;
+    text-decoration: @link-hover-decoration;
+  }
+
+  &[disabled] {
+    color: @disabled-color;
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+}
 
 .ant-btn {
   text-transform: uppercase;
