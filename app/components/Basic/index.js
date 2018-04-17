@@ -137,6 +137,7 @@ class Basic extends React.Component {
 
   static propTypes = {
     colorPalette: PropTypes.object,
+    themeName: PropTypes.string,
   };
 
   state = {
@@ -158,22 +159,31 @@ class Basic extends React.Component {
 
   }
 
+  handleBackToList() {
+    console.log(this.props);
+    this.props.history.push('/');
+  }
+
   constructor(props) {
     super(props);
 
     this.onSliderChange = this.onSliderChange.bind(this);
     this.onTabChange = this.onTabChange.bind(this);
+    this.handleBackToList = this.handleBackToList.bind(this);
   }
 
   render() {
     return (
       <div className={'container'}>
+        <div className="back-to-list" onClick={this.handleBackToList}>
+          <Icon type="left" />
+        </div>
         <div className="header">
           <div className="header-logo">
             <img src={logo} alt=""/>
           </div>
           <div className="header-description">
-            style guide: midnight theme
+            style guide: {this.props.themeName} theme
           </div>
         </div>
         <Divider style={{marginTop: 0}}/>
