@@ -59,6 +59,14 @@ body.darkTheme {
 @dark-9: color(~`colorPalette("@{dark-6}", 9)`);
 @dark-10: color(~`colorPalette("@{dark-6}", 10)`);
 
+@primary-dark-1: #333;
+@primary-dark-2: #2A2A2A;
+
+@accent-1: #BABABA;
+@accent-2: #656565;
+@accent-3: #383838;
+@accent-4: #262626;
+
 
 // The prefix to use on all css classes from ant.
 @ant-prefix             : ant;
@@ -92,13 +100,13 @@ body.darkTheme {
 // Background color for `<body>`
 @body-background        : #fff;
 // Base background color for most components
-@component-background   : #fff;
+@component-background   : @dark-6;
 @font-family-no-number  : "Chinese Quote", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
 @font-family            : Roboto Medium, "Monospaced Number", @font-family-no-number;
 @code-family            : Consolas, Menlo, Courier, monospace;
-@heading-color          : fade(#000, 85%);
-@text-color             : fade(#000, 65%);
-@text-color-secondary   : fade(#000, 45%);
+@heading-color          : #fff;
+@text-color             : #fff;
+@text-color-secondary   : #fff;
 @heading-color-dark     : fade(#fff, 100%);
 @text-color-dark        : fade(#fff,85%);
 @text-color-secondary-dark: fade(#fff, 65%);
@@ -121,8 +129,8 @@ body.darkTheme {
 
 // The background colors for active and hover states for things like
 // list items or table cells.
-@item-active-bg         : @primary-1;
-@item-hover-bg          : @primary-1;
+@item-active-bg         : @accent-3;
+@item-hover-bg          : @accent-3;
 
 // ICONFONT
 @iconfont-css-prefix    : anticon;
@@ -160,11 +168,11 @@ body.darkTheme {
 @outline-width          : 2px;
 @outline-color          : @primary-color;
 
-@background-color-light : hsv(0, 0, 98%);  // background of header and selected item
-@background-color-base  : hsv(0, 0, 96%);  // Default grey background color
+@background-color-light : @accent-2;  // background of header and selected item
+@background-color-base  : @accent-2;  // Default grey background color
 
 // Disabled states
-@disabled-color         : fade(#000, 25%);
+@disabled-color         : @accent-2;
 @disabled-bg            : @background-color-base;
 @disabled-color-dark    : fade(#fff, 35%);
 
@@ -315,12 +323,12 @@ body.darkTheme {
 @input-padding-vertical-base : 4px;
 @input-padding-vertical-sm   : 1px;
 @input-padding-vertical-lg   : 6px;
-@input-placeholder-color     : hsv(0, 0, 75%);
+@input-placeholder-color     : @accent-2;
 @input-color                 : @text-color;
-@input-border-color          : @border-color-base;
-@input-bg                    : #fff;
+@input-border-color          : @accent-2;
+@input-bg                    : @accent-4;
 @input-addon-bg              : @background-color-light;
-@input-hover-border-color    : @primary-color;
+@input-hover-border-color    : @accent-1;
 @input-disabled-bg           : @disabled-bg;
 
 // Tooltip
