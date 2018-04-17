@@ -532,8 +532,8 @@ body.darkTheme {
 @breadcrumb-last-item-color:   @text-color;
 @breadcrumb-font-size:         @font-size-base;
 @breadcrumb-icon-font-size:    @font-size-sm;
-@breadcrumb-link-color:        @text-color-secondary;
-@breadcrumb-link-color-hover:  @primary-5;
+@breadcrumb-link-color:        @primary-color;
+@breadcrumb-link-color-hover:  @primary-4;
 @breadcrumb-separator-color:   @text-color-secondary;
 @breadcrumb-separator-margin:  0 @padding-xs;
 
@@ -750,6 +750,22 @@ span.ant-switch {
   }
   div.ant-tabs-ink-bar {
     height: @tabs-ink-bar-height;
+  }
+}
+
+// Breadcrumb
+// ---
+
+.ant-breadcrumb {
+  &-link, a {
+    &:focus {
+      text-decoration: none;
+    }
+  }
+  >span:last-child {
+    .ant-breadcrumb-separator {
+      display: none;
+    }
   }
 }
 
