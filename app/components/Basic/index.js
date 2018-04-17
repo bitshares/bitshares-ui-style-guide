@@ -140,6 +140,7 @@ class Basic extends React.Component {
 
   state = {
     sliderValue: 1,
+    activeTabKey: 'tab1'
   };
 
   onSliderChange(value) {
@@ -148,10 +149,19 @@ class Basic extends React.Component {
     })
   }
 
+  onTabChange(tab) {
+
+    this.setState({
+      activeTabKey: tab,
+    });
+
+  }
+
   constructor(props) {
     super(props);
 
     this.onSliderChange = this.onSliderChange.bind(this);
+    this.onTabChange = this.onTabChange.bind(this);
   }
 
   render() {
@@ -475,10 +485,10 @@ class Basic extends React.Component {
 
         <h2>Tabs</h2>
 
-        <Tabs defaultActiveKey="1">
-          <Tabs.TabPane tab="Tab #1" key="1">Content of Tab Pane 1</Tabs.TabPane>
-          <Tabs.TabPane tab="Tab #2" key="2">Content of Tab Pane 2</Tabs.TabPane>
-          <Tabs.TabPane tab="Tab #3" key="3">Content of Tab Pane 3</Tabs.TabPane>
+        <Tabs defaultActiveKey={'tab1'} activeKey={this.state.activeTabKey} onChange={this.onTabChange}>
+          <Tabs.TabPane tab="Tab #1" key="tab1">Content of Tab Pane 1</Tabs.TabPane>
+          <Tabs.TabPane tab="Tab #2" key="tab2">Content of Tab Pane 2</Tabs.TabPane>
+          <Tabs.TabPane tab="Tab #3" key="tab3">Content of Tab Pane 3</Tabs.TabPane>
         </Tabs>
 
         <Divider/>

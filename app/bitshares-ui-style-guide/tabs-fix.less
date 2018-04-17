@@ -1,0 +1,29 @@
+/*
+  This file is to fix tabs issue. If it break something after new ant version please feel free to remove it
+*/
+
+.ant-tabs {
+  > .ant-tabs-content {
+    width: 100%;
+
+    > .ant-tabs-tabpane {
+      flex-shrink: 0;
+      width: 100%;
+      transition: opacity .45s;
+      opacity: 1;
+    }
+
+    > .ant-tabs-tabpane-inactive {
+      opacity: 0;
+      height: 0;
+      padding: 0 !important;
+      pointer-events: none;
+    }
+  }
+  > .ant-tabs-content-animated {
+    display: flex;
+    flex-direction: row;
+    will-change: margin-left;
+    transition: margin-left 0.3s @ease-in-out;
+  }
+}

@@ -2,6 +2,7 @@
 
 body.darkTheme {
   @import "~antd/lib/style/components";
+  @import "tabs-fix";
 }
 
 @blue-1: color(~`colorPalette("@{blue-6}", 1)`);
@@ -472,10 +473,12 @@ body.darkTheme {
 @tabs-title-font-size-lg: @font-size-lg;
 @tabs-title-font-size-sm: @font-size-base;
 @tabs-ink-bar-bg-color: @primary-color;
+@tabs-ink-bar-height: 4px;
+@tabs-tab-text-transform: uppercase;
 @tab-bar-margin: 0 0 16px 0;
 @tab-horizontal-margin: 0 32px 0 0;
 @tab-vertical-margin: 0 0 16px 0;
-@tab-horizontal-padding: 12px 16px;
+@tab-horizontal-padding: 12px 24px;
 @tab-vertical-padding: 8px 24px;
 @tab-scrolling-size: 32px;
 @tab-highlight-color: @primary-color;
@@ -735,6 +738,18 @@ span.ant-switch {
         }
       }
     }
+  }
+}
+
+// ant-tabs
+// ---
+
+.ant-tabs {
+  .ant-tabs-tab {
+    text-transform: @tabs-tab-text-transform;
+  }
+  div.ant-tabs-ink-bar {
+    height: @tabs-ink-bar-height;
   }
 }
 
