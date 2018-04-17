@@ -278,7 +278,7 @@ class Basic extends React.Component {
         </div>
 
         <h3>Default</h3>
-        <Button>Default</Button> <Button type="primary" disabled={true}>Disabled</Button>
+        <Button>Default</Button> <Button disabled={true}>Disabled</Button>
         <div>
           <code>
             {`<Button>Default</Button>`}

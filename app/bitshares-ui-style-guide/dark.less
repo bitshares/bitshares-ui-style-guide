@@ -5,6 +5,18 @@ body.darkTheme {
   @import "tabs-fix";
 }
 
+@white-1: color(~`colorPalette("@{white-6}", 1)`);
+@white-2: color(~`colorPalette("@{white-6}", 2)`);
+@white-3: color(~`colorPalette("@{white-6}", 3)`);
+@white-4: color(~`colorPalette("@{white-6}", 4)`);
+@white-5: color(~`colorPalette("@{white-6}", 5)`);
+@white-6: #fff;
+@white-7: color(~`colorPalette("@{white-6}", 7)`);
+@white-8: color(~`colorPalette("@{white-6}", 8)`);
+@white-9: color(~`colorPalette("@{white-6}", 9)`);
+@white-10: color(~`colorPalette("@{white-6}", 10)`);
+
+
 @blue-1: color(~`colorPalette("@{blue-6}", 1)`);
 @blue-2: color(~`colorPalette("@{blue-6}", 2)`);
 @blue-3: color(~`colorPalette("@{blue-6}", 3)`);
@@ -804,5 +816,12 @@ span.ant-switch {
   text-transform: uppercase;
   span {
     font-weight: @btn-font-weight;
+  }
+  &-primary {
+    &[disabled] {
+      background-color: @primary-8 !important;
+      border-color: @primary-8 !important;
+      color: @white-9 !important;
+    }
   }
 }
