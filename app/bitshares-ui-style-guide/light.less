@@ -267,6 +267,25 @@ body.lightTheme {
       padding: 0 @padding-md - 1px !important;
     }
   }
+
+  // ant-select
+  // ---
+
+  .ant-select {
+    &-selection {
+      background-color: @select-background-color;
+    }
+
+    &-dropdown-menu-item {
+      background-color: @select-background-color;
+    }
+    &-dropdown-menu-item-selected {
+      background-color: @select-item-selected-background-color;
+    }
+    &-dropdown-menu {
+      border: @select-dropdown-menu-border-width @select-dropdown-menu-border-style @select-dropdown-menu-border-color;
+    }
+  }
 }
 
 @white-1: color(~`colorPalette("@{white-6}", 1)`);
@@ -835,6 +854,16 @@ body.lightTheme {
 @slider-dot-border-color-active:      @primary-color;
 @slider-disabled-color:               @disabled-color;
 @slider-disabled-background-color:    @component-background;
+
+// Select
+// ---
+
+@select-background-color: @white-6;
+@select-dropdown-menu-border-width: 1px;
+@select-dropdown-menu-border-style: solid;
+@select-dropdown-menu-border-color: @primary-color;
+@select-item-selected-background-color: @primary-1;
+
 
 // Upload
 // ---
