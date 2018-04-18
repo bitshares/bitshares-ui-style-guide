@@ -224,6 +224,7 @@ body.lightTheme {
       background-color: @slider-handle-background-color;
     }
     &-dot {
+      transition: .15s;
       background-color: @slider-dot-background-color;
     }
     &-dot-active {
@@ -232,6 +233,12 @@ body.lightTheme {
     &:hover {
       .ant-slider-handle {
         background-color: @slider-handle-background-color-hover;
+      }
+      .ant-slider-dot {
+        border-color: @slider-dot-border-color-hover;
+      }
+      .ant-slider-dot-active {
+        border-color: @slider-dot-border-color-active;
       }
     }
   }
@@ -877,6 +884,7 @@ body.lightTheme {
 @slider-handle-background-color-hover:@primary-1;
 @slider-dot-border-color:             @accent-2;
 @slider-dot-border-color-active:      @primary-color;
+@slider-dot-border-color-hover:       @accent-2;
 @slider-dot-background-color:         @dark-6;
 @slider-dot-background-color-active:  @dark-6;
 @slider-disabled-color:               @disabled-color;
