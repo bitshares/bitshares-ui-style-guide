@@ -216,6 +216,26 @@ body.lightTheme {
     }
   }
 
+  // ant-slider
+  // ---
+
+  .ant-slider {
+    &-handle {
+      background-color: @slider-handle-background-color;
+    }
+    &-dot {
+      background-color: @slider-dot-background-color;
+    }
+    &-dot-active {
+      background-color: @slider-dot-background-color-active;
+    }
+    &:hover {
+      .ant-slider-handle {
+        background-color: @slider-handle-background-color-hover;
+      }
+    }
+  }
+
   // ant-modal
   // ---
 
@@ -853,8 +873,12 @@ body.lightTheme {
 @slider-handle-color-focus:           @primary-color;
 @slider-handle-color-focus-shadow:    @primary-color;
 @slider-handle-color-tooltip-open:    @primary-color;
+@slider-handle-background-color  :    @dark-6;
+@slider-handle-background-color-hover:@primary-1;
 @slider-dot-border-color:             @accent-2;
 @slider-dot-border-color-active:      @primary-color;
+@slider-dot-background-color:         @dark-6;
+@slider-dot-background-color-active:  @dark-6;
 @slider-disabled-color:               @disabled-color;
 @slider-disabled-background-color:    @component-background;
 
