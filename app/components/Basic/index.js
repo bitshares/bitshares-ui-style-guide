@@ -190,9 +190,9 @@ class Basic extends React.Component {
         {/*
             ****COLOURS PALETTE****
         */}
-        <h2>colour palette</h2>
+        <h2 className="helper">colour palette</h2>
 
-        <h3>primary colours</h3>
+        <h3 className="helper">primary colours</h3>
 
         <Example label="example uses" content="Links, buttons, tabs & navigation components" style={{width: '300px'}}/>
 
@@ -200,7 +200,7 @@ class Basic extends React.Component {
           <Color {...color} key={i}/>
         ))}
 
-        <h3>helper colours</h3>
+        <h3 className="helper">helper colours</h3>
 
         <Example label="example uses" content="User feedback & positive / negative % change" style={{width: '300px'}}/>
 
@@ -208,7 +208,7 @@ class Basic extends React.Component {
           <Color {...color} key={i}/>
         ))}
 
-        <h3>accent colours</h3>
+        <h3 className="helper">accent colours</h3>
 
         <Example label="example uses" content="Borders, highlights, shadows" style={{width: '300px'}}/>
 
@@ -216,7 +216,7 @@ class Basic extends React.Component {
           <Color {...color} key={i}/>
         ))}
 
-        <h3>calculated colours</h3>
+        <h3 className="helper">calculated colours</h3>
         <span>
           Using SCSS, it is possible to use calculated colours, for example hover effect that are in keeping with existing branding.
           <br/>
@@ -235,7 +235,7 @@ class Basic extends React.Component {
             ****TYPOGRAPHY****
         */}
         <Divider/>
-        <h2>Typography</h2>
+        <h2 className="helper">Typography</h2>
         <Example label="note" content={
           <div>
             <p>For edge cases there is an argument to use Noto Sans which offers support for:</p>
@@ -251,7 +251,7 @@ class Basic extends React.Component {
         <p>
           Roboto covers all Latin, Greek and Cyrillic characters as defined in Unicode 7.0
         </p>
-        <h3>definitions</h3>
+        <h3 className="helper">definitions</h3>
         <p>Roboto Regular // Base Font Size // 14px</p>
         <h6>Roboto Medium // HEADING 6 // 14px</h6>
         <h5>Roboto Medium // HEADING 5 // 16px</h5>
@@ -263,7 +263,7 @@ class Basic extends React.Component {
             ****ICONOGRAPHY****
         */}
         <Divider/>
-        <h2>ICONOGRAPHY</h2>
+        <h2 className="helper">ICONOGRAPHY</h2>
         <p>
           The full list of icons you can find there: <a href="https://ant.design/components/icon/">https://ant.design/components/icon</a>
         </p>
@@ -294,9 +294,9 @@ class Basic extends React.Component {
           <IconExample type="double-left" />
         </div>
         <Divider/>
-        <h2>Buttons</h2>
+        <h2 className="helper">Buttons</h2>
 
-        <h3>Primary</h3>
+        <h3 className="helper">Primary</h3>
         <Example label="example uses" content={
           <div>
             <p>Combine primary and secondary styles to provide a visual weighting to choices E.g.</p>
@@ -305,10 +305,10 @@ class Basic extends React.Component {
         } style={{width: '300px'}}/>
         <Button type="primary">Regular</Button> <Button type="primary" disabled={true}>Disabled</Button>
 
-        <h3>Default</h3>
+        <h3 className="helper">Default</h3>
         <Button>Default</Button> <Button disabled={true}>Disabled</Button>
 
-        <h3>Contextual Buttons</h3>
+        <h3 className="helper">Contextual Buttons</h3>
         <p>
           There may be cases where providing a contextual button will reinforce what the user is about to do.<br/>
           This approach however should be used both carefully and sparingly.
@@ -318,9 +318,9 @@ class Basic extends React.Component {
 
         <Divider/>
 
-        <h2>form fields</h2>
+        <h2 className="helper">form fields</h2>
 
-        <h3>text input</h3>
+        <h3 className="helper">text input</h3>
 
         <Row>
           <Col span={11}>
@@ -341,7 +341,7 @@ class Basic extends React.Component {
           </Col>
         </Row>
 
-        <h3>text input</h3>
+        <h3 className="helper">text input</h3>
 
         <Row>
           <Col span={11}>
@@ -375,7 +375,7 @@ class Basic extends React.Component {
           </Col>
         </Row>
 
-        <h3>Select input</h3>
+        <h3 className="helper">Select input</h3>
 
         <Row>
           <Col span={11}>
@@ -396,7 +396,7 @@ class Basic extends React.Component {
           </Col>
         </Row>
 
-        <h3>Select & typeahead</h3>
+        <h3 className="helper">Select & typeahead</h3>
 
         <Row>
           <Col span={11}>
@@ -419,7 +419,7 @@ class Basic extends React.Component {
 
         <Row>
           <Col span={11}>
-            <h3>Upload by click</h3>
+            <h3 className="helper">Upload by click</h3>
             <Upload {...props}>
               <Button>
                 <Icon type="upload" /> Upload
@@ -427,7 +427,7 @@ class Basic extends React.Component {
             </Upload>
           </Col>
           <Col span={11} offset={2}>
-            <h3>Upload drag & drop</h3>
+            <h3 className="helper">Upload drag & drop</h3>
             <Upload.Dragger {...props2}>
               <p className="ant-upload-drag-icon">
                 <Icon type="inbox" />
@@ -438,7 +438,7 @@ class Basic extends React.Component {
           </Col>
         </Row>
 
-        <h3>checkbox & radio buttons</h3>
+        <h3 className="helper">checkbox & radio buttons</h3>
 
         <Row>
           <Col span={11}>
@@ -459,7 +459,7 @@ class Basic extends React.Component {
           </Col>
         </Row>
 
-        <h3>Switches</h3>
+        <h3 className="helper">Switches</h3>
 
         <Row>
           <Col span={2}>
@@ -476,19 +476,19 @@ class Basic extends React.Component {
 
         <Divider/>
 
-        <h2>tables</h2>
+        <h2 className="helper">tables</h2>
 
-        <h3>table with pagination</h3>
+        <h3 className="helper">table with pagination</h3>
 
         <Table columns={tableColumns} dataSource={tableData}/>
 
-        <h3>table without pagination</h3>
+        <h3 className="helper">table without pagination</h3>
 
         <Table columns={tableColumns} dataSource={tableData} pagination={false}/>
 
         <Divider/>
 
-        <h2>Tabs</h2>
+        <h2 className="helper">Tabs</h2>
 
         <Tabs defaultActiveKey={'tab1'} activeKey={this.state.activeTabKey} onChange={this.onTabChange}>
           <Tabs.TabPane tab="Tab #1" key="tab1">Content of Tab Pane 1</Tabs.TabPane>
@@ -498,22 +498,22 @@ class Basic extends React.Component {
 
         <Divider/>
 
-        <h2>Slider</h2>
+        <h2 className="helper">Slider</h2>
 
         <Row>
           <Col span={11}>
-            <h3>Single Slider</h3>
+            <h3 className="helper">Single Slider</h3>
             <Slider />
           </Col>
           <Col span={11} offset={2}>
-            <h3>Range Slider</h3>
+            <h3 className="helper">Range Slider</h3>
             <Slider range defaultValue={[20, 50]}/>
           </Col>
         </Row>
 
         <Row>
           <Col span={11}>
-            <h3>Slider Input</h3>
+            <h3 className="helper">Slider Input</h3>
             <Row>
               <Col span={16}>
                 <Slider onChange={this.onSliderChange} value={this.state.sliderValue}/>
@@ -524,14 +524,14 @@ class Basic extends React.Component {
             </Row>
           </Col>
           <Col span={11} offset={2}>
-            <h3>Stepped Slider</h3>
+            <h3 className="helper">Stepped Slider</h3>
             <Slider marks={sliderMarks}/>
           </Col>
         </Row>
 
         <Divider/>
 
-        <h2>breadcrumbs</h2>
+        <h2 className="helper">breadcrumbs</h2>
 
         <Breadcrumb>
           <Breadcrumb.Item><a href="javascript:void(0)">Dashboard</a></Breadcrumb.Item>
@@ -542,7 +542,7 @@ class Basic extends React.Component {
 
         <Divider/>
 
-        <h2>Modal</h2>
+        <h2 className="helper">Modal</h2>
 
         <iframe src={`#/modal/${this.props.theme}`} frameBorder={0} width={'100%'} height={'500px'} style={{border: '2px solid #33343a'}}/>
 
