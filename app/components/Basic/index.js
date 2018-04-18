@@ -300,13 +300,13 @@ class Basic extends React.Component {
         <Example label="example uses" content={
           <div>
             <p>Combine primary and secondary styles to provide a visual weighting to choices E.g.</p>
-            <Button type="primary">submit</Button> <Button>reset</Button>
+            <Button type="primary">submit</Button>&nbsp;&nbsp;&nbsp;&nbsp;<Button>reset</Button>
           </div>
         } style={{width: '300px'}}/>
-        <Button type="primary">Regular</Button> <Button type="primary" disabled={true}>Disabled</Button>
+        <Button type="primary">Regular</Button>&nbsp;&nbsp;&nbsp;&nbsp;<Button type="primary" disabled={true}>Disabled</Button>
 
         <h3 className="helper">Default</h3>
-        <Button>Default</Button> <Button disabled={true}>Disabled</Button>
+        <Button>Default</Button>&nbsp;&nbsp;&nbsp;&nbsp;<Button disabled={true}>Disabled</Button>
 
         <h3 className="helper">Contextual Buttons</h3>
         <p>
