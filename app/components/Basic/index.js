@@ -27,7 +27,7 @@ import {
 
 import PropTypes from 'prop-types';
 
-import logo from '../../assets/images/bitshares-logo.png';
+import logo from '../../assets/images/bitshares-text-logo.png';
 
 /* * * * * * * UPLOAD * * * * * * */
 
