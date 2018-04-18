@@ -10,6 +10,10 @@
 @helper-example-label-color: #9a9a9b;
 @helper-example-content-color: #9a9a9b;
 
+@helper-asset-name-color: #00A9E9;
+@helper-price-high: #39B54A;
+@helper-price-low: #E6001F;
+
 .helper {
   &-divider {
     width: 100%;
@@ -54,6 +58,15 @@
         line-height: 1.6;
       }
     }
+  }
+  &-table-asset-name {
+    color: @helper-asset-name-color;
+  }
+  &-table-price-high {
+    color: @helper-price-high;
+  }
+  &-table-price-low {
+    color: @helper-price-low;
   }
 }
 

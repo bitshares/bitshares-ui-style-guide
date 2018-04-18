@@ -80,7 +80,7 @@ const tableColumns = [{
   title    : 'asset',
   dataIndex: 'asset',
   key      : 'asset',
-  render   : (text) => text
+  render   : (text) => (<div className="helper-table-asset-name">{text}</div>)
 }, {
   title    : 'price',
   dataIndex: 'price',
@@ -90,7 +90,16 @@ const tableColumns = [{
   title    : 'change',
   dataIndex: 'change',
   key      : 'change',
-  render   : (text) => text
+  render   : (text) => {
+    let textNumber = text.replace('%', '');
+    if(Number(textNumber) > 0) {
+      return (<div className="helper-table-price-high">{text}</div>);
+    } else if (Number(textNumber) < 0 ){
+      return (<div className="helper-table-price-low">{text}</div>);
+    } else {
+      return (text);
+    }
+  }
 }, {
   title    : 'volume',
   dataIndex: 'volume',
@@ -100,20 +109,20 @@ const tableColumns = [{
 
 const tableData = [
   {
-    key: 'open.btc:bitUSD',
-    asset: 'open.btc:bitUSD',
+    key: 'open.BTC:bitUSD',
+    asset: 'open.BTC:bitUSD',
     price: '8,734.00',
     change: '9.12%',
     volume: '117.0k'
   }, {
-    key: 'open.btc:bitEUR',
-    asset: 'open.btc:bitEUR',
+    key: 'open.BTC:bitEUR',
+    asset: 'open.BTC:bitEUR',
     price: '2345.00',
     change: '-3.12%',
     volume: '50.0k'
   }, {
-    key: 'open.btc:bitCNY',
-    asset: 'open.btc:bitCNY',
+    key: 'open.BTC:bitCNY',
+    asset: 'open.BTC:bitCNY',
     price: '0,23',
     change: '10%',
     volume: '120.0k'
@@ -323,28 +332,22 @@ class Basic extends React.Component {
         <h3 className="helper">text input</h3>
 
         <Row>
-          <Col span={11}>
+          <Col span={6}>
             <Input type="text" placeholder="Placeholder"/>
             <p>Default (empty)</p>
           </Col>
-          <Col span={11} offset={2}>
+
+          <Col span={6} offset={1}>
             <Input type="text" defaultValue="Entered Text"/>
             <p>Default (Filled)</p>
-
           </Col>
+
         </Row>
 
-        <Row>
-          <Col span={11}>
-            <Input type="text" defaultValue="Edited, but unsaved field" unsaved={true}/>
-            <p>Input revisited from another tab</p>
-          </Col>
-        </Row>
-
-        <h3 className="helper">text input</h3>
+        <h3 className="helper">labels, validation & inline buttons</h3>
 
         <Row>
-          <Col span={11}>
+          <Col span={6}>
 
             <Form.Item label="Input Label">
               <Input type="text" placeholder="Input"/>
@@ -352,25 +355,22 @@ class Basic extends React.Component {
 
           </Col>
 
-          <Col span={11} offset={2}>
+          <Col span={6} offset={1}>
 
             <Form.Item label="Input Label" validateStatus="error" help="Validation error text helper">
               <Input type="text" placeholder="Input"/>
             </Form.Item>
 
           </Col>
-        </Row>
 
-        <Row>
-          <Col span={11}>
+          <Col span={6} offset={1}>
+
             <Form.Item label="Input Group">
               <Input.Group compact>
                 <Input style={{width: 'calc(100% - 50px)'}} type="text" placeholder="Placeholder" />
                 <Button style={{width: '50px'}} type="primary" icon="copy"/>
               </Input.Group>
             </Form.Item>
-          </Col>
-          <Col span={11} offset={2}>
 
           </Col>
         </Row>
@@ -378,7 +378,7 @@ class Basic extends React.Component {
         <h3 className="helper">Select input</h3>
 
         <Row>
-          <Col span={11}>
+          <Col span={6}>
             <Select placeholder="Select option" style={{width: '100%'}}>
               <Select.Option value={'Option #1'}>Option #1</Select.Option>
               <Select.Option value={'Option #2'}>Option #2</Select.Option>
@@ -386,7 +386,7 @@ class Basic extends React.Component {
               <Select.Option value={'Option #4'}>Option #4</Select.Option>
             </Select>
           </Col>
-          <Col span={11} offset={2}>
+          <Col span={6} offset={1}>
             <Select defaultValue='Option #1' placeholder="Select currency" style={{width: '100%'}}>
               <Select.Option value={'Option #1'}>Option #1</Select.Option>
               <Select.Option value={'Option #2'}>Option #2</Select.Option>
@@ -399,7 +399,7 @@ class Basic extends React.Component {
         <h3 className="helper">Select & typeahead</h3>
 
         <Row>
-          <Col span={11}>
+          <Col span={6}>
             <Select placeholder={"Select asset"} showSearch optionFilterProp="children"  style={{width: '100%'}} filterOption={(input, option) => option.props.children.toLowerCase().indexOf(input.toLowerCase()) >= 0}>
               <Select.Option value={'Bitshares'}>Bitshares</Select.Option>
               <Select.Option value={'Bitcoin'}>Bitcoin</Select.Option>
@@ -407,7 +407,7 @@ class Basic extends React.Component {
               <Select.Option value={'Bitcoin Cash'}>Bitcoin Cash</Select.Option>
             </Select>
           </Col>
-          <Col span={11} offset={2}>
+          <Col span={6} offset={1}>
             <Select defaultValue={"Bitshares"} showSearch optionFilterProp="children"  style={{width: '100%'}} filterOption={(input, option) => option.props.children.toLowerCase().indexOf(input.toLowerCase()) >= 0}>
               <Select.Option value={'Bitshares'}>Bitshares</Select.Option>
               <Select.Option value={'Bitcoin'}>Bitcoin</Select.Option>
@@ -418,7 +418,7 @@ class Basic extends React.Component {
         </Row>
 
         <Row>
-          <Col span={11}>
+          <Col span={6}>
             <h3 className="helper">Upload by click</h3>
             <Upload {...props}>
               <Button>
@@ -426,7 +426,7 @@ class Basic extends React.Component {
               </Button>
             </Upload>
           </Col>
-          <Col span={11} offset={2}>
+          <Col span={6} offset={1}>
             <h3 className="helper">Upload drag & drop</h3>
             <Upload.Dragger {...props2}>
               <p className="ant-upload-drag-icon">
@@ -467,7 +467,7 @@ class Basic extends React.Component {
               <Switch defaultChecked/>
             </Form.Item>
           </Col>
-          <Col span={11} offset={2}>
+          <Col span={11} offset={1}>
             <Form.Item label="Switch Off">
               <Switch />
             </Form.Item>
