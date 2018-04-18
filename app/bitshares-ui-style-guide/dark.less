@@ -4,7 +4,6 @@ body.darkTheme {
   @import "~antd/lib/style/components";
   @import "tabs-fix";
 
-
   /* * * * * * * * * * * COMPONENTS REWRITE (additional changes to components) * * * * * * * * * */
 
 
@@ -131,6 +130,7 @@ body.darkTheme {
     border-radius: @switch-border-radius !important;
     background-color: @switch-bg;
     &:after {
+      box-shadow: @switch-dot-shadow !important;
       border-radius: @switch-dot-border-radius !important;
       background-color: @switch-color !important;
       margin-left: @switch-dot-margin-left;
@@ -159,6 +159,7 @@ body.darkTheme {
         > tr {
           > th {
             > span {
+              color: @table-header-color;
               text-transform: @table-header-text-transform;
             }
             border-bottom: @table-header-border-bottom;
@@ -188,6 +189,9 @@ body.darkTheme {
   // ---
 
   .ant-tabs {
+    &-bar {
+      border-bottom: @tabs-border-width @tabs-border-style @tabs-border-color !important;
+    }
     .ant-tabs-tab {
       text-transform: @tabs-tab-text-transform;
     }
@@ -704,6 +708,7 @@ body.darkTheme {
 // Table
 // --
 @table-header-bg: @accent-3;
+@table-header-color: @white-6;
 @table-header-sort-bg: @accent-4;
 @table-header-text-transform: uppercase;
 @table-header-border-bottom: 1px solid @dark-6;
@@ -760,6 +765,9 @@ body.darkTheme {
 
 // Tabs
 // ---
+@tabs-border-width: 1px;
+@tabs-border-style: solid;
+@tabs-border-color: @accent-2;
 @tabs-card-head-background: @background-color-light;
 @tabs-card-height: 40px;
 @tabs-card-active-color: @primary-color;
@@ -813,7 +821,7 @@ body.darkTheme {
 @switch-dot-margin-top: 1px;
 @switch-dot-margin-left: 2px;
 @switch-checked-dot-margin-left: -19px;
-
+@switch-dot-shadow: none;
 
 // Pagination
 // ---
@@ -858,7 +866,6 @@ body.darkTheme {
 @select-dropdown-menu-border-style: solid;
 @select-dropdown-menu-border-color: @accent-2;
 @select-item-selected-background-color: @accent-3;
-
 
 // Upload
 // ---
