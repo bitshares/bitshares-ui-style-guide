@@ -3,6 +3,266 @@
 body.darkTheme {
   @import "~antd/lib/style/components";
   @import "tabs-fix";
+
+
+  /* * * * * * * * * * * COMPONENTS REWRITE (additional changes to components) * * * * * * * * * */
+
+
+  // ant-upload
+  // ---
+
+  .ant-upload {
+    .ant-upload-list-item-name, a.ant-upload-list-item-name {
+      color: @upload-item-name-color;
+    }
+    &-list-item {
+      i.anticon-cross {
+        opacity: 1 !important;
+        right: auto !important;
+        left: 0 !important;
+        color: @primary-color !important;
+      }
+      &-info {
+        padding-left: 20px !important;
+      }
+    }
+  }
+
+  .ant-upload-drag-container {
+    cursor: pointer;
+    text-align: center;
+
+    padding: @upload-drag-container-padding;
+    background: @upload-drag-container-bg;
+    border: @upload-drag-container-border-width @upload-drag-container-border-style @upload-drag-container-border-color;
+
+    .ant-upload-drag-icon {
+      i {
+        color: @upload-drag-container-icon-color;
+        font-size: @upload-drag-container-icon-size;
+      }
+    }
+
+    .ant-upload-text {
+      font-size: @upload-drag-container-text-size;
+      color: @upload-drag-container-text-color;
+    }
+
+    .ant-upload-hint {
+      font-size: @upload-drag-container-hint-size;
+      color: @upload-drag-container-hint-color;
+    }
+  }
+
+  // a
+  // ---
+
+  a {
+    color: @link-color;
+    background-color: transparent; // remove the gray background on active links in IE 10.
+    text-decoration: @link-decoration;
+    outline: none;
+    cursor: pointer;
+    transition: color .3s;
+    -webkit-text-decoration-skip: objects; // remove gaps in links underline in iOS 8+ and Safari 8+.
+
+    &:focus {
+      text-decoration: underline;
+      text-decoration-skip: ink;
+    }
+
+    &:hover {
+      color: @link-hover-color;
+    }
+
+    &:active {
+      color: @link-active-color;
+    }
+
+    &:active,
+    &:hover {
+      outline: 0;
+      text-decoration: @link-hover-decoration;
+    }
+
+    &[disabled] {
+      color: @disabled-color;
+      cursor: not-allowed;
+      pointer-events: none;
+    }
+  }
+
+  // ant-radio
+  // ---
+
+  .ant-radio {
+    span.ant-radio-inner {
+      border-color: @radio-border-color;
+      background: @radio-bg;
+      &:after {
+        border-radius: @radio-dot-radius;
+      }
+    }
+  }
+
+  // ant-checkbox
+  // ---
+
+  .ant-checkbox {
+    span.ant-checkbox-inner {
+      border-color: @checkbox-border-color;
+      background-color: @checkbox-bg;
+    }
+    &.ant-checkbox-checked {
+      span.ant-checkbox-inner {
+        border-color: @checkbox-checked-border-color;
+        background-color: @checkbox-checked-bg;
+        &:after {
+          border-color: @checkbox-flag-color;
+        }
+      }
+    }
+  }
+
+  // ant-switch
+  // ---
+
+  span.ant-switch {
+    border-radius: @switch-border-radius !important;
+    background-color: @switch-bg;
+    &:after {
+      border-radius: @switch-dot-border-radius !important;
+      background-color: @switch-color !important;
+      margin-left: @switch-dot-margin-left;
+      height: @switch-dot-size !important;
+      width: @switch-dot-size !important;
+      margin-top: @switch-dot-margin-top !important;
+    }
+    &.ant-switch-checked {
+      background-color: @switch-checked-bg;
+      &:after {
+        background-color: @switch-checked-color !important;
+        height: @switch-dot-size;
+        width: @switch-dot-size;
+        margin-top: @switch-dot-margin-top;
+        margin-left: @switch-checked-dot-margin-left;
+      }
+    }
+  }
+
+  // ant-table
+  // ---
+
+  .ant-table {
+    table {
+      thead.ant-table-thead {
+        > tr {
+          > th {
+            > span {
+              text-transform: @table-header-text-transform;
+            }
+            border-bottom: @table-header-border-bottom;
+          }
+        }
+      }
+      tbody.ant-table-tbody {
+        > tr.ant-table-row {
+          > td {
+            border-bottom: @table-body-border-bottom;
+          }
+          &:nth-child(2n) {
+            background-color: @table-row-even-bg;
+          }
+          &:nth-child(2n+1) {
+            background-color: @table-row-odd-bg;
+          }
+          &:hover {
+            background-color: @table-row-hover-bg;
+          }
+        }
+      }
+    }
+  }
+
+  // ant-tabs
+  // ---
+
+  .ant-tabs {
+    .ant-tabs-tab {
+      text-transform: @tabs-tab-text-transform;
+    }
+    div.ant-tabs-ink-bar {
+      height: @tabs-ink-bar-height;
+    }
+  }
+
+  // Breadcrumb
+  // ---
+
+  .ant-breadcrumb {
+    &-link, a {
+      &:focus {
+        text-decoration: none;
+      }
+    }
+    >span:last-child {
+      .ant-breadcrumb-separator {
+        display: none;
+      }
+    }
+  }
+
+  // ant-modal
+  // ---
+
+  .ant-modal {
+    &-close-x {
+      color: @modal-close-x-color;
+      transition: .3s;
+      &:hover {
+        color: @modal-close-x-color-hover;
+      }
+    }
+    &-footer {
+      > div {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: flex-end;
+        button {
+          margin: 0 6px;
+          &:last-child {
+            margin-left: 0 !important;
+          }
+        }
+      }
+    }
+  }
+
+  // ant-input
+  // ---
+  .ant-input {
+    line-height: @input-line-height !important;
+  }
+
+  // ant-btn
+  // ---
+
+  .ant-btn {
+    text-transform: uppercase;
+    span {
+      font-weight: @btn-font-weight;
+    }
+    &-primary {
+      &[disabled] {
+        background-color: @primary-8 !important;
+        border-color: @primary-8 !important;
+        color: @white-9 !important;
+      }
+    }
+    &-icon-only {
+      padding: 0 @padding-md - 1px !important;
+    }
+  }
 }
 
 @white-1: color(~`colorPalette("@{white-6}", 1)`);
@@ -208,7 +468,7 @@ body.darkTheme {
 @btn-primary-bg         : @primary-color;
 
 @btn-default-color      : @primary-color;
-@btn-default-bg         : @dark-6;
+@btn-default-bg         : transparent;
 @btn-default-border     : @primary-color;
 
 @btn-danger-color       : @error-color;
@@ -533,6 +793,8 @@ body.darkTheme {
 @switch-dot-size: 16px;
 @switch-dot-margin-top: 1px;
 @switch-dot-margin-left: 2px;
+@switch-checked-dot-margin-left: -19px;
+
 
 // Pagination
 // ---
@@ -588,262 +850,3 @@ body.darkTheme {
 
 @upload-drag-container-hint-color: @accent-2;
 @upload-drag-container-hint-size: 11px;
-
-
-/* * * * * * * * * * * COMPONENTS REWRITE (additional changes to components) * * * * * * * * * */
-
-
-// ant-upload
-// ---
-
-.ant-upload {
-  .ant-upload-list-item-name, a.ant-upload-list-item-name {
-    color: @upload-item-name-color;
-  }
-  &-list-item {
-    i.anticon-cross {
-      opacity: 1 !important;
-      right: auto !important;
-      left: 0 !important;
-      color: @primary-color !important;
-    }
-    &-info {
-      padding-left: 20px !important;
-    }
-  }
-}
-
-.ant-upload-drag-container {
-  cursor: pointer;
-  text-align: center;
-
-  padding: @upload-drag-container-padding;
-  background: @upload-drag-container-bg;
-  border: @upload-drag-container-border-width @upload-drag-container-border-style @upload-drag-container-border-color;
-
-  .ant-upload-drag-icon {
-    i {
-      color: @upload-drag-container-icon-color;
-      font-size: @upload-drag-container-icon-size;
-    }
-  }
-
-  .ant-upload-text {
-    font-size: @upload-drag-container-text-size;
-    color: @upload-drag-container-text-color;
-  }
-
-  .ant-upload-hint {
-    font-size: @upload-drag-container-hint-size;
-    color: @upload-drag-container-hint-color;
-  }
-}
-
-// a
-// ---
-
-a {
-  color: @link-color;
-  background-color: transparent; // remove the gray background on active links in IE 10.
-  text-decoration: @link-decoration;
-  outline: none;
-  cursor: pointer;
-  transition: color .3s;
-  -webkit-text-decoration-skip: objects; // remove gaps in links underline in iOS 8+ and Safari 8+.
-
-  &:focus {
-    text-decoration: underline;
-    text-decoration-skip: ink;
-  }
-
-  &:hover {
-    color: @link-hover-color;
-  }
-
-  &:active {
-    color: @link-active-color;
-  }
-
-  &:active,
-  &:hover {
-    outline: 0;
-    text-decoration: @link-hover-decoration;
-  }
-
-  &[disabled] {
-    color: @disabled-color;
-    cursor: not-allowed;
-    pointer-events: none;
-  }
-}
-
-// ant-radio
-// ---
-
-.ant-radio {
-  span.ant-radio-inner {
-    border-color: @radio-border-color;
-    background: @radio-bg;
-    &:after {
-      border-radius: @radio-dot-radius;
-    }
-  }
-}
-
-// ant-checkbox
-// ---
-
-.ant-checkbox {
-  span.ant-checkbox-inner {
-    border-color: @checkbox-border-color;
-    background-color: @checkbox-bg;
-  }
-  &.ant-checkbox-checked {
-    span.ant-checkbox-inner {
-      border-color: @checkbox-checked-border-color;
-      background-color: @checkbox-checked-bg;
-      &:after {
-        border-color: @checkbox-flag-color;
-      }
-    }
-  }
-}
-
-// ant-switch
-// ---
-
-span.ant-switch {
-  border-radius: @switch-border-radius !important;
-  background-color: @switch-bg;
-  &:after {
-    border-radius: @switch-dot-border-radius !important;
-    background-color: @switch-color !important;
-    margin-left: @switch-dot-margin-left;
-    height: @switch-dot-size !important;
-    width: @switch-dot-size !important;
-    margin-top: @switch-dot-margin-top !important;
-  }
-  &.ant-switch-checked {
-    background-color: @switch-checked-bg;
-    &:after {
-      background-color: @switch-checked-color !important;
-      height: @switch-dot-size;
-      width: @switch-dot-size;
-      margin-top: @switch-dot-margin-top;
-    }
-  }
-}
-
-// ant-table
-// ---
-
-.ant-table {
-  table {
-    thead.ant-table-thead {
-      > tr {
-        > th {
-          > span {
-            text-transform: @table-header-text-transform;
-          }
-          border-bottom: @table-header-border-bottom;
-        }
-      }
-    }
-    tbody.ant-table-tbody {
-      > tr.ant-table-row {
-        > td {
-          border-bottom: @table-body-border-bottom;
-        }
-        &:nth-child(2n) {
-          background-color: @table-row-even-bg;
-        }
-        &:nth-child(2n+1) {
-          background-color: @table-row-odd-bg;
-        }
-        &:hover {
-          background-color: @table-row-hover-bg;
-        }
-      }
-    }
-  }
-}
-
-// ant-tabs
-// ---
-
-.ant-tabs {
-  .ant-tabs-tab {
-    text-transform: @tabs-tab-text-transform;
-  }
-  div.ant-tabs-ink-bar {
-    height: @tabs-ink-bar-height;
-  }
-}
-
-// Breadcrumb
-// ---
-
-.ant-breadcrumb {
-  &-link, a {
-    &:focus {
-      text-decoration: none;
-    }
-  }
-  >span:last-child {
-    .ant-breadcrumb-separator {
-      display: none;
-    }
-  }
-}
-
-// ant-modal
-// ---
-
-.ant-modal {
-  &-close-x {
-    color: @modal-close-x-color;
-    transition: .3s;
-    &:hover {
-      color: @modal-close-x-color-hover;
-    }
-  }
-  &-footer {
-    > div {
-      display: flex;
-      flex-direction: row-reverse;
-      justify-content: flex-end;
-      button {
-        margin: 0 6px;
-        &:last-child {
-          margin-left: 0 !important;
-        }
-      }
-    }
-  }
-}
-
-// ant-input
-// ---
-.ant-input {
-  line-height: @input-line-height !important;
-}
-
-// ant-btn
-// ---
-
-.ant-btn {
-  text-transform: uppercase;
-  span {
-    font-weight: @btn-font-weight;
-  }
-  &-primary {
-    &[disabled] {
-      background-color: @primary-8 !important;
-      border-color: @primary-8 !important;
-      color: @white-9 !important;
-    }
-  }
-  &-icon-only {
-    padding: 0 @padding-md - 1px !important;
-  }
-}

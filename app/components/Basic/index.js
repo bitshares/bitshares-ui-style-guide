@@ -161,7 +161,6 @@ class Basic extends React.Component {
   }
 
   handleBackToList() {
-    console.log(this.props);
     this.props.history.push('/');
   }
 
