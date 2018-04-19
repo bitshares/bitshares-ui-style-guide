@@ -2,6 +2,10 @@
 
 @bg-color: '#fff';
 @text-color: '#000';
+@back-to-list-background-color: rgba(0,0,0,0.1);
+@back-to-list-background-color-hover: rgba(0,0,0,0.15);
+@back-to-list-icon-color: rgba(255,255,255,0.5);
+@back-to-list-icon-color-hover: #fff;
 
 .container {
   width: 100%;
@@ -16,19 +20,19 @@
   top: 0;
   left: 0;
   bottom: 0;
-  background: rgba(0,0,0,0.1);
+  background: @back-to-list-background-color;
   width: 48px;
   cursor: pointer;
   transition: .3s;
   &:hover {
-    background: rgba(0,0,0,0.15);
+    background: @back-to-list-background-color-hover;
     i {
-      color: #fff;
+      color: @back-to-list-icon-color-hover;
     }
   }
   i {
     transition: .3s;
-    color: rgba(255,255,255,0.5);
+    color: @back-to-list-icon-color;
     font-size: 18px;
     position: absolute;
     top: 50%;
