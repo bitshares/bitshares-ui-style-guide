@@ -1,173 +1,173 @@
-const { resolve } = require('path');
-const webpack = require('webpack');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const CopyWebpackPlugin = require('copy-webpack-plugin');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const path = require('path');
+const {resolve} = require("path");
+const webpack = require("webpack");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+const CopyWebpackPlugin = require("copy-webpack-plugin");
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const path = require("path");
 
 const config = {
-  devtool: 'cheap-module-source-map',
+    devtool: "cheap-module-source-map",
 
-  entry: [
-    './bitshares-ui-style-guide/index.js'
-  ],
+    entry: [
+        "./bitshares-ui-style-guide/index.js"
+    ],
 
-  context: resolve(__dirname, 'app'),
+    context: resolve(__dirname, "app"),
 
-  externals: {
-    react: {
-      'commonjs': 'react',
-      'commonjs2': 'react',
-      'amd': 'react',
-      'root': 'React'
+    externals: {
+        react      : {
+            "commonjs" : "react",
+            "commonjs2": "react",
+            "amd"      : "react",
+            "root"     : "React"
+        },
+        "react-dom": {
+            "commonjs" : "react-dom",
+            "commonjs2": "react-dom",
+            "amd"      : "react-dom",
+            "root"     : "ReactDOM"
+        },
+        "antd"     : {
+            "commonjs" : "antd",
+            "commonjs2": "antd",
+            "amd"      : "antd"
+        }
     },
-    'react-dom': {
-      'commonjs': 'react-dom',
-      'commonjs2': 'react-dom',
-      'amd': 'react-dom',
-      'root': 'ReactDOM'
+
+    output: {
+        filename      : "[name].js",
+        path          : resolve(__dirname, "dist"),
+        publicPath    : "",
+        library       : "bitshares",
+        libraryTarget : "umd",
+        umdNamedDefine: true
     },
-    'antd': {
-      'commonjs': 'antd',
-      'commonjs2': 'antd',
-      'amd': 'antd'
-    }
-  },
 
-  output: {
-    filename: '[name].js',
-    path: resolve(__dirname, 'dist'),
-    publicPath: '',
-    library: 'bitshares',
-    libraryTarget: 'umd',
-    umdNamedDefine: true
-  },
+    plugins: [
+        new webpack.optimize.ModuleConcatenationPlugin(),
+        new HtmlWebpackPlugin({
+            template: `${__dirname}/app/index.html`,
+            filename: "index.html",
+            inject  : "body",
+        }),
+        new webpack.optimize.OccurrenceOrderPlugin(),
+        new webpack.LoaderOptionsPlugin({
+            minimize: true,
+            debug   : false,
+        }),
+        new webpack.optimize.UglifyJsPlugin({
+            beautify: false
+        }),
+        new webpack.DefinePlugin({"process.env": {NODE_ENV: JSON.stringify("production")}}),
+        new ExtractTextPlugin({filename: "./styles/style.css", disable: false, allChunks: true}),
+        new CopyWebpackPlugin([{from: "./vendors", to: "vendors"}]),
+    ],
 
-  plugins: [
-    new webpack.optimize.ModuleConcatenationPlugin(),
-    new HtmlWebpackPlugin({
-      template: `${__dirname}/app/index.html`,
-      filename: 'index.html',
-      inject: 'body',
-    }),
-    new webpack.optimize.OccurrenceOrderPlugin(),
-    new webpack.LoaderOptionsPlugin({
-      minimize: true,
-      debug: false,
-    }),
-    new webpack.optimize.UglifyJsPlugin({
-      beautify: false
-    }),
-    new webpack.DefinePlugin({ 'process.env': { NODE_ENV: JSON.stringify('production') } }),
-    new ExtractTextPlugin({ filename: './styles/style.css', disable: false, allChunks: true }),
-    new CopyWebpackPlugin([{ from: './vendors', to: 'vendors' }]),
-  ],
+    resolve: {
+        extensions: [".js", ".jsx"],
+        modules   : [
+            path.resolve("./app"),
+            path.resolve("./node_modules")
+        ]
+    },
 
-  resolve: {
-    extensions: ['.js', '.jsx'],
-    modules: [
-      path.resolve('./app'),
-      path.resolve('./node_modules')
-    ]
-  },
-
-  module: {
-    loaders: [
-      {
-        test: /\.less$/,
-        use: [{
-          loader: "style-loader" // creates style nodes from JS strings
-        }, {
-          loader: "css-loader" // translates CSS into CommonJS
-        }, {
-          loader: "less-loader", // compiles Less to CSS
-          options: {
-            javascriptEnabled: true
-          }
-        }].concat(ExtractTextPlugin.extract({
-          fallback: 'style-loader',
-          use: [
-            'css-loader',
+    module: {
+        loaders: [
             {
-              loader: 'less-loader',
-              options: {
-                javascriptEnabled: true
-              }
+                test: /\.less$/,
+                use : [{
+                    loader: "style-loader" // creates style nodes from JS strings
+                }, {
+                    loader: "css-loader" // translates CSS into CommonJS
+                }, {
+                    loader : "less-loader", // compiles Less to CSS
+                    options: {
+                        javascriptEnabled: true
+                    }
+                }].concat(ExtractTextPlugin.extract({
+                    fallback  : "style-loader",
+                    use       : [
+                        "css-loader",
+                        {
+                            loader : "less-loader",
+                            options: {
+                                javascriptEnabled: true
+                            }
+                        },
+                    ],
+                    publicPath: "../"
+                }))
             },
-          ],
-          publicPath: '../'
-        }))
-      },
-      {
-        test: /\.jsx?$/,
-        exclude: /node_modules/,
-        loader: 'babel-loader',
-      },
-      {
-        test: /\.(png|jpg|gif)$/,
-        use: [
-          {
-            loader: 'url-loader',
-            options: {
-              limit: 8192,
-              mimetype: 'image/png',
-              name: 'images/[name].[ext]',
-            }
-          }
-        ],
-      },
-      {
-        test: /\.eot(\?v=\d+.\d+.\d+)?$/,
-        use: [
-          {
-            loader: 'file-loader',
-            options: {
-              name: 'fonts/[name].[ext]'
-            }
-          }
-        ],
-      },
-      {
-        test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-        use: [
-          {
-            loader: 'url-loader',
-            options: {
-              limit: 8192,
-              mimetype: 'application/font-woff',
-              name: 'fonts/[name].[ext]',
-            }
-          }
-        ],
-      },
-      {
-        test: /\.[ot]tf(\?v=\d+.\d+.\d+)?$/,
-        use: [
-          {
-            loader: 'url-loader',
-            options: {
-              limit: 8192,
-              mimetype: 'application/octet-stream',
-              name: 'fonts/[name].[ext]',
-            }
-          }
-        ],
-      },
-      {
-        test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,
-        use: [
-          {
-            loader: 'url-loader',
-            options: {
-              limit: 8192,
-              mimetype: 'image/svg+xml',
-              name: 'images/[name].[ext]',
-            }
-          }
-        ],
-      },
-    ]
-  },
+            {
+                test   : /\.jsx?$/,
+                exclude: /node_modules/,
+                loader : "babel-loader",
+            },
+            {
+                test: /\.(png|jpg|gif)$/,
+                use : [
+                    {
+                        loader : "url-loader",
+                        options: {
+                            limit   : 8192,
+                            mimetype: "image/png",
+                            name    : "images/[name].[ext]",
+                        }
+                    }
+                ],
+            },
+            {
+                test: /\.eot(\?v=\d+.\d+.\d+)?$/,
+                use : [
+                    {
+                        loader : "file-loader",
+                        options: {
+                            name: "fonts/[name].[ext]"
+                        }
+                    }
+                ],
+            },
+            {
+                test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+                use : [
+                    {
+                        loader : "url-loader",
+                        options: {
+                            limit   : 8192,
+                            mimetype: "application/font-woff",
+                            name    : "fonts/[name].[ext]",
+                        }
+                    }
+                ],
+            },
+            {
+                test: /\.[ot]tf(\?v=\d+.\d+.\d+)?$/,
+                use : [
+                    {
+                        loader : "url-loader",
+                        options: {
+                            limit   : 8192,
+                            mimetype: "application/octet-stream",
+                            name    : "fonts/[name].[ext]",
+                        }
+                    }
+                ],
+            },
+            {
+                test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,
+                use : [
+                    {
+                        loader : "url-loader",
+                        options: {
+                            limit   : 8192,
+                            mimetype: "image/svg+xml",
+                            name    : "images/[name].[ext]",
+                        }
+                    }
+                ],
+            },
+        ]
+    },
 };
 
 module.exports = config;
