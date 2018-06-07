@@ -1,13 +1,13 @@
-import React from 'react';
-import {Layout as AntLayout} from 'antd';
+import React from "react";
+import {Layout as AntLayout} from "antd";
 
 class Layout extends React.Component {
 
-  render() {
-    return (
-      <AntLayout {...this.props}/>
-    );
-  }
+    render() {
+        return (
+            <AntLayout {...this.props}/>
+        );
+    }
 
 }
 

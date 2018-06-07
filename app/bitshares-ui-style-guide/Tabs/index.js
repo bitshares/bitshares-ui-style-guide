@@ -1,13 +1,13 @@
-import React from 'react';
-import {Tabs as AntTabs} from 'antd';
+import React from "react";
+import {Tabs as AntTabs} from "antd";
 
 class Tabs extends React.Component {
 
-  render() {
-    return (
-      <AntTabs {...this.props}/>
-    );
-  }
+    render() {
+        return (
+            <AntTabs {...this.props}/>
+        );
+    }
 
 }
 

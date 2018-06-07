@@ -1,13 +1,13 @@
-import React from 'react';
-import {Icon as AntIcon} from 'antd';
+import React from "react";
+import {Icon as AntIcon} from "antd";
 
 class Icon extends React.Component {
 
-  render() {
-    return (
-      <AntIcon {...this.props}/>
-    );
-  }
+    render() {
+        return (
+            <AntIcon {...this.props}/>
+        );
+    }
 
 }
 

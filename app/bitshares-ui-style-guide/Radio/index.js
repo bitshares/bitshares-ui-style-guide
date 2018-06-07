@@ -1,13 +1,13 @@
-import React from 'react';
-import {Radio as AntRadio} from 'antd';
+import React from "react";
+import {Radio as AntRadio} from "antd";
 
 class Radio extends React.Component {
 
-  render() {
-    return (
-      <AntRadio {...this.props}/>
-    );
-  }
+    render() {
+        return (
+            <AntRadio {...this.props}/>
+        );
+    }
 
 }
 

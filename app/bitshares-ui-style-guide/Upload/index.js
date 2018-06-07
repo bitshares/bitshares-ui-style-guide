@@ -1,16 +1,16 @@
-import React from 'react';
-import {Upload as AntUpload} from 'antd';
+import React from "react";
+import {Upload as AntUpload} from "antd";
 
 class Upload extends React.Component {
 
-  render() {
+    render() {
 
-    const props = {...this.props};
+        const props = {...this.props};
 
-    return (
-      <AntUpload {...props}/>
-    );
-  }
+        return (
+            <AntUpload {...props}/>
+        );
+    }
 
 }
 

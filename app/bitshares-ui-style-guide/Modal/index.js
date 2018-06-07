@@ -1,13 +1,13 @@
-import React from 'react';
-import {Modal as AntModal} from 'antd';
+import React from "react";
+import {Modal as AntModal} from "antd";
 
 class Modal extends React.Component {
 
-  render() {
-    return (
-      <AntModal {...this.props}/>
-    );
-  }
+    render() {
+        return (
+            <AntModal {...this.props}/>
+        );
+    }
 
 }
 

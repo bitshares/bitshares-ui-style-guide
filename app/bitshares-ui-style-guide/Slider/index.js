@@ -1,13 +1,13 @@
-import React from 'react';
-import {Slider as AntSlider} from 'antd';
+import React from "react";
+import {Slider as AntSlider} from "antd";
 
 class Slider extends React.Component {
 
-  render() {
-    return (
-      <AntSlider {...this.props}/>
-    );
-  }
+    render() {
+        return (
+            <AntSlider {...this.props}/>
+        );
+    }
 
 }
 

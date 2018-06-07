@@ -1,16 +1,16 @@
-import React from 'react';
-import {Select as AntSelect} from 'antd';
+import React from "react";
+import {Select as AntSelect} from "antd";
 
 class Select extends React.Component {
 
-  render() {
+    render() {
 
-    const props = {...this.props};
+        const props = {...this.props};
 
-    return (
-      <AntSelect {...props}/>
-    );
-  }
+        return (
+            <AntSelect {...props}/>
+        );
+    }
 
 }
 
