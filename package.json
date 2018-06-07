@@ -61,9 +61,13 @@
     "webpack-dev-server": "2.9.6"
   },
   "scripts": {
+    "build:docs": "webpack --config webpack.demopage.config.js --progress --profile --colors",
+    "build:dist": "webpack --config webpack.production.config.js --progress --profile --colors",
     "start": "webpack-dev-server",
-    "clean": "rimraf dist",
-    "build": "cross-env npm run clean && webpack --config webpack.production.config.js --progress --profile --colors",
+    "clean:docs": "rimraf docs",
+    "clean:dist": "rimraf dist",
+    "clean": "npm run clean:docs && npm run clean:dist",
+    "build": "cross-env npm run clean && npm run build:docs && npm run build:dist",
     "lint": "eslint ./app/**/**.js",
     "test": "jest",
     "test:watch": "jest --watch",
