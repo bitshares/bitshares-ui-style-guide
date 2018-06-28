@@ -35,7 +35,7 @@ const config = {
     },
 
     output: {
-        filename      : "[name]-[hash].js",
+        filename      : "[name].js",
         path          : resolve(__dirname, "dist"),
         publicPath    : "",
         library       : "bitshares",
@@ -59,7 +59,7 @@ const config = {
             beautify: false
         }),
         new webpack.DefinePlugin({"process.env": {NODE_ENV: JSON.stringify("production")}}),
-        new ExtractTextPlugin({filename: "./styles/style-[contenthash].css", disable: false, allChunks: true}),
+        new ExtractTextPlugin({filename: "./styles/style.css", disable: false, allChunks: true}),
         new CopyWebpackPlugin([{from: "./vendors", to: "vendors"}]),
     ],
 
