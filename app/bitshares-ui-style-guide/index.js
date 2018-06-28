@@ -10,6 +10,7 @@ import Input from "./Input";
 import Select from "./Select";
 import Upload from "./Upload";
 import Checkbox from "./Checkbox";
+import Collapse from "./Collapse";
 import Radio from "./Radio";
 import Switch from "./Switch";
 import InputNumber from "./InputNumber";
@@ -30,6 +31,7 @@ export {
     Select,
     Upload,
     Checkbox,
+    Collapse,
     InputNumber,
     Breadcrumb,
     Modal,

@@ -9,11 +9,6 @@
   Please, after upgrade of ant do copy-paste styles from base again and comment unnecessary styles which break project
 
 **/
-html,
-body {
-  width: 100%;
-  height: 100%;
-}
 input::-ms-clear,
 input::-ms-reveal {
   display: none;
@@ -22,14 +17,6 @@ input::-ms-reveal {
 *::before,
 *::after {
   box-sizing: border-box;
-}
-html {
-  font-family: sans-serif;
-  line-height: 1.15;
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
-  -ms-overflow-style: scrollbar;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 article,
 aside,
@@ -43,10 +30,6 @@ main,
 nav,
 section {
   display: block;
-}
-body {
-  margin: 0;
-  background-color: #fff;
 }
 [tabindex="-1"]:focus {
   outline: none !important;
@@ -185,7 +168,7 @@ select {
   text-transform: none;
 }
 button,
-html [type="button"],
+[type="button"],
 [type="reset"],
 [type="submit"] {
   -webkit-appearance: button;
@@ -18575,4 +18558,71 @@ span.ant-switch.ant-switch-checked:after {
 }
 .ant-select-dropdown-menu {
   border: 1px solid #00A9E0;
+}
+.ant-collapse {
+  border: 0;
+  background-color: transparent;
+}
+.ant-collapse-header {
+  padding-left: 12px !important;
+  color: #00A9E0 !important;
+  text-transform: uppercase;
+  border: 1px solid #00A9E0;
+  border-bottom: 0;
+  background-color: #fff;
+}
+.ant-collapse-header:hover {
+  color: #fff !important;
+  background-color: #00A9E0;
+}
+.ant-collapse-header .arrow {
+  transform: rotate(90deg) !important;
+  right: 16px !important;
+  left: auto !important;
+}
+.ant-collapse-header[aria-expanded="true"] .arrow {
+  transform: rotate(-90deg) !important;
+}
+.ant-collapse-item {
+  background-color: transparent;
+  border-bottom: 0 !important;
+}
+.ant-collapse-item:last-child .ant-collapse-header {
+  border-bottom: 1px solid #00A9E0;
+}
+.ant-collapse-item-active .ant-collapse-header {
+  color: #fff !important;
+  background-color: #00A9E0;
+}
+.ant-collapse-item-disabled:last-child .ant-collapse-header {
+  border-bottom: 1px solid #CCCCCC;
+}
+.ant-collapse-item-disabled .ant-collapse-header {
+  color: #CCCCCC !important;
+  background-color: #fff;
+  border: 1px solid #CCCCCC;
+  border-bottom: 0;
+}
+.ant-collapse-content {
+  border-top: 0;
+  background-color: transparent;
+}
+.ant-collapse-borderless .ant-collapse-header {
+  background-color: transparent;
+  border: transparent;
+  border-bottom: 1px solid #CCCCCC;
+}
+.ant-collapse-borderless .ant-collapse-header:hover {
+  color: #656565 !important;
+  background-color: transparent;
+}
+.ant-collapse-borderless .ant-collapse-item-active .ant-collapse-header {
+  color: #656565 !important;
+  background-color: transparent;
+  border: transparent;
+  border-bottom: 1px solid #CCCCCC;
+}
+.ant-collapse-borderless .ant-collapse-item-disabled .ant-collapse-header {
+  color: #CCCCCC !important;
+  background-color: transparent;
 }

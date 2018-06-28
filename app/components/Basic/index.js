@@ -16,6 +16,7 @@ import {
     Select,
     Upload,
     Checkbox,
+    Collapse,
     InputNumber,
     Breadcrumb,
     Switch,
@@ -551,6 +552,69 @@ class Basic extends React.Component {
 
                 <iframe src={`#/modal/${this.props.theme}`} frameBorder={0} width={"100%"} height={"500px"} style={{border: "2px solid #33343a"}}/>
 
+                <Divider/>
+
+                <h2>Collapse</h2>
+
+                <h3>Collapse</h3>
+
+                <Collapse defaultActiveKey={["1"]}>
+                    <Collapse.Panel header="This is panel header 1" key="1">
+                        <p>
+                            BitShares provides a high-performance decentralized exchange, with all the features you would expect in a trading platform. It can handle the trading volume of the NASDAQ, while settling orders the second you submit them. With this kind of performance on a decentralized exchange, who needs risky centralized exchanges?
+                        </p>
+                    </Collapse.Panel>
+                    <Collapse.Panel header="This is panel header 2" key="2" >
+                        <p>
+                            BitShares provides a high-performance decentralized exchange, with all the features you would expect in a trading platform. It can handle the trading volume of the NASDAQ, while settling orders the second you submit them. With this kind of performance on a decentralized exchange, who needs risky centralized exchanges?
+                        </p>
+                    </Collapse.Panel>
+                    <Collapse.Panel header="This is panel header 3" key="3" disabled>
+                        <p>
+                            BitShares provides a high-performance decentralized exchange, with all the features you would expect in a trading platform. It can handle the trading volume of the NASDAQ, while settling orders the second you submit them. With this kind of performance on a decentralized exchange, who needs risky centralized exchanges?
+                        </p>
+                    </Collapse.Panel>
+                </Collapse>
+
+                <h3>Borderless</h3>
+
+                <Collapse defaultActiveKey={["1"]} bordered={false}>
+                    <Collapse.Panel header="This is panel header 1" key="1">
+                        <p>
+                            BitShares provides a high-performance decentralized exchange, with all the features you would expect in a trading platform. It can handle the trading volume of the NASDAQ, while settling orders the second you submit them. With this kind of performance on a decentralized exchange, who needs risky centralized exchanges?
+                        </p>
+                    </Collapse.Panel>
+                    <Collapse.Panel header="This is panel header 2" key="2">
+                        <p>
+                            BitShares provides a high-performance decentralized exchange, with all the features you would expect in a trading platform. It can handle the trading volume of the NASDAQ, while settling orders the second you submit them. With this kind of performance on a decentralized exchange, who needs risky centralized exchanges?
+                        </p>
+                    </Collapse.Panel>
+                    <Collapse.Panel header="This is panel header 3" key="3" disabled>
+                        <p>
+                            BitShares provides a high-performance decentralized exchange, with all the features you would expect in a trading platform. It can handle the trading volume of the NASDAQ, while settling orders the second you submit them. With this kind of performance on a decentralized exchange, who needs risky centralized exchanges?
+                        </p>
+                    </Collapse.Panel>
+                </Collapse>
+
+                <h3>No Arrow</h3>
+
+                <Collapse defaultActiveKey={["1"]}>
+                    <Collapse.Panel header="This is panel header 1" key="1" showArrow={false}>
+                        <p>
+                            BitShares provides a high-performance decentralized exchange, with all the features you would expect in a trading platform. It can handle the trading volume of the NASDAQ, while settling orders the second you submit them. With this kind of performance on a decentralized exchange, who needs risky centralized exchanges?
+                        </p>
+                    </Collapse.Panel>
+                    <Collapse.Panel header="This is panel header 2" key="2" showArrow={false}>
+                        <p>
+                            BitShares provides a high-performance decentralized exchange, with all the features you would expect in a trading platform. It can handle the trading volume of the NASDAQ, while settling orders the second you submit them. With this kind of performance on a decentralized exchange, who needs risky centralized exchanges?
+                        </p>
+                    </Collapse.Panel>
+                    <Collapse.Panel header="This is panel header 3" key="3" disabled showArrow={false}>
+                        <p>
+                            BitShares provides a high-performance decentralized exchange, with all the features you would expect in a trading platform. It can handle the trading volume of the NASDAQ, while settling orders the second you submit them. With this kind of performance on a decentralized exchange, who needs risky centralized exchanges?
+                        </p>
+                    </Collapse.Panel>
+                </Collapse>
             </div>
         );
     }
