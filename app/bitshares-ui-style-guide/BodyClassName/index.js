@@ -43,6 +43,10 @@ class BodyClassName extends React.Component {
         });
     }
 
+    shouldComponentUpdate(np) {
+        return np.className !== this.props.className;
+    }
+
     render() {
         return this.props.children;
     }
