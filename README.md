@@ -2,6 +2,8 @@
 
 Welcome to bitshares ui style-guide
 
+Available online at https://styleguide.bitshares.org/
+
 ### Quick Setup Guide
 
 #### Setup localy
