@@ -18626,3 +18626,24 @@ span.ant-switch.ant-switch-checked:after {
   color: #CCCCCC !important;
   background-color: transparent;
 }
+.ant-popover .ant-popover-content {
+  border: 1px solid #00A9E0;
+}
+.ant-popover .ant-popover-content .ant-popover-title {
+  border-bottom: 1px solid #00A9E0;
+}
+.ant-popover .ant-popover-content .ant-popover-arrow {
+  border: 1px solid #00A9E0;
+}
+.ant-popover .ant-popover-content .ant-popover-arrow:after {
+  content: "";
+  display: block;
+  background: #fff;
+  width: 48.071068px;
+  height: 7.07106781px;
+  transform: rotate(135deg);
+  position: absolute;
+  border: solid transparent;
+  margin-top: -11px;
+  margin-left: -17px;
+}

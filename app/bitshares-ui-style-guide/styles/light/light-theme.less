@@ -398,6 +398,36 @@ span.ant-switch {
   }
 }
 
+// ant-popover
+
+.ant-popover {
+
+  .ant-popover-content {
+    border: 1px solid @primary-color;
+
+    .ant-popover-title {
+      border-bottom: 1px solid @primary-color;
+    }
+
+    .ant-popover-arrow {
+      border: 1px solid @primary-color;
+      &:after {
+        content: "";
+        display: block;
+        background: @white-6;
+        width: 48.071068px;
+        height: 7.07106781px;
+        transform: rotate(135deg);
+        position: absolute;
+        border: solid transparent;
+        margin-top: -11px;
+        margin-left: -17px;
+      }
+    }
+
+  }
+}
+
 @white-1: color(~`colorPalette("@{white-6}", 1)`);
 @white-2: color(~`colorPalette("@{white-6}", 2)`);
 @white-3: color(~`colorPalette("@{white-6}", 3)`);

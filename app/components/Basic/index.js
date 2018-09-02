@@ -24,6 +24,7 @@ import {
     Radio,
     Table,
     Tabs,
+    Popover,
 } from "bitshares-ui-style-guide";
 
 import PropTypes from "prop-types";
@@ -142,6 +143,18 @@ const sliderMarks = {
 };
 
 /* * * * * * * SLIDER END * * * * * * */
+
+
+/* * * * * * * POPOVER CONTENT * * * * */
+
+const popoverContent = (
+    <div>
+        <div>Content</div>
+        <div>Content</div>
+    </div>
+);
+
+/* * * * * * * POPOVER CONTENT END * * * * */
 
 class Basic extends React.Component {
 
@@ -615,6 +628,23 @@ class Basic extends React.Component {
                         </p>
                     </Collapse.Panel>
                 </Collapse>
+
+                <Divider/>
+
+                <h2>Popover</h2>
+
+                <h3>Popover with title</h3>
+
+                <Popover content={popoverContent} title="Title">
+                    <Button type="primary">Hover me</Button>
+                </Popover>
+
+                <h3>Popover without title</h3>
+
+                <Popover content={popoverContent}>
+                    <Button type="primary">Hover me</Button>
+                </Popover>
+
             </div>
         );
     }

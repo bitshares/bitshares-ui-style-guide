@@ -13001,7 +13001,7 @@ textarea.ant-pagination-options-quick-jumper input {
   padding-right: 9px;
 }
 .ant-popover-inner {
-  background-color: #fff;
+  background-color: #191A1F;
   background-clip: padding-box;
   border-radius: 0px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
@@ -13040,7 +13040,7 @@ textarea.ant-pagination-options-quick-jumper input {
   margin-left: 8px;
 }
 .ant-popover-arrow {
-  background: #fff;
+  background: #191A1F;
   width: 7.07106781px;
   height: 7.07106781px;
   transform: rotate(45deg);
@@ -18624,4 +18624,25 @@ span.ant-switch.ant-switch-checked:after {
 .ant-collapse-borderless .ant-collapse-item-disabled .ant-collapse-header {
   color: #656565 !important;
   background-color: transparent;
+}
+.ant-popover .ant-popover-content {
+  border: 1px solid #656565;
+}
+.ant-popover .ant-popover-content .ant-popover-title {
+  border-bottom: 1px solid #656565;
+}
+.ant-popover .ant-popover-content .ant-popover-arrow {
+  border: 1px solid #656565;
+}
+.ant-popover .ant-popover-content .ant-popover-arrow:after {
+  content: "";
+  display: block;
+  background: #191A1F;
+  width: 48.071068px;
+  height: 7.07106781px;
+  transform: rotate(135deg);
+  position: absolute;
+  border: solid transparent;
+  margin-top: -11px;
+  margin-left: -17px;
 }

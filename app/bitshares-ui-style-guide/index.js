@@ -19,6 +19,7 @@ import Tabs from "./Tabs";
 import Slider from "./Slider";
 import Breadcrumb from "./Breadcrumb";
 import Modal from "./Modal";
+import Popover from "./Popover";
 import Layout from "./Layout";
 import Icon from "./Icon";
 
@@ -41,6 +42,7 @@ export {
     Table,
     Icon,
     Tabs,
+    Popover,
     /* default ANT components */
     Row,
     Col,
