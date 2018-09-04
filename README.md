@@ -69,7 +69,7 @@ Available online at https://styleguide.bitshares.org/
 - [ ] Carousel
 - [ ] Collapse
 - [ ] List
-- [ ] Popover
+- [x] Popover
 - [ ] Tooltip
 - [x] Table
 - [x] Tabs
