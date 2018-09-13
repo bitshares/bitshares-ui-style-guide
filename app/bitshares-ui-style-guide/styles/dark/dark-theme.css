@@ -18490,7 +18490,7 @@ span.ant-switch.ant-switch-checked:after {
 }
 .ant-table .ant-table-placeholder {
   height: 100px;
-  line-height: 100px;
+  line-height: 85px;
   vertical-align: middle;
 }
 .ant-tabs-bar {
