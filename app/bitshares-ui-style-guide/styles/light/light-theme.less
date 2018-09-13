@@ -159,6 +159,22 @@ span.ant-switch {
             text-transform: @table-header-text-transform;
           }
           border-bottom: @table-header-border-bottom;
+          .anticon {
+            color: @table-header-icon-color;
+            &.ant-table-filter-selected {
+              color: @table-header-icon-active-color;
+            }
+          }
+          .on {
+            .anticon {
+              color: @table-header-icon-active-color;
+            }
+          }
+          .off {
+            .anticon {
+              color: @table-header-icon-color;
+            }
+          }
         }
       }
     }
@@ -847,8 +863,10 @@ span.ant-switch {
 // --
 @table-header-bg: @primary-color;
 @table-header-color: @white-6;
-@table-header-sort-bg: @accent-4;
+@table-header-sort-bg: @primary-5;
 @table-header-text-transform: uppercase;
+@table-header-icon-color: @white-6;
+@table-header-icon-active-color: @primary-8;
 @table-header-border-bottom: 1px solid @accent-1;
 @table-body-border-bottom: none;
 @table-row-hover-bg: @primary-1;

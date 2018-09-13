@@ -82,6 +82,7 @@ const tableColumns = [{
     title    : "asset",
     dataIndex: "asset",
     key      : "asset",
+    sorter: (a, b) => a.asset.length - b.asset.length,
     render   : function someName(text) { return (<div className="helper-table-asset-name">{text}</div>); }
 }, {
     title    : "price",
@@ -92,6 +93,17 @@ const tableColumns = [{
     title    : "change",
     dataIndex: "change",
     key      : "change",
+    filters  : [
+        {
+            text : "> 0",
+            value: "1"
+        },
+        {
+            text : "< 0",
+            value: "-1"
+        }
+    ],
+    onFilter: (value, record) => value > 0 ? record.change > 0 : record.change < 0,
     render   : (text) => {
         let textNumber = text.replace("%", "");
         if (Number(textNumber) > 0) {

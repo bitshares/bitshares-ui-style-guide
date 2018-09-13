@@ -15227,7 +15227,7 @@ span.ant-radio + * {
   background: #00A9E0;
 }
 .ant-table-thead > tr > th.ant-table-column-sort {
-  background: #262626;
+  background: #423f3e;
 }
 .ant-table-thead > tr > th,
 .ant-table-tbody > tr > td {
@@ -18463,6 +18463,18 @@ span.ant-switch.ant-switch-checked:after {
 .ant-table table thead.ant-table-thead > tr > th > span {
   color: #fff;
   text-transform: uppercase;
+}
+.ant-table table thead.ant-table-thead > tr > th .anticon {
+  color: #fff;
+}
+.ant-table table thead.ant-table-thead > tr > th .anticon.ant-table-filter-selected {
+  color: #00A9E0;
+}
+.ant-table table thead.ant-table-thead > tr > th .on .anticon {
+  color: #00A9E0;
+}
+.ant-table table thead.ant-table-thead > tr > th .off .anticon {
+  color: #fff;
 }
 .ant-table table tbody.ant-table-tbody > tr.ant-table-row > td {
   border-bottom: none;
