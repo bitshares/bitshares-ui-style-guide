@@ -18488,6 +18488,11 @@ span.ant-switch.ant-switch-checked:after {
 .ant-table table tbody.ant-table-tbody > tr.ant-table-row:hover {
   background-color: #383838;
 }
+.ant-table .ant-table-placeholder {
+  height: 100px;
+  line-height: 100px;
+  vertical-align: middle;
+}
 .ant-tabs-bar {
   border-bottom: 1px solid #656565 !important;
 }
