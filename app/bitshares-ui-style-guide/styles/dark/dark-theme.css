@@ -18498,6 +18498,10 @@ span.ant-switch.ant-switch-checked:after {
 }
 .ant-tabs .ant-tabs-tab {
   text-transform: uppercase;
+  font-weight: 400;
+}
+.ant-tabs .ant-tabs-tab.ant-tabs-tab-active {
+  font-weight: 400;
 }
 .ant-tabs div.ant-tabs-ink-bar {
   height: 4px;

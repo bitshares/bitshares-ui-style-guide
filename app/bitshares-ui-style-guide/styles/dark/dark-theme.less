@@ -211,6 +211,10 @@ span.ant-switch {
   }
   .ant-tabs-tab {
     text-transform: @tabs-tab-text-transform;
+    font-weight: @tabs-title-font-weight;
+    &.ant-tabs-tab-active {
+      font-weight: @tabs-title-active-font-weight;
+    }
   }
   div.ant-tabs-ink-bar {
     height: @tabs-ink-bar-height;
@@ -934,6 +938,8 @@ span.ant-switch {
 @tabs-card-head-background: @background-color-light;
 @tabs-card-height: 40px;
 @tabs-card-active-color: @primary-color;
+@tabs-title-font-weight: 400;
+@tabs-title-active-font-weight: 400;
 @tabs-title-font-size: @font-size-base;
 @tabs-title-font-size-lg: @font-size-lg;
 @tabs-title-font-size-sm: @font-size-base;
