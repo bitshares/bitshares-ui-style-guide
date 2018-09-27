@@ -4,6 +4,14 @@ Welcome to bitshares ui style-guide
 
 Available online at https://styleguide.bitshares.org/
 
+### How to use it on Bitshares-UI Project?
+
+[Instruction is provided there](https://github.com/bitshares/bitshares-ui-style-guide/blob/master/INSTRUCTIONS.md#usage-of-style-guide-in-bitshares-ui-project)
+
+### Instruction
+
+You can find instruction about usage and manage of style-guide [there](https://github.com/bitshares/bitshares-ui-style-guide/blob/master/INSTRUCTIONS.md)
+
 ### Quick Setup Guide
 
 #### Setup localy
