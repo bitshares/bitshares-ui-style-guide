@@ -173,6 +173,16 @@ button.ant-switch {
     thead.ant-table-thead {
       > tr {
         > th {
+          text-transform: uppercase;
+          &.ant-table-column-has-actions {
+            &:hover {
+              background-color: @table-header-bg !important;
+              .anticon {
+                background: transparent !important;
+                color: @table-header-icon-active-color;
+              }
+            }
+          }
           > span {
             color: @table-header-color;
             text-transform: @table-header-text-transform;
@@ -183,16 +193,23 @@ button.ant-switch {
             &.ant-table-filter-selected {
               color: @table-header-icon-active-color;
             }
+            &.ant-table-filter-open {
+              background: transparent !important;
+            }
           }
           .on {
-            .anticon {
-              color: @table-header-icon-active-color;
+            &.anticon {
+              color: @table-header-icon-active-color !important;
             }
           }
           .off {
-            .anticon {
-              color: @table-header-icon-color;
+            &.anticon {
+              color: @table-header-icon-color !important;
             }
+          }
+          .ant-table-column-sorter {
+            height: 20px;
+            margin-top: -10px;
           }
         }
       }
