@@ -17948,22 +17948,29 @@ h6 {
 .ant-upload-list-item-info {
   padding-left: 20px !important;
 }
-.ant-upload-drag-container {
+.ant-upload-drag {
+  border: 0 !important;
+  background-color: transparent !important;
+}
+.ant-upload-drag .ant-upload.ant-upload-btn {
+  padding: 0 !important;
+}
+.ant-upload-drag .ant-upload-drag-container {
   cursor: pointer;
   text-align: center;
   padding: 24px;
   background: #121212;
   border: 1px dashed #656565;
 }
-.ant-upload-drag-container .ant-upload-drag-icon i {
+.ant-upload-drag .ant-upload-drag-container .ant-upload-drag-icon i {
   color: #00A9E0;
   font-size: 24px;
 }
-.ant-upload-drag-container .ant-upload-text {
+.ant-upload-drag .ant-upload-drag-container .ant-upload-text {
   font-size: 14px;
   color: #656565;
 }
-.ant-upload-drag-container .ant-upload-hint {
+.ant-upload-drag .ant-upload-drag-container .ant-upload-hint {
   font-size: 11px;
   color: #656565;
 }

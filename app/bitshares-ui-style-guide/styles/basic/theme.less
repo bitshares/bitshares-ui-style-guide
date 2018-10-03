@@ -21,30 +21,41 @@
   }
 }
 
-.ant-upload-drag-container {
-  cursor: pointer;
-  text-align: center;
+.ant-upload-drag {
 
-  padding: @upload-drag-container-padding;
-  background: @upload-drag-container-bg;
-  border: @upload-drag-container-border-width @upload-drag-container-border-style @upload-drag-container-border-color;
+  border: 0 !important;
+  background-color: transparent !important;
 
-  .ant-upload-drag-icon {
-    i {
-      color: @upload-drag-container-icon-color;
-      font-size: @upload-drag-container-icon-size;
+  .ant-upload.ant-upload-btn {
+    padding: 0 !important;
+  }
+
+  .ant-upload-drag-container {
+    cursor: pointer;
+    text-align: center;
+
+    padding: @upload-drag-container-padding;
+    background: @upload-drag-container-bg;
+    border: @upload-drag-container-border-width @upload-drag-container-border-style @upload-drag-container-border-color;
+
+    .ant-upload-drag-icon {
+      i {
+        color: @upload-drag-container-icon-color;
+        font-size: @upload-drag-container-icon-size;
+      }
+    }
+
+    .ant-upload-text {
+      font-size: @upload-drag-container-text-size;
+      color: @upload-drag-container-text-color;
+    }
+
+    .ant-upload-hint {
+      font-size: @upload-drag-container-hint-size;
+      color: @upload-drag-container-hint-color;
     }
   }
 
-  .ant-upload-text {
-    font-size: @upload-drag-container-text-size;
-    color: @upload-drag-container-text-color;
-  }
-
-  .ant-upload-hint {
-    font-size: @upload-drag-container-hint-size;
-    color: @upload-drag-container-hint-color;
-  }
 }
 
 // a
