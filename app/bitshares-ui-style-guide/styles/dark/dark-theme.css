@@ -18027,11 +18027,11 @@ a[disabled] {
 .ant-checkbox.ant-checkbox-checked span.ant-checkbox-inner:after {
   border-color: #00A9E0;
 }
-span.ant-switch {
+button.ant-switch {
   border-radius: 0px !important;
   background-color: #656565 !important;
 }
-span.ant-switch:after {
+button.ant-switch:after {
   box-shadow: none !important;
   border-radius: 0px !important;
   background-color: #fff !important;
@@ -18040,15 +18040,15 @@ span.ant-switch:after {
   width: 16px !important;
   margin-top: 1px !important;
 }
-span.ant-switch.ant-switch-checked {
+button.ant-switch.ant-switch-checked {
   background-color: #656565 !important;
 }
-span.ant-switch.ant-switch-checked:after {
+button.ant-switch.ant-switch-checked:after {
   background-color: #39B54A !important;
   height: 16px;
   width: 16px;
   margin-top: 1px;
-  margin-left: -19px;
+  margin-left: -2px;
 }
 .ant-table table thead.ant-table-thead > tr > th {
   border-bottom: 1px solid #2A2A2A;
