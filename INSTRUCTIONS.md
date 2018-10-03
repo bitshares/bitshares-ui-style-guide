@@ -32,19 +32,20 @@ To start to support new components please follow the next steps:
 
 ### How to manage styles of style-guide components ?
 
-Styles for all 3 themes are placed inside these files:
+Configs for all 3 themes are placed inside these files:
 - `app/bitshares-ui-style-guide/styles/dark/dark-theme.less`
 - `app/bitshares-ui-style-guide/styles/dark/light-theme.less`
 - `app/bitshares-ui-style-guide/styles/dark/midnight-theme.less`
 
-All themes files splitted by 2 parts:
-- configs (at the bottom of file, where all config variables placed)
-- custom overrides
+Custom css rules placed there:
+- `app/bitshares-ui-style-guide/styles/basic/theme.less`
+
+Config themes files contains only variables.
 
 ### PLEASE FOLLOW THE RULES TO MANAGE STYLES:
 
 - Use variables for any values of properties. Do not put hardcoded values like: `background-color: #000`. 
 - Use variables instead: `background-color: @new-component-background-color`
-- Keep all 3 themes files in SYNC. Do not apply styles only for single theme template file. All themes files should be the same. Only variable values should be different
+- Keep all 3 themes config files in SYNC. Do not apply styles only for single theme template file. All themes files should be the same. Only variable values should be different
 
 
