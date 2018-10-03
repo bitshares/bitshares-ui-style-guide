@@ -18004,6 +18004,12 @@ a[disabled] {
 .ant-radio span.ant-radio-inner:after {
   border-radius: 10px;
 }
+.ant-radio-group .ant-radio-button-wrapper {
+  border-color: #00A9E0;
+}
+.ant-radio-group .ant-radio-button-wrapper:not(:first-child)::before {
+  background-color: #00A9E0;
+}
 .ant-checkbox span.ant-checkbox-inner {
   border-color: #CCCCCC;
   background-color: #fff;
@@ -18148,6 +18154,9 @@ span.ant-switch.ant-switch-checked:after {
 .ant-btn-icon-only {
   padding: 0 15px !important;
 }
+.ant-btn-group .ant-btn[disabled] {
+  border-color: #00A9E0 !important;
+}
 .ant-select-selection {
   background-color: #fff;
 }
@@ -18235,6 +18244,8 @@ span.ant-switch.ant-switch-checked:after {
 }
 .ant-popover .ant-popover-content .ant-popover-arrow {
   border: 1px solid #00A9E0;
+  bottom: 7px !important;
+  margin-top: -10px !important;
 }
 .ant-popover .ant-popover-content .ant-popover-arrow:after {
   content: "";

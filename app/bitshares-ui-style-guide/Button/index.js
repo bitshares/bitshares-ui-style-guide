@@ -11,4 +11,6 @@ class Button extends React.Component {
 
 }
 
+Button.Group = AntButton.Group;
+
 export default Button;

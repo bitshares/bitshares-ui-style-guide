@@ -98,6 +98,16 @@ a {
   }
 }
 
+.ant-radio-group {
+  .ant-radio-button-wrapper {
+    border-color: @radio-button-border-color;
+
+    &:not(:first-child)::before {
+      background-color: @radio-button-border-color;
+    }
+  }
+}
+
 // ant-checkbox
 // ---
 
@@ -311,6 +321,11 @@ span.ant-switch {
   }
   &-icon-only {
     padding: 0 @padding-md - 1px !important;
+  }
+  .ant-btn-group & {
+    &[disabled] {
+      border-color: @btn-default-border !important;
+    }
   }
 }
 

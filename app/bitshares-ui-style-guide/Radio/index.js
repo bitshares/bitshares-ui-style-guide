@@ -11,6 +11,7 @@ class Radio extends React.Component {
 
 }
 
+Radio.Button = AntRadio.Button;
 Radio.Group = AntRadio.Group;
 
 export default Radio;

@@ -657,6 +657,41 @@ class Basic extends React.Component {
                     <Button type="primary">Hover me</Button>
                 </Popover>
 
+                <Divider/>
+
+                <h2>Button Group</h2>
+
+                <h3>Button Group</h3>
+
+                <Button.Group>
+                    <Button>First</Button>
+                    <Button>Second</Button>
+                </Button.Group>
+
+                <h3>Button Group Disabled</h3>
+
+                <Button.Group>
+                    <Button>First</Button>
+                    <Button disabled>Second</Button>
+                    <Button>Third</Button>
+                </Button.Group>
+
+                <h3>Button Group different styles</h3>
+
+                <Button.Group>
+                    <Button type="primary">First</Button>
+                    <Button type="dashed">Second</Button>
+                    <Button type="danger">Third</Button>
+                </Button.Group>
+
+                <h2>Radio Button Group</h2>
+
+                <Radio.Group buttonStyle="solid" defaultValue="a">
+                    <Radio.Button value="a">First</Radio.Button>
+                    <Radio.Button value="b">Second</Radio.Button>
+                    <Radio.Button value="c">Third</Radio.Button>
+                </Radio.Group>
+
             </div>
         );
     }
