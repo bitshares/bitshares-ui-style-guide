@@ -12,6 +12,7 @@
     "cross-env": "5.1.4",
     "less-plugin-precompile-import": "git+https://github.com/gibbsfromncis/less-plugin-precompile-import.git",
     "normalize.css": "^8.0.0",
+    "npm-watch": "^0.4.0",
     "prop-types": "^15.6.1",
     "react": "16.2.0",
     "react-dom": "16.2.0",
@@ -64,13 +65,17 @@
     "webpack-dev-server": "2.9.6"
   },
   "scripts": {
+    "theme-compile": "concurrently --kill-others \"npm run theme-compile:dark\" \"npm run theme-compile:light\" \"npm run theme-compile:midnight\"",
+    "theme-compile:dark": "lessc -js app/bitshares-ui-style-guide/styles/dark/dark-theme.less > app/bitshares-ui-style-guide/styles/dark/dark-theme.css",
+    "theme-compile:light": "lessc -js app/bitshares-ui-style-guide/styles/light/light-theme.less > app/bitshares-ui-style-guide/styles/light/light-theme.css",
+    "theme-compile:midnight": "lessc -js app/bitshares-ui-style-guide/styles/midnight/midnight-theme.less > app/bitshares-ui-style-guide/styles/midnight/midnight-theme.css",
     "theme-watch:dark": "./node_modules/less-watch-cli/index.js app/bitshares-ui-style-guide/styles/dark/dark-theme.less app/bitshares-ui-style-guide/styles/dark/dark-theme.css",
     "theme-watch:light": "./node_modules/less-watch-cli/index.js app/bitshares-ui-style-guide/styles/light/light-theme.less app/bitshares-ui-style-guide/styles/light/light-theme.css",
     "theme-watch:midnight": "./node_modules/less-watch-cli/index.js app/bitshares-ui-style-guide/styles/midnight/midnight-theme.less app/bitshares-ui-style-guide/styles/midnight/midnight-theme.css",
     "theme-watch": "concurrently --kill-others \"npm run theme-watch:dark\" \"npm run theme-watch:light\" \"npm run theme-watch:midnight\"",
     "build:docs": "webpack --config webpack.demopage.config.js --progress --profile --colors",
     "build:dist": "webpack --config webpack.production.config.js --progress --profile --colors",
-    "start": "concurrently --kill-others \"npm run theme-watch\" \"webpack-dev-server\"",
+    "start": "concurrently --kill-others \"npm run theme-watch\" \"npm run watch\" \"webpack-dev-server\"",
     "clean:docs": "rimraf docs",
     "clean:dist": "rimraf dist",
     "clean": "npm run clean:docs && npm run clean:dist",
@@ -78,7 +83,8 @@
     "lint": "eslint ./app/**/**.js",
     "test": "jest",
     "test:watch": "jest --watch",
-    "coverage": "jest --coverage"
+    "coverage": "jest --coverage",
+    "watch": "npm-watch"
   },
   "repository": {
     "type": "git",
@@ -103,5 +109,8 @@
     "transform": {
       "\\.js$": "babel-jest"
     }
+  },
+  "watch": {
+    "theme-compile": "app/bitshares-ui-style-guide/styles/basic/theme.less"
   }
 }
