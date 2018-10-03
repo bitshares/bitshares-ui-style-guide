@@ -18192,12 +18192,8 @@ button.ant-switch.ant-switch-checked:after {
   background-color: #383838;
 }
 .ant-collapse-header .arrow {
-  transform: rotate(90deg) !important;
   right: 16px !important;
   left: auto !important;
-}
-.ant-collapse-header[aria-expanded="true"] .arrow {
-  transform: rotate(-90deg) !important;
 }
 .ant-collapse-item {
   background-color: transparent;
