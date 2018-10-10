@@ -73,7 +73,7 @@ You can find instruction about usage and manage of style-guide [there](https://g
 - [ ] Avatar
 - [ ] Badge
 - [ ] Calendar
-- [ ] Card
+- [x] Card (Partial support)
 - [ ] Carousel
 - [ ] Collapse
 - [ ] List

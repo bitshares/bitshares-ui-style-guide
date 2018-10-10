@@ -22,6 +22,7 @@ import Modal from "./Modal";
 import Popover from "./Popover";
 import Layout from "./Layout";
 import Icon from "./Icon";
+import Card from "./Card";
 
 export {
     /* wrapped ANT components */
@@ -43,6 +44,7 @@ export {
     Icon,
     Tabs,
     Popover,
+    Card,
     /* default ANT components */
     Row,
     Col,

@@ -3052,7 +3052,7 @@ a.ant-btn-sm {
   border: 1px solid #262626;
 }
 .ant-card-head {
-  background: #2A2A2A;
+  background: #333;
   border-bottom: 1px solid #262626;
   padding: 0 24px;
   border-radius: 0px 0px 0 0;
@@ -18275,4 +18275,16 @@ button.ant-switch.ant-switch-checked:after {
   border: solid transparent;
   margin-top: -11px;
   margin-left: -17px;
+}
+.ant-card {
+  background-color: transparent;
+  border-color: #262626;
+}
+.ant-card .ant-card-head {
+  border-color: #262626;
+}
+.ant-card .ant-card-body {
+  margin-top: 1px;
+  background-color: #333;
+  border-color: #262626;
 }

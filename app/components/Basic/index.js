@@ -25,6 +25,7 @@ import {
     Table,
     Tabs,
     Popover,
+    Card,
 } from "bitshares-ui-style-guide";
 
 import PropTypes from "prop-types";
@@ -691,6 +692,22 @@ class Basic extends React.Component {
                     <Radio.Button value="b">Second</Radio.Button>
                     <Radio.Button value="c">Third</Radio.Button>
                 </Radio.Group>
+
+                <Divider/>
+
+                <h2>Card</h2>
+
+                <h3>Card Basic</h3>
+
+                <Card
+                    title="Card title"
+                    extra={<a href="#">More</a>}
+                    style={{ width: 300 }}
+                >
+                    <p style={{margin: 0}}>Card content</p>
+                    <p style={{margin: 0}}>Card content</p>
+                    <p style={{margin: 0}}>Card content</p>
+                </Card>
 
             </div>
         );

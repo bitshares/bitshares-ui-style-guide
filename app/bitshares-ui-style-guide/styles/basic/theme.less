@@ -489,3 +489,21 @@ button.ant-switch {
 
   }
 }
+
+// ant-card
+
+.ant-card {
+  background-color: @card-background;
+  border-color: @card-border-color;
+
+  .ant-card-head {
+    border-color: @card-border-color;
+  }
+
+  .ant-card-body {
+    // fix if body has background it places over the border
+    margin-top: 1px;
+    background-color: @card-body-background;
+    border-color: @card-border-color;
+  }
+}
