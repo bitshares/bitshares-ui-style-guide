@@ -1215,11 +1215,11 @@ mark {
   color: #00A9E0;
 }
 .ant-alert-warning {
-  border: 1px solid #ffe58f;
-  background-color: #fffbe6;
+  border: 1px solid #f7f063;
+  background-color: #feffb8;
 }
 .ant-alert-warning .ant-alert-icon {
-  color: #faad14;
+  color: #DDC512;
 }
 .ant-alert-error {
   border: 1px solid #ff7a7f;
@@ -1662,7 +1662,7 @@ mark {
   background-color: #E6001F;
 }
 .ant-badge-status-warning {
-  background-color: #faad14;
+  background-color: #DDC512;
 }
 .ant-badge-status-text {
   color: #2A2A2A;
@@ -6188,50 +6188,50 @@ form .ant-input-group-wrapper {
 }
 .has-warning .ant-form-explain,
 .has-warning .ant-form-split {
-  color: #faad14;
+  color: #DDC512;
 }
 .has-warning .ant-input,
 .has-warning .ant-input:hover {
-  border-color: #faad14;
+  border-color: #DDC512;
 }
 .has-warning .ant-input:focus {
-  border-color: #ffc53d;
+  border-color: #ebdc38;
   outline: 0;
-  box-shadow: 0 0 0 2px rgba(250, 173, 20, 0.2);
+  box-shadow: 0 0 0 2px rgba(221, 197, 18, 0.2);
   border-right-width: 1px !important;
 }
 .has-warning .ant-input:not([disabled]):hover {
-  border-color: #faad14;
+  border-color: #DDC512;
 }
 .has-warning .ant-calendar-picker-open .ant-calendar-picker-input {
-  border-color: #ffc53d;
+  border-color: #ebdc38;
   outline: 0;
-  box-shadow: 0 0 0 2px rgba(250, 173, 20, 0.2);
+  box-shadow: 0 0 0 2px rgba(221, 197, 18, 0.2);
   border-right-width: 1px !important;
 }
 .has-warning .ant-input-prefix {
-  color: #faad14;
+  color: #DDC512;
 }
 .has-warning .ant-input-group-addon {
-  color: #faad14;
-  border-color: #faad14;
+  color: #DDC512;
+  border-color: #DDC512;
   background-color: #fff;
 }
 .has-warning .has-feedback {
-  color: #faad14;
+  color: #DDC512;
 }
 .has-warning.has-feedback .ant-form-item-children-icon {
-  color: #faad14;
+  color: #DDC512;
   animation-name: diffZoomIn3 !important;
 }
 .has-warning .ant-select-selection {
-  border-color: #faad14;
+  border-color: #DDC512;
 }
 .has-warning .ant-select-open .ant-select-selection,
 .has-warning .ant-select-focused .ant-select-selection {
-  border-color: #ffc53d;
+  border-color: #ebdc38;
   outline: 0;
-  box-shadow: 0 0 0 2px rgba(250, 173, 20, 0.2);
+  box-shadow: 0 0 0 2px rgba(221, 197, 18, 0.2);
   border-right-width: 1px !important;
 }
 .has-warning .ant-calendar-picker-icon:after,
@@ -6239,29 +6239,29 @@ form .ant-input-group-wrapper {
 .has-warning .ant-picker-icon:after,
 .has-warning .ant-select-arrow,
 .has-warning .ant-cascader-picker-arrow {
-  color: #faad14;
+  color: #DDC512;
 }
 .has-warning .ant-input-number,
 .has-warning .ant-time-picker-input {
-  border-color: #faad14;
+  border-color: #DDC512;
 }
 .has-warning .ant-input-number-focused,
 .has-warning .ant-time-picker-input-focused,
 .has-warning .ant-input-number:focus,
 .has-warning .ant-time-picker-input:focus {
-  border-color: #ffc53d;
+  border-color: #ebdc38;
   outline: 0;
-  box-shadow: 0 0 0 2px rgba(250, 173, 20, 0.2);
+  box-shadow: 0 0 0 2px rgba(221, 197, 18, 0.2);
   border-right-width: 1px !important;
 }
 .has-warning .ant-input-number:not([disabled]):hover,
 .has-warning .ant-time-picker-input:not([disabled]):hover {
-  border-color: #faad14;
+  border-color: #DDC512;
 }
 .has-warning .ant-cascader-picker:focus .ant-cascader-input {
-  border-color: #ffc53d;
+  border-color: #ebdc38;
   outline: 0;
-  box-shadow: 0 0 0 2px rgba(250, 173, 20, 0.2);
+  box-shadow: 0 0 0 2px rgba(221, 197, 18, 0.2);
   border-right-width: 1px !important;
 }
 .has-error .ant-form-explain,
@@ -11477,7 +11477,7 @@ textarea.ant-mention-wrapper .ant-mention-editor {
   color: #E6001F;
 }
 .ant-message-warning .anticon {
-  color: #faad14;
+  color: #DDC512;
 }
 .ant-message-info .anticon,
 .ant-message-loading .anticon {
@@ -11713,7 +11713,7 @@ textarea.ant-mention-wrapper .ant-mention-editor {
 }
 .ant-confirm-warning .ant-confirm-body > .anticon,
 .ant-confirm-confirm .ant-confirm-body > .anticon {
-  color: #faad14;
+  color: #DDC512;
 }
 .ant-confirm-info .ant-confirm-body > .anticon {
   color: #00A9E0;
@@ -11808,7 +11808,7 @@ textarea.ant-mention-wrapper .ant-mention-editor {
   color: #00A9E0;
 }
 .ant-notification-notice-icon-warning {
-  color: #faad14;
+  color: #DDC512;
 }
 .ant-notification-notice-icon-error {
   color: #E6001F;
@@ -12355,7 +12355,7 @@ textarea.ant-pagination-options-quick-jumper input {
 .ant-popover-message > .anticon {
   position: absolute;
   top: 8px;
-  color: #faad14;
+  color: #DDC512;
   font-size: 14px;
 }
 .ant-popover-message-title {
@@ -15790,13 +15790,13 @@ tr.ant-table-expanded-row:hover {
   color: #fff;
 }
 .ant-tag-gold {
-  color: #faad14;
-  background: #fffbe6;
-  border-color: #ffe58f;
+  color: #DDC512;
+  background: #feffe6;
+  border-color: #fffd8f;
 }
 .ant-tag-gold-inverse {
-  background: #faad14;
-  border-color: #faad14;
+  background: #DDC512;
+  border-color: #DDC512;
   color: #fff;
 }
 .ant-tag-cyan {
@@ -18288,4 +18288,7 @@ button.ant-switch.ant-switch-checked:after {
   margin-top: 1px;
   background-color: transparent;
   border-color: #EEEEEE;
+}
+.ant-alert .ant-alert-message {
+  font-weight: 500;
 }

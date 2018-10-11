@@ -7,6 +7,7 @@ import {
 } from "../Helper/index";
 
 import {
+    Alert,
     Button,
     Input,
     Icon,
@@ -708,6 +709,74 @@ class Basic extends React.Component {
                     <p style={{margin: 0}}>Card content</p>
                     <p style={{margin: 0}}>Card content</p>
                 </Card>
+
+                <Divider/>
+
+                <h2>Alert</h2>
+
+                <h3>Simple</h3>
+
+                <Alert message="Success Text" type="success" /><br/>
+                <Alert message="Info Text" type="info" /><br/>
+                <Alert message="Warning Text" type="warning" /><br/>
+                <Alert message="Error Text" type="error" /><br/>
+
+                <h3>Title</h3>
+
+                <Alert
+                    message="Success Text"
+                    description="Success Description Success Description Success Description"
+                    type="success"
+                />
+                <br/>
+                <Alert
+                    message="Info Text"
+                    description="Info Description Info Description Info Description Info Description"
+                    type="info"
+                />
+                <br/>
+                <Alert
+                    message="Warning Text"
+                    description="Warning Description Warning Description Warning Description Warning Description"
+                    type="warning"
+                />
+                <br/>
+                <Alert
+                    message="Error Text"
+                    description="Error Description Error Description Error Description Error Description"
+                    type="error"
+                />
+
+                <h3>Icon</h3>
+
+                <Alert message="Success Tips" type="success" showIcon /><br/>
+                <Alert message="Informational Notes" type="info" showIcon /><br/>
+                <Alert message="Warning" type="warning" showIcon /><br/>
+                <Alert message="Error" type="error" showIcon /><br/>
+                <Alert
+                    message="Success Tips"
+                    description="Detailed description and advices about successful copywriting."
+                    type="success"
+                    showIcon
+                /><br/>
+                <Alert
+                    message="Informational Notes"
+                    description="Additional description and informations about copywriting."
+                    type="info"
+                    showIcon
+                /><br/>
+                <Alert
+                    message="Warning"
+                    description="This is a warning notice about copywriting."
+                    type="warning"
+                    showIcon
+                /><br/>
+                <Alert
+                    message="Error"
+                    description="This is an error message about copywriting."
+                    type="error"
+                    showIcon
+                />
 
             </div>
         );

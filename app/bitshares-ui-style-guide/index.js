@@ -23,11 +23,13 @@ import Popover from "./Popover";
 import Layout from "./Layout";
 import Icon from "./Icon";
 import Card from "./Card";
+import Alert from "./Alert";
 
 export {
     /* wrapped ANT components */
     BodyClassName,
     Button,
+    Alert,
     Input,
     Slider,
     Select,
