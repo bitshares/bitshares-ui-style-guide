@@ -90,7 +90,7 @@ You can find instruction about usage and manage of style-guide [there](https://g
 - [x] Alert
 - [x] Modal
 - [ ] Message
-- [ ] Notification
+- [x] Notification
 - [ ] Progress
 - [ ] Popconfirm
 - [ ] Spin

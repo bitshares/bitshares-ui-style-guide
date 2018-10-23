@@ -24,6 +24,7 @@ import Layout from "./Layout";
 import Icon from "./Icon";
 import Card from "./Card";
 import Alert from "./Alert";
+import Notification from "./Notification";
 
 export {
     /* wrapped ANT components */
@@ -47,6 +48,7 @@ export {
     Tabs,
     Popover,
     Card,
+    Notification,
     /* default ANT components */
     Row,
     Col,

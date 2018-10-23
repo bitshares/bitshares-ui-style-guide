@@ -27,6 +27,7 @@ import {
     Tabs,
     Popover,
     Card,
+    Notification,
 } from "bitshares-ui-style-guide";
 
 import PropTypes from "prop-types";
@@ -207,6 +208,26 @@ class Basic extends React.Component {
         this.onSliderChange = this.onSliderChange.bind(this);
         this.onTabChange = this.onTabChange.bind(this);
         this.handleBackToList = this.handleBackToList.bind(this);
+    }
+
+    showNotification(type) {
+
+        return () => {
+
+            if(!type) {
+                Notification.open({
+                    message: "Hello, world!",
+                    description: "This is the content of the notification. This is the content of the notification. This is the content of the notification.",
+                });
+                return true;
+            }
+
+            Notification[type]({
+                message: "Hello, world!",
+                description: "This is the content of the notification. This is the content of the notification. This is the content of the notification.",
+                duration: 600000
+            });
+        };
     }
 
     render() {
@@ -709,6 +730,16 @@ class Basic extends React.Component {
                     <p style={{margin: 0}}>Card content</p>
                     <p style={{margin: 0}}>Card content</p>
                 </Card>
+
+                <Divider/>
+
+                <h2>Notification</h2>
+
+                <Button style={{marginRight: "8px"}} onClick={this.showNotification("")}>Notify</Button>
+                <Button style={{marginRight: "8px"}} onClick={this.showNotification("success")}>Notify Success</Button>
+                <Button style={{marginRight: "8px"}} onClick={this.showNotification("info")}>Notify Info</Button>
+                <Button style={{marginRight: "8px"}} onClick={this.showNotification("warning")}>Notify Warning</Button>
+                <Button style={{marginRight: "8px"}} onClick={this.showNotification("error")}>Notify Error</Button>
 
                 <Divider/>
 

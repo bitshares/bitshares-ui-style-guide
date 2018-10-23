@@ -18291,3 +18291,6 @@ button.ant-switch.ant-switch-checked:after {
 .ant-alert .ant-alert-message {
   font-weight: 500;
 }
+.ant-notification-notice {
+  border: 1px solid #262626;
+}
