@@ -377,7 +377,7 @@
 //** Popover maximum width
 @popover-min-width: 177px;
 //** Popover arrow width
-@popover-arrow-width: 5px;
+@popover-arrow-width: 6px;
 //** Popover arrow color
 @popover-arrow-color: @popover-bg;
 //** Popover outer arrow width
@@ -386,10 +386,14 @@
 //** Popover distance with trigger
 @popover-distance: @popover-arrow-width + 4px;
 
-@popover-content-border-color: @accent-2;
+@popover-box-shadow-color: @accent-2;
 @popover-title-border-bottom-color: @accent-2;
-@popover-arrow-border-color: @accent-2;
-@popover-triangle-bg: @dark-6;
+
+@popover-content-inner-box-shadow: 0 0 0 1px @popover-box-shadow-color;
+@popover-placement-top-arrow-box-shadow: 1px 1px 0 0 @popover-box-shadow-color;
+@popover-placement-left-arrow-box-shadow: 1px -1px 0 0 @popover-box-shadow-color;
+@popover-placement-right-arrow-box-shadow: -1px 1px 0 0 @popover-box-shadow-color;
+@popover-placement-bottom-arrow-box-shadow: -1px -1px 0 0 @popover-box-shadow-color;
 
 // Modal
 // --

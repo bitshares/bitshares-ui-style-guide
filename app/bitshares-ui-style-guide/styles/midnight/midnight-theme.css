@@ -12309,22 +12309,22 @@ textarea.ant-pagination-options-quick-jumper input {
 .ant-popover-placement-top,
 .ant-popover-placement-topLeft,
 .ant-popover-placement-topRight {
-  padding-bottom: 9px;
+  padding-bottom: 10px;
 }
 .ant-popover-placement-right,
 .ant-popover-placement-rightTop,
 .ant-popover-placement-rightBottom {
-  padding-left: 9px;
+  padding-left: 10px;
 }
 .ant-popover-placement-bottom,
 .ant-popover-placement-bottomLeft,
 .ant-popover-placement-bottomRight {
-  padding-top: 9px;
+  padding-top: 10px;
 }
 .ant-popover-placement-left,
 .ant-popover-placement-leftTop,
 .ant-popover-placement-leftBottom {
-  padding-right: 9px;
+  padding-right: 10px;
 }
 .ant-popover-inner {
   background-color: #191A1F;
@@ -12369,8 +12369,8 @@ textarea.ant-pagination-options-quick-jumper input {
 }
 .ant-popover-arrow {
   background: #191A1F;
-  width: 7.07106781px;
-  height: 7.07106781px;
+  width: 8.48528137px;
+  height: 8.48528137px;
   transform: rotate(45deg);
   position: absolute;
   display: block;
@@ -18253,28 +18253,80 @@ button.ant-switch.ant-switch-checked:after {
   color: #656565 !important;
   background-color: transparent;
 }
-.ant-popover .ant-popover-content {
-  border: 1px solid #656565;
+.ant-popover.ant-popover-placement-top .ant-popover-content .ant-popover-arrow {
+  box-shadow: 1px 1px 0 0 #656565;
 }
-.ant-popover .ant-popover-content .ant-popover-title {
+.ant-popover.ant-popover-placement-top .ant-popover-content .ant-popover-inner {
+  box-shadow: 0 0 0 1px #656565;
+}
+.ant-popover.ant-popover-placement-topLeft .ant-popover-content .ant-popover-arrow {
+  box-shadow: 1px 1px 0 0 #656565;
+}
+.ant-popover.ant-popover-placement-topLeft .ant-popover-content .ant-popover-inner {
+  box-shadow: 0 0 0 1px #656565;
+}
+.ant-popover.ant-popover-placement-topRight .ant-popover-content .ant-popover-arrow {
+  box-shadow: 1px 1px 0 0 #656565;
+}
+.ant-popover.ant-popover-placement-topRight .ant-popover-content .ant-popover-inner {
+  box-shadow: 0 0 0 1px #656565;
+}
+.ant-popover.ant-popover-placement-left .ant-popover-content .ant-popover-arrow {
+  box-shadow: 1px -1px 0 0 #656565;
+}
+.ant-popover.ant-popover-placement-left .ant-popover-content .ant-popover-inner {
+  box-shadow: 0 0 0 1px #656565;
+}
+.ant-popover.ant-popover-placement-leftTop .ant-popover-content .ant-popover-arrow {
+  box-shadow: 1px -1px 0 0 #656565;
+}
+.ant-popover.ant-popover-placement-leftTop .ant-popover-content .ant-popover-inner {
+  box-shadow: 0 0 0 1px #656565;
+}
+.ant-popover.ant-popover-placement-leftBottom .ant-popover-content .ant-popover-arrow {
+  box-shadow: 1px -1px 0 0 #656565;
+}
+.ant-popover.ant-popover-placement-leftBottom .ant-popover-content .ant-popover-inner {
+  box-shadow: 0 0 0 1px #656565;
+}
+.ant-popover.ant-popover-placement-bottom .ant-popover-content .ant-popover-arrow {
+  box-shadow: -1px -1px 0 0 #656565;
+}
+.ant-popover.ant-popover-placement-bottom .ant-popover-content .ant-popover-inner {
+  box-shadow: 0 0 0 1px #656565;
+}
+.ant-popover.ant-popover-placement-bottomLeft .ant-popover-content .ant-popover-arrow {
+  box-shadow: -1px -1px 0 0 #656565;
+}
+.ant-popover.ant-popover-placement-bottomLeft .ant-popover-content .ant-popover-inner {
+  box-shadow: 0 0 0 1px #656565;
+}
+.ant-popover.ant-popover-placement-bottomRight .ant-popover-content .ant-popover-arrow {
+  box-shadow: -1px -1px 0 0 #656565;
+}
+.ant-popover.ant-popover-placement-bottomRight .ant-popover-content .ant-popover-inner {
+  box-shadow: 0 0 0 1px #656565;
+}
+.ant-popover.ant-popover-placement-right .ant-popover-content .ant-popover-arrow {
+  box-shadow: -1px 1px 0 0 #656565;
+}
+.ant-popover.ant-popover-placement-right .ant-popover-content .ant-popover-inner {
+  box-shadow: 0 0 0 1px #656565;
+}
+.ant-popover.ant-popover-placement-rightTop .ant-popover-content .ant-popover-arrow {
+  box-shadow: -1px 1px 0 0 #656565;
+}
+.ant-popover.ant-popover-placement-rightTop .ant-popover-content .ant-popover-inner {
+  box-shadow: 0 0 0 1px #656565;
+}
+.ant-popover.ant-popover-placement-rightBottom .ant-popover-content .ant-popover-arrow {
+  box-shadow: -1px 1px 0 0 #656565;
+}
+.ant-popover.ant-popover-placement-rightBottom .ant-popover-content .ant-popover-inner {
+  box-shadow: 0 0 0 1px #656565;
+}
+.ant-popover .ant-popover-title {
   border-bottom: 1px solid #656565;
-}
-.ant-popover .ant-popover-content .ant-popover-arrow {
-  border: 1px solid #656565;
-  bottom: 7px !important;
-  margin-top: -10px !important;
-}
-.ant-popover .ant-popover-content .ant-popover-arrow:after {
-  content: "";
-  display: block;
-  background: #191A1F;
-  width: 48.071068px;
-  height: 7.07106781px;
-  transform: rotate(135deg);
-  position: absolute;
-  border: solid transparent;
-  margin-top: -11px;
-  margin-left: -17px;
 }
 .ant-card {
   background-color: transparent;

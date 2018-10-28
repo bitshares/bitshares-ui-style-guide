@@ -462,32 +462,48 @@ button.ant-switch {
 
 .ant-popover {
 
-  .ant-popover-content {
-    border: 1px solid @popover-content-border-color;
-
-    .ant-popover-title {
-      border-bottom: 1px solid @popover-title-border-bottom-color;
-    }
-
-    .ant-popover-arrow {
-      border: 1px solid @popover-arrow-border-color;
-      bottom: 7px !important;
-      margin-top: -10px !important;
-      &:after {
-        content: "";
-        display: block;
-        background: @popover-triangle-bg;
-        width: 48.071068px;
-        height: 7.07106781px;
-        transform: rotate(135deg);
-        position: absolute;
-        border: solid transparent;
-        margin-top: -11px;
-        margin-left: -17px;
+  .style-guide-popover-mixin(@box-shadow, @placement) {
+    &.ant-popover-placement-@{placement} {
+      .ant-popover-content {
+        .ant-popover-arrow {
+          box-shadow: @box-shadow;
+        }
+        .ant-popover-inner {
+          box-shadow: @popover-content-inner-box-shadow;
+        }
       }
     }
-
   }
+
+  // placements
+
+  // top
+  .style-guide-popover-mixin(@popover-placement-top-arrow-box-shadow, top);
+  .style-guide-popover-mixin(@popover-placement-top-arrow-box-shadow, topLeft);
+  .style-guide-popover-mixin(@popover-placement-top-arrow-box-shadow, topRight);
+
+  // left
+  .style-guide-popover-mixin(@popover-placement-left-arrow-box-shadow, left);
+  .style-guide-popover-mixin(@popover-placement-left-arrow-box-shadow, leftTop);
+  .style-guide-popover-mixin(@popover-placement-left-arrow-box-shadow, leftBottom);
+
+
+  // bottom
+  .style-guide-popover-mixin(@popover-placement-bottom-arrow-box-shadow, bottom);
+  .style-guide-popover-mixin(@popover-placement-bottom-arrow-box-shadow, bottomLeft);
+  .style-guide-popover-mixin(@popover-placement-bottom-arrow-box-shadow, bottomRight);
+
+
+  // right
+  .style-guide-popover-mixin(@popover-placement-right-arrow-box-shadow, right);
+  .style-guide-popover-mixin(@popover-placement-right-arrow-box-shadow, rightTop);
+  .style-guide-popover-mixin(@popover-placement-right-arrow-box-shadow, rightBottom);
+
+
+  .ant-popover-title {
+    border-bottom: 1px solid @popover-title-border-bottom-color;
+  }
+
 }
 
 // ant-card

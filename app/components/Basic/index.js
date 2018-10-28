@@ -162,6 +162,10 @@ const sliderMarks = {
 
 /* * * * * * * POPOVER CONTENT * * * * */
 
+const popoverDemoButtonWidth = 110;
+
+const popoverTitle = <span>Title</span>;
+
 const popoverContent = (
     <div>
         <div>Content</div>
@@ -679,6 +683,55 @@ class Basic extends React.Component {
                 <Popover content={popoverContent}>
                     <Button type="primary">Hover me</Button>
                 </Popover>
+
+                <h3>Popover placement</h3>
+                <div className="helper-popover-demo">
+
+                    <div style={{ marginLeft: popoverDemoButtonWidth, whiteSpace: "nowrap" }}>
+                        <Popover placement="topLeft" title={popoverTitle} content={popoverContent} trigger="click">
+                            <Button>TL</Button>
+                        </Popover>
+                        <Popover placement="top" title={popoverTitle} content={popoverContent} trigger="click">
+                            <Button>Top</Button>
+                        </Popover>
+                        <Popover placement="topRight" title={popoverTitle} content={popoverContent} trigger="click">
+                            <Button>TR</Button>
+                        </Popover>
+                    </div>
+                    <div style={{ width: popoverDemoButtonWidth, float:"left" }}>
+                        <Popover placement="leftTop" title={popoverTitle} content={popoverContent} trigger="click">
+                            <Button>LT</Button>
+                        </Popover>
+                        <Popover placement="left" title={popoverTitle} content={popoverContent} trigger="click">
+                            <Button>Left</Button>
+                        </Popover>
+                        <Popover placement="leftBottom" title={popoverTitle} content={popoverContent} trigger="click">
+                            <Button>LB</Button>
+                        </Popover>
+                    </div>
+                    <div style={{ width: popoverDemoButtonWidth, marginLeft: (popoverDemoButtonWidth * 4) }}>
+                        <Popover placement="rightTop" title={popoverTitle} content={popoverContent} trigger="click">
+                            <Button>RT</Button>
+                        </Popover>
+                        <Popover placement="right" title={popoverTitle} content={popoverContent} trigger="click">
+                            <Button>Right</Button>
+                        </Popover>
+                        <Popover placement="rightBottom" title={popoverTitle} content={popoverContent} trigger="click">
+                            <Button>RB</Button>
+                        </Popover>
+                    </div>
+                    <div style={{ marginLeft: popoverDemoButtonWidth, clear: "both", whiteSpace: "nowrap" }}>
+                        <Popover placement="bottomLeft" title={popoverTitle} content={popoverContent} trigger="click">
+                            <Button>BL</Button>
+                        </Popover>
+                        <Popover placement="bottom" title={popoverTitle} content={popoverContent} trigger="click">
+                            <Button>Bottom</Button>
+                        </Popover>
+                        <Popover placement="bottomRight" title={popoverTitle} content={popoverContent} trigger="click">
+                            <Button>BR</Button>
+                        </Popover>
+                    </div>
+                </div>
 
                 <Divider/>
 
