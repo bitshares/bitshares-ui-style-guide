@@ -28,6 +28,7 @@ import {
     Popover,
     Card,
     Notification,
+    Tooltip,
 } from "bitshares-ui-style-guide";
 
 import PropTypes from "prop-types";
@@ -172,6 +173,12 @@ const popoverContent = (
         <div>Content</div>
     </div>
 );
+
+/* * * * * * * TOOLTIP CONTENT * * * * */
+
+const tooltipDemoButtonWidth = 110;
+
+const tooltipTitle = <span>Title</span>;
 
 /* * * * * * * POPOVER CONTENT END * * * * */
 
@@ -731,6 +738,60 @@ class Basic extends React.Component {
                             <Button>BR</Button>
                         </Popover>
                     </div>
+                </div>
+
+                <Divider/>
+
+                <h2>Tooltip</h2>
+
+                <h3>Tooltip placement</h3>
+                <div className="helper-popover-demo">
+
+                    <div style={{ marginLeft: tooltipDemoButtonWidth, whiteSpace: "nowrap" }}>
+                        <Tooltip placement="topLeft" title={tooltipTitle}>
+                            <Button>TL</Button>
+                        </Tooltip>
+                        <Tooltip placement="top" title={tooltipTitle}>
+                            <Button>Top</Button>
+                        </Tooltip>
+                        <Tooltip placement="topRight" title={tooltipTitle}>
+                            <Button>TR</Button>
+                        </Tooltip>
+                    </div>
+                    <div style={{ width: tooltipDemoButtonWidth, float: "left" }}>
+                        <Tooltip placement="leftTop" title={tooltipTitle}>
+                            <Button>LT</Button>
+                        </Tooltip>
+                        <Tooltip placement="left" title={tooltipTitle}>
+                            <Button>Left</Button>
+                        </Tooltip>
+                        <Tooltip placement="leftBottom" title={tooltipTitle}>
+                            <Button>LB</Button>
+                        </Tooltip>
+                    </div>
+                    <div style={{ width: tooltipDemoButtonWidth, marginLeft: (tooltipDemoButtonWidth * 4) }}>
+                        <Tooltip placement="rightTop" title={tooltipTitle}>
+                            <Button>RT</Button>
+                        </Tooltip>
+                        <Tooltip placement="right" title={tooltipTitle}>
+                            <Button>Right</Button>
+                        </Tooltip>
+                        <Tooltip placement="rightBottom" title={tooltipTitle}>
+                            <Button>RB</Button>
+                        </Tooltip>
+                    </div>
+                    <div style={{ marginLeft: tooltipDemoButtonWidth, clear: "both", whiteSpace: "nowrap" }}>
+                        <Tooltip placement="bottomLeft" title={tooltipTitle}>
+                            <Button>BL</Button>
+                        </Tooltip>
+                        <Tooltip placement="bottom" title={tooltipTitle}>
+                            <Button>Bottom</Button>
+                        </Tooltip>
+                        <Tooltip placement="bottomRight" title={tooltipTitle}>
+                            <Button>BR</Button>
+                        </Tooltip>
+                    </div>
+                    
                 </div>
 
                 <Divider/>

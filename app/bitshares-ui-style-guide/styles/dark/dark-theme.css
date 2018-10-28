@@ -16337,7 +16337,7 @@ textarea.ant-time-picker-input {
   color: #fff;
   text-align: left;
   text-decoration: none;
-  background-color: rgba(0, 0, 0, 0.75);
+  background-color: #656565;
   border-radius: 0px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
   min-height: 32px;
@@ -16355,7 +16355,7 @@ textarea.ant-time-picker-input {
 .ant-tooltip-placement-topRight .ant-tooltip-arrow {
   bottom: 3px;
   border-width: 5px 5px 0;
-  border-top-color: rgba(0, 0, 0, 0.75);
+  border-top-color: #656565;
 }
 .ant-tooltip-placement-top .ant-tooltip-arrow {
   left: 50%;
@@ -16372,7 +16372,7 @@ textarea.ant-time-picker-input {
 .ant-tooltip-placement-rightBottom .ant-tooltip-arrow {
   left: 3px;
   border-width: 5px 5px 5px 0;
-  border-right-color: rgba(0, 0, 0, 0.75);
+  border-right-color: #656565;
 }
 .ant-tooltip-placement-right .ant-tooltip-arrow {
   top: 50%;
@@ -16389,7 +16389,7 @@ textarea.ant-time-picker-input {
 .ant-tooltip-placement-leftBottom .ant-tooltip-arrow {
   right: 3px;
   border-width: 5px 0 5px 5px;
-  border-left-color: rgba(0, 0, 0, 0.75);
+  border-left-color: #656565;
 }
 .ant-tooltip-placement-left .ant-tooltip-arrow {
   top: 50%;
@@ -16406,7 +16406,7 @@ textarea.ant-time-picker-input {
 .ant-tooltip-placement-bottomRight .ant-tooltip-arrow {
   top: 3px;
   border-width: 0 5px 5px;
-  border-bottom-color: rgba(0, 0, 0, 0.75);
+  border-bottom-color: #656565;
 }
 .ant-tooltip-placement-bottom .ant-tooltip-arrow {
   left: 50%;

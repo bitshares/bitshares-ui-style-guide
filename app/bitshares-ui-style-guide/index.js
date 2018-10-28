@@ -25,6 +25,7 @@ import Icon from "./Icon";
 import Card from "./Card";
 import Alert from "./Alert";
 import Notification from "./Notification";
+import Tooltip from "./Tooltip";
 
 export {
     /* wrapped ANT components */
@@ -49,6 +50,7 @@ export {
     Popover,
     Card,
     Notification,
+    Tooltip,
     /* default ANT components */
     Row,
     Col,
