@@ -59,3 +59,7 @@ npm-debug.log
 # coverage
 
 /coverage
+
+# github pages config
+
+docs/CNAME
