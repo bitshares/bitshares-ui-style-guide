@@ -15129,7 +15129,7 @@ tr.ant-table-expanded-row:hover {
   border: 1px solid #33343c;
   border-bottom: 0;
   border-radius: 0px 0px 0 0;
-  background: #38393F;
+  background: #29292b;
   margin-right: 2px;
   padding: 0 16px;
   transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
@@ -18113,6 +18113,18 @@ button.ant-switch.ant-switch-checked:after {
 }
 .ant-tabs div.ant-tabs-ink-bar {
   height: 4px;
+}
+.ant-tabs-card .ant-tabs-tab {
+  background-color: #2C2E37 !important;
+  border-color: #414245 !important;
+}
+.ant-tabs-card .ant-tabs-tab-active {
+  border-color: #00A9E0 !important;
+  background: #00A9E0 !important;
+  color: #fff !important;
+}
+.ant-tabs-card .ant-tabs-bar {
+  border-bottom-color: #00A9E0 !important;
 }
 .ant-breadcrumb-link:focus,
 .ant-breadcrumb a:focus {

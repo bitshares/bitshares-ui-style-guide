@@ -561,6 +561,16 @@ class Basic extends React.Component {
                     <Tabs.TabPane tab="Tab #3" key="tab3">Content of Tab Pane 3</Tabs.TabPane>
                 </Tabs>
 
+                <br/>
+                <br/>
+                <br/>
+
+                <Tabs type="card" defaultActiveKey={"tab1"} activeKey={this.state.activeTabKey} onChange={this.onTabChange}>
+                    <Tabs.TabPane tab="Tab #1" key="tab1">Content of Tab Pane 1</Tabs.TabPane>
+                    <Tabs.TabPane tab="Tab #2" key="tab2">Content of Tab Pane 2</Tabs.TabPane>
+                    <Tabs.TabPane tab="Tab #3" key="tab3">Content of Tab Pane 3</Tabs.TabPane>
+                </Tabs>
+
                 <Divider/>
 
                 <h2 className="helper">Slider</h2>

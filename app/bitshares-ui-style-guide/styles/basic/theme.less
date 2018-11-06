@@ -255,6 +255,21 @@ button.ant-switch {
   div.ant-tabs-ink-bar {
     height: @tabs-ink-bar-height;
   }
+  &-card {
+    .ant-tabs-tab {
+      background-color: @tabs-card-tab-bg !important;
+      border-color: @tabs-card-split-border-color !important;
+      &-active {
+        border-color: @tabs-card-tab-active-border-color !important;
+        background: @tabs-card-tab-active-bg !important;
+        color: @tabs-card-tab-active-color !important;
+      }
+    }
+    .ant-tabs-bar {
+      border-bottom-color: @tabs-card-bar-border-color !important;
+    }
+  }
+
 }
 
 // Breadcrumb

@@ -18115,6 +18115,18 @@ button.ant-switch.ant-switch-checked:after {
 .ant-tabs div.ant-tabs-ink-bar {
   height: 4px;
 }
+.ant-tabs-card .ant-tabs-tab {
+  background-color: #EEEEEE !important;
+  border-color: #CCCCCC !important;
+}
+.ant-tabs-card .ant-tabs-tab-active {
+  border-color: #999999 !important;
+  background: #fff !important;
+  color: #00A9E0 !important;
+}
+.ant-tabs-card .ant-tabs-bar {
+  border-bottom-color: #999999 !important;
+}
 .ant-breadcrumb-link:focus,
 .ant-breadcrumb a:focus {
   text-decoration: none;
