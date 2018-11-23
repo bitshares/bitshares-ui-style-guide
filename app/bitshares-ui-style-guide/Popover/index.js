@@ -1,14 +1,3 @@
-import React from "react";
-import {Popover as AntPopover} from "antd";
-
-class Popover extends React.Component {
-
-    render() {
-        return (
-            <AntPopover {...this.props}/>
-        );
-    }
-
-}
+import {Popover} from "antd";
 
 export default Popover;
