@@ -406,6 +406,25 @@ class Basic extends React.Component {
                         <Input type="text" defaultValue="Entered Text"/>
                         <p>Default (Filled)</p>
                     </Col>
+                    <Col span={6} offset={1}>
+                        <Input type="text" defaultValue="Entered Text" disabled={true}/>
+                        <p>Disabled</p>
+                    </Col>
+
+                </Row>
+
+                <h3 className="helper">text area</h3>
+
+                <Row>
+                    <Col span={6}>
+                        <Input.TextArea rows={5} type="text" placeholder="Placeholder"/>
+                        <p>Textarea</p>
+                    </Col>
+
+                    <Col span={6} offset={1}>
+                        <Input.TextArea rows={5} type="text" placeholder="Placeholder" disabled={true}/>
+                        <p>Textarea Disabled</p>
+                    </Col>
 
                 </Row>
 
@@ -453,6 +472,14 @@ class Basic extends React.Component {
                     </Col>
                     <Col span={6} offset={1}>
                         <Select defaultValue="Option #1" placeholder="Select currency" style={{width: "100%"}}>
+                            <Select.Option value={"Option #1"}>Option #1</Select.Option>
+                            <Select.Option value={"Option #2"}>Option #2</Select.Option>
+                            <Select.Option disabled value={"Option #3"}>Option #3</Select.Option>
+                            <Select.Option value={"Option #4"}>Option #4</Select.Option>
+                        </Select>
+                    </Col>
+                    <Col span={6} offset={1}>
+                        <Select disabled={true} defaultValue="Option #1" placeholder="Select currency" style={{width: "100%"}}>
                             <Select.Option value={"Option #1"}>Option #1</Select.Option>
                             <Select.Option value={"Option #2"}>Option #2</Select.Option>
                             <Select.Option disabled value={"Option #3"}>Option #3</Select.Option>
@@ -511,6 +538,7 @@ class Basic extends React.Component {
                             <Checkbox checked>Bitshares</Checkbox>
                             <Checkbox>Bitcoin</Checkbox>
                             <Checkbox>Bitcoin Cash</Checkbox>
+                            <Checkbox disabled={true}>Disabled</Checkbox>
                         </Form.Item>
                     </Col>
                     <Col span={11} offset={2}>
@@ -519,6 +547,7 @@ class Basic extends React.Component {
                                 <Radio value={"bitshares"}>Bitshares</Radio>
                                 <Radio value={"bitcoin"}>Bitcoin</Radio>
                                 <Radio value={"bitcoin cash"}>Bitcoin Cash</Radio>
+                                <Radio value={"bitcoin cash"} disabled={true}>Disabled</Radio>
                             </Radio.Group>
                         </Form.Item>
                     </Col>
@@ -532,9 +561,19 @@ class Basic extends React.Component {
                             <Switch defaultChecked/>
                         </Form.Item>
                     </Col>
-                    <Col span={11} offset={1}>
+                    <Col span={2} offset={1}>
                         <Form.Item label="Switch Off">
                             <Switch/>
+                        </Form.Item>
+                    </Col>
+                    <Col span={2} offset={1}>
+                        <Form.Item label="Switch On Disabled">
+                            <Switch defaultChecked disabled={true}/>
+                        </Form.Item>
+                    </Col>
+                    <Col span={2} offset={1}>
+                        <Form.Item label="Switch Off Disabled">
+                            <Switch disabled={true}/>
                         </Form.Item>
                     </Col>
                 </Row>
@@ -801,7 +840,7 @@ class Basic extends React.Component {
                             <Button>BR</Button>
                         </Tooltip>
                     </div>
-                    
+
                 </div>
 
                 <Divider/>
