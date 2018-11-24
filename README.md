@@ -54,7 +54,7 @@ You can find instruction about usage and manage of style-guide [there](https://g
 - [ ] Cascader
 - [x] Checkbox
 - [ ] DatePicker
-- [ ] Form
+- [x] Form
 - [x] Input
 - [x] InputNumber
 - [ ] Mention
@@ -91,7 +91,7 @@ You can find instruction about usage and manage of style-guide [there](https://g
 - [x] Modal
 - [ ] Message
 - [x] Notification
-- [ ] Progress
+- [x] Progress
 - [ ] Popconfirm
 - [ ] Spin
 
