@@ -29,6 +29,7 @@ import {
     Card,
     Notification,
     Tooltip,
+    Progress,
 } from "bitshares-ui-style-guide";
 
 import PropTypes from "prop-types";
@@ -589,6 +590,24 @@ class Basic extends React.Component {
                 <h3 className="helper">table without pagination</h3>
 
                 <Table columns={tableColumns} dataSource={tableData} pagination={false}/>
+
+                <Divider/>
+
+                <h2 className="helper">Progress</h2>
+
+                <h3 className="helper">Progress Bar</h3>
+
+                <Progress percent={30} />
+                <Progress percent={50} status="active" />
+                <Progress percent={70} status="exception" />
+                <Progress percent={100} />
+                <Progress percent={50} showInfo={false} />
+
+                <h3 className="helper">Progress Circle</h3>
+
+                <Progress type="circle" percent={75} format={percent => `${percent} Days`} />
+                &nbsp;
+                <Progress type="circle" percent={100} format={() => "Done"} />
 
                 <Divider/>
 

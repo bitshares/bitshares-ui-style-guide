@@ -26,6 +26,7 @@ import Card from "./Card";
 import Alert from "./Alert";
 import Notification from "./Notification";
 import Tooltip from "./Tooltip";
+import Progress from "./Progress";
 
 export {
     /* wrapped ANT components */
@@ -51,6 +52,7 @@ export {
     Card,
     Notification,
     Tooltip,
+    Progress,
     /* default ANT components */
     Row,
     Col,
