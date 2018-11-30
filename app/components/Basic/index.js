@@ -30,6 +30,7 @@ import {
     Notification,
     Tooltip,
     Progress,
+    Drawer
 } from "bitshares-ui-style-guide";
 
 import PropTypes from "prop-types";
@@ -193,8 +194,21 @@ class Basic extends React.Component {
 
     state = {
         sliderValue : 1,
-        activeTabKey: "tab1"
+        activeTabKey: "tab1",
+        isDrawerVisible: false,
     };
+
+    handleDrawerOpen() {
+        this.setState({
+            isDrawerVisible: true
+        });
+    }
+
+    handleDrawerClose() {
+        this.setState({
+            isDrawerVisible: false
+        });
+    }
 
     onSliderChange(value) {
         this.setState({
@@ -220,6 +234,8 @@ class Basic extends React.Component {
         this.onSliderChange = this.onSliderChange.bind(this);
         this.onTabChange = this.onTabChange.bind(this);
         this.handleBackToList = this.handleBackToList.bind(this);
+        this.handleDrawerOpen = this.handleDrawerOpen.bind(this);
+        this.handleDrawerClose= this.handleDrawerClose.bind(this);
     }
 
     showNotification(type) {
@@ -680,6 +696,17 @@ class Basic extends React.Component {
                 <iframe src={`#/modal/${this.props.theme}`} frameBorder={0} width={"100%"} height={"500px"} style={{border: "2px solid #33343a"}}/>
 
                 <Divider/>
+
+                <h2 className="helper">Drawer</h2>
+
+                <Button onClick={this.handleDrawerOpen}>Open</Button>
+
+                <Drawer visible={this.state.isDrawerVisible} title="Basic Drawer" placement="right" onClose={this.handleDrawerClose}>
+                    The drawer content is there
+                </Drawer>
+
+                <Divider/>
+
 
                 <h2>Collapse</h2>
 

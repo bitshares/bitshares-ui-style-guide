@@ -27,6 +27,7 @@ import Alert from "./Alert";
 import Notification from "./Notification";
 import Tooltip from "./Tooltip";
 import Progress from "./Progress";
+import Drawer from "./Drawer";
 
 export {
     /* wrapped ANT components */
@@ -53,6 +54,7 @@ export {
     Notification,
     Tooltip,
     Progress,
+    Drawer,
     /* default ANT components */
     Row,
     Col,
