@@ -34,8 +34,8 @@ To start to support new components please follow the next steps:
 
 Configs for all 3 themes are placed inside these files:
 - `app/bitshares-ui-style-guide/styles/dark/dark-theme.less`
-- `app/bitshares-ui-style-guide/styles/dark/light-theme.less`
-- `app/bitshares-ui-style-guide/styles/dark/midnight-theme.less`
+- `app/bitshares-ui-style-guide/styles/light/light-theme.less`
+- `app/bitshares-ui-style-guide/styles/midnight/midnight-theme.less`
 
 Custom css rules placed there:
 - `app/bitshares-ui-style-guide/styles/basic/theme.less`
