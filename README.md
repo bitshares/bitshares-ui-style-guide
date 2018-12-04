@@ -46,7 +46,7 @@ You can find instruction about usage and manage of style-guide [there](https://g
 - [ ] Dropdown
 - [ ] Menu
 - [ ] Pagination
-- [ ] Steps
+- [x] Steps
 
 #### Data Entry
 

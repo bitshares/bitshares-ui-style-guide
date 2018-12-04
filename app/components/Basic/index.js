@@ -30,6 +30,7 @@ import {
     Notification,
     Tooltip,
     Progress,
+    Steps,
     Drawer
 } from "bitshares-ui-style-guide";
 
@@ -888,6 +889,18 @@ class Basic extends React.Component {
                     </div>
 
                 </div>
+
+                <Divider/>
+
+                <h2>Steps</h2>
+
+                <h3>Basic</h3>
+
+                <Steps current={1}>
+                    <Steps.Step title="Finished" description="This is a description." />
+                    <Steps.Step title="In Progress" description="This is a description." />
+                    <Steps.Step title="Waiting" description="This is a description." />
+                </Steps>
 
                 <Divider/>
 
