@@ -128,6 +128,14 @@ const tableColumns = [{
     render   : (text) => text
 }];
 
+const inputAddonSelect = (
+    <Select defaultValue="1">
+        <Select.Option key="1">@gmail.com</Select.Option>
+        <Select.Option key="2">@yahoo.com</Select.Option>
+        <Select.Option key="3">@example.com</Select.Option>
+    </Select>
+);
+
 const tableData = [
     {
         key   : "open.BTC:bitUSD",
@@ -427,6 +435,21 @@ class Basic extends React.Component {
                     <Col span={6} offset={1}>
                         <Input type="text" defaultValue="Entered Text" disabled={true}/>
                         <p>Disabled</p>
+                    </Col>
+
+                </Row>
+
+                <h3 className="helper">Addon Before & Addon After</h3>
+
+                <Row>
+                    <Col span={9}>
+                        <Input type="text" placeholder="Email" addonAfter={"@gmail.com"} addonBefore={"Email:"}/>
+                        <p>Text AddonAfter</p>
+                    </Col>
+
+                    <Col span={9} offset={1}>
+                        <Input type="text" placeholder="Email" addonAfter={inputAddonSelect}/>
+                        <p>Select AddonAfter</p>
                     </Col>
 
                 </Row>
