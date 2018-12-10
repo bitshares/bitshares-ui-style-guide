@@ -1201,32 +1201,32 @@ mark {
   display: none;
 }
 .ant-alert-success {
-  border: 1px solid #38b549;
-  background-color: #38b549;
+  border: 1px solid #bbda98;
+  background-color: #e0ffd6;
 }
 .ant-alert-success .ant-alert-icon {
-  color: #fff;
+  color: #53a128;
 }
 .ant-alert-info {
-  border: 1px solid #00a8e0;
-  background-color: #00a8e0;
+  border: 1px solid #bdccef;
+  background-color: #eaeffa;
 }
 .ant-alert-info .ant-alert-icon {
-  color: #fff;
+  color: #92b9df;
 }
 .ant-alert-warning {
-  border: 1px solid #dec612;
-  background-color: #dec612;
+  border: 1px solid #fcebaf;
+  background-color: #fff9e5;
 }
 .ant-alert-warning .ant-alert-icon {
-  color: #fff;
+  color: #fe8c00;
 }
 .ant-alert-error {
-  border: 1px solid #e6001f;
-  background-color: #e6001f;
+  border: 1px solid #ffaba0;
+  background-color: #faeef0;
 }
 .ant-alert-error .ant-alert-icon {
-  color: #fff;
+  color: #d0021c;
 }
 .ant-alert-close-icon {
   font-size: 12px;
@@ -1252,7 +1252,7 @@ mark {
   padding: 15px 15px 15px 64px;
   position: relative;
   border-radius: 0px;
-  color: #fff;
+  color: #2C2E37;
   line-height: 1.5;
 }
 .ant-alert-with-description.ant-alert-no-icon {
@@ -1273,7 +1273,7 @@ mark {
 }
 .ant-alert-with-description .ant-alert-message {
   font-size: 16px;
-  color: #fff;
+  color: #2C2E37;
   display: block;
   margin-bottom: 4px;
 }
@@ -18502,6 +18502,7 @@ button.ant-switch.ant-switch-checked:after {
   border-color: #191A1F;
 }
 .ant-alert .ant-alert-message {
+  color: #2C2E37;
   font-weight: 500;
 }
 .ant-notification-notice {
