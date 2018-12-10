@@ -18346,7 +18346,16 @@ button.ant-switch.ant-switch-checked:after {
 .ant-select-dropdown-menu-item {
   background-color: #fff;
 }
+.ant-select-dropdown-menu-item:hover {
+  color: #00A9E0;
+  background-color: #e6fdff;
+}
 .ant-select-dropdown-menu-item-selected {
+  color: #00A9E0;
+  background-color: #e6fdff;
+}
+.ant-select-dropdown-menu-item-selected:hover {
+  color: #00A9E0;
   background-color: #e6fdff;
 }
 .ant-select-dropdown-menu {

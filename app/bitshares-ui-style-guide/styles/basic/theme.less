@@ -382,9 +382,19 @@ button.ant-switch {
 
   &-dropdown-menu-item {
     background-color: @select-background-color;
+
+    &:hover {
+      color: @select-item-hover-color;
+      background-color: @select-item-hover-background-color;
+    }
   }
   &-dropdown-menu-item-selected {
+    color: @select-item-selected-color;
     background-color: @select-item-selected-background-color;
+    &:hover {
+      color: @select-item-selected-hover-color;
+      background-color: @select-item-selected-hover-background-color;
+    }
   }
   &-dropdown-menu {
     border: @select-dropdown-menu-border-width @select-dropdown-menu-border-style @select-dropdown-menu-border-color;

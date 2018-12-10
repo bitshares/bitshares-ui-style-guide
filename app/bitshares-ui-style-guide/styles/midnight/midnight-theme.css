@@ -18345,8 +18345,17 @@ button.ant-switch.ant-switch-checked:after {
 .ant-select-dropdown-menu-item {
   background-color: #121212;
 }
+.ant-select-dropdown-menu-item:hover {
+  color: #00A9E0;
+  background-color: #121212;
+}
 .ant-select-dropdown-menu-item-selected {
-  background-color: #38393F;
+  color: #00A9E0;
+  background-color: #121212;
+}
+.ant-select-dropdown-menu-item-selected:hover {
+  color: #00A9E0;
+  background-color: #121212;
 }
 .ant-select-dropdown-menu {
   border: 1px solid #656565;
