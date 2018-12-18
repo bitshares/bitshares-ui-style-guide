@@ -245,6 +245,7 @@ class Basic extends React.Component {
         this.handleBackToList = this.handleBackToList.bind(this);
         this.handleDrawerOpen = this.handleDrawerOpen.bind(this);
         this.handleDrawerClose= this.handleDrawerClose.bind(this);
+        this.mobileTooltipOnInput = React.createRef();
     }
 
     showNotification(type) {
@@ -911,6 +912,28 @@ class Basic extends React.Component {
                         </Tooltip>
                     </div>
 
+                </div>
+
+                <h2>Mobile tooltips</h2>
+                <div className="helper-popover-demo-mobile">
+
+                <Row>
+                    <Col span={24}>
+                        <Tooltip placement="leftTop" title="This is an extra long tooltip title" withQuestionIcon={true}>
+                          <Input type="text" placeholder="Some input"/>
+                        </Tooltip>
+                        <p>Tooltip with question icon</p>
+                    </Col>
+                </Row>
+
+                <Row>
+                    <Col span={24}>
+                        <Tooltip placement="leftTop" title="This is an extra long tooltip title">
+                          <Input type="text" placeholder="Some input"/>
+                        </Tooltip>
+                        <p>Tooltip with default behavior</p>
+                    </Col>
+                </Row>
                 </div>
 
                 <Divider/>

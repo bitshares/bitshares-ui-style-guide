@@ -63,3 +63,10 @@ npm-debug.log
 # github pages config
 
 docs/CNAME
+
+# vim
+*.sw*
+.*.sw*
+
+# npm junk
+package-lock.json
