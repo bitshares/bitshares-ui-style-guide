@@ -919,19 +919,10 @@ class Basic extends React.Component {
 
                 <Row>
                     <Col span={24}>
-                        <Tooltip placement="leftTop" title="This is an extra long tooltip title" withQuestionIcon={true}>
-                          <Input type="text" placeholder="Some input"/>
-                        </Tooltip>
-                        <p>Tooltip with question icon</p>
-                    </Col>
-                </Row>
-
-                <Row>
-                    <Col span={24}>
                         <Tooltip placement="leftTop" title="This is an extra long tooltip title">
                           <Input type="text" placeholder="Some input"/>
                         </Tooltip>
-                        <p>Tooltip with default behavior</p>
+                        <p>Tooltip will require click to open on mobile</p>
                     </Col>
                 </Row>
                 </div>

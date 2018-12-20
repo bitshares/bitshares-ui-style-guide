@@ -22,7 +22,7 @@ class BitsharesTooltip extends React.Component {
 
   render(){
     let { props, state } = this;
-    let { withQuestionIcon } = props;
+    var { wrapperStyles, iconStyles } = props;
     let { isMobile } = state;
     let extraProps = {};
 
@@ -31,14 +31,25 @@ class BitsharesTooltip extends React.Component {
       extraProps.placement = "topLeft";
     }
 
-    return withQuestionIcon ? <div style={{position: "relative"}}>
-      <div style={{position: "absolute", zIndex: "1", right: "5px", top: "5px"}}>
+    wrapperStyles = Object.assign({
+      position: "absolute",
+      zIndex: "1",
+      right: "5px",
+      top: "5px"
+    }, wrapperStyles || {});
+
+    iconStyles = Object.assign({
+      fontSize: "1.5em"
+    }, iconStyles || {});
+
+    return <div style={{position: "relative"}}>
+      <div style={wrapperStyles}>
         <Tooltip {...props} {...extraProps}>
-          <Icon type="question-circle" theme="outlined" style={{fontSize: "1.5em"}}/>
+          <Icon type="question-circle" theme="outlined" style={iconStyles}/>
         </Tooltip>
       </div>
       {this.props.children}
-    </div> : <Tooltip {...props} {...extraProps} />
+    </div>
   }
 }
 
