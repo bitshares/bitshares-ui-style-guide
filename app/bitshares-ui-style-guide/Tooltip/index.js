@@ -1,7 +1,7 @@
 import {Tooltip, Icon} from "antd";
 import React from "react";
 
-class BitsharesTooltip extends React.Component {
+class CustomTooltip extends React.Component {
   state = {
     isMobile: false
   }
@@ -22,7 +22,7 @@ class BitsharesTooltip extends React.Component {
 
   render(){
     let { props, state } = this;
-    var { wrapperStyles, iconStyles } = props;
+    let { withQuestionIcon } = props;
     let { isMobile } = state;
     let extraProps = {};
 
@@ -31,30 +31,19 @@ class BitsharesTooltip extends React.Component {
       extraProps.placement = "topLeft";
     }
 
-    wrapperStyles = Object.assign({
-      position: "absolute",
-      zIndex: "1",
-      right: "5px",
-      top: "5px"
-    }, wrapperStyles || {});
-
-    iconStyles = Object.assign({
-      fontSize: "1.5em"
-    }, iconStyles || {});
-
-    return <div style={{position: "relative"}}>
-      <div style={wrapperStyles}>
+    return withQuestionIcon ? <div style={{position: "relative"}}>
+      <div style={{position: "absolute", zIndex: "1", right: "5px", top: "5px"}}>
         <Tooltip {...props} {...extraProps}>
-          <Icon type="question-circle" theme="outlined" style={iconStyles}/>
+          <Icon type="question-circle" theme="outlined" style={{fontSize: "1.5em"}}/>
         </Tooltip>
       </div>
       {this.props.children}
-    </div>
+    </div> : <Tooltip {...props} {...extraProps} />
   }
 }
 
-BitsharesTooltip.defaultProps = {
+CustomTooltip.defaultProps = {
   mobileBreakpoint: 760
 }
 
-export default BitsharesTooltip;
+export default CustomTooltip;

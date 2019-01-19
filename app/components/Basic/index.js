@@ -916,15 +916,23 @@ class Basic extends React.Component {
 
                 <h2>Mobile tooltips</h2>
                 <div className="helper-popover-demo-mobile">
+                  <Row>
+                      <Col span={24}>
+                          <Tooltip placement="leftTop" title="This is an extra long tooltip title" withQuestionIcon={true}>
+                            <Input type="text" placeholder="Some input"/>
+                          </Tooltip>
+                          <p>Tooltip with question icon</p>
+                      </Col>
+                  </Row>
 
-                <Row>
-                    <Col span={24}>
-                        <Tooltip placement="leftTop" title="This is an extra long tooltip title">
-                          <Input type="text" placeholder="Some input"/>
-                        </Tooltip>
-                        <p>Tooltip will require click to open on mobile</p>
-                    </Col>
-                </Row>
+                  <Row>
+                      <Col span={24}>
+                          <Tooltip placement="leftTop" title="This is an extra long tooltip title">
+                            <Input type="text" placeholder="Some input"/>
+                          </Tooltip>
+                          <p>Tooltip will require click to open on mobile</p>
+                      </Col>
+                  </Row>
                 </div>
 
                 <Divider/>
