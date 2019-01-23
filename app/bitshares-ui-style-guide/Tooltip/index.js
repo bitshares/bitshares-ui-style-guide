@@ -28,7 +28,7 @@ class CustomTooltip extends React.Component {
 
     if(isMobile){
       extraProps.trigger = "click";
-      extraProps.placement = "topLeft";
+      extraProps.placement = props.placement || "topLeft";
     }
 
     return withQuestionIcon ? <div style={{position: "relative"}}>
