@@ -31,7 +31,8 @@ import {
     Tooltip,
     Progress,
     Steps,
-    Drawer
+    Drawer,
+    DatePicker
 } from "bitshares-ui-style-guide";
 
 import PropTypes from "prop-types";
@@ -618,7 +619,45 @@ class Basic extends React.Component {
                         </Form.Item>
                     </Col>
                 </Row>
-
+    
+                <Divider/>
+    
+                <h2 className="helper">DatePicker & TimePicker</h2>
+                
+                <Row>
+                    <Col span="6">
+                        <h3 className="helper">Date Picker</h3>
+    
+                        <DatePicker />
+                    </Col>
+                    <Col span="6">
+                        <h3 className="helper">Month Picker</h3>
+    
+                        <DatePicker.MonthPicker />
+                    </Col>
+                    
+                    <Col span="6">
+                        <h3 className="helper">Range Picker</h3>
+    
+                        <DatePicker.RangePicker />
+                    </Col>
+                    
+                </Row>
+    
+                <Row>
+                    <Col span="6">
+                        <h3 className="helper">Week Picker</h3>
+            
+                        <DatePicker.WeekPicker />
+                    </Col>
+                    <Col span="6">
+                        <h3 className="helper">Show Time</h3>
+            
+                        <DatePicker showTime={true} />
+                    </Col>
+    
+                </Row>
+                
                 <Divider/>
 
                 <h2 className="helper">tables</h2>

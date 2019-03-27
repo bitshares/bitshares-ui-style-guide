@@ -29,6 +29,7 @@ import Tooltip from "./Tooltip";
 import Progress from "./Progress";
 import Drawer from "./Drawer";
 import Steps from "./Steps";
+import DatePicker from "./DatePicker";
 
 export {
     /* wrapped ANT components */
@@ -57,6 +58,7 @@ export {
     Progress,
     Drawer,
     Steps,
+    DatePicker,
     /* default ANT components */
     Row,
     Col,
