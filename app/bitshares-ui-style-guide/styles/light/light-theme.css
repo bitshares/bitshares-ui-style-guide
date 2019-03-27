@@ -73,7 +73,7 @@ dt {
   font-weight: 500;
 }
 dd {
-  margin-bottom: 0.5em;
+  margin-bottom: .5em;
   margin-left: 0;
 }
 blockquote {
@@ -139,8 +139,8 @@ table {
   border-collapse: collapse;
 }
 caption {
-  padding-top: 0.75em;
-  padding-bottom: 0.3em;
+  padding-top: .75em;
+  padding-bottom: .3em;
   color: #2A2A2A;
   text-align: left;
   caption-side: bottom;
@@ -206,7 +206,7 @@ legend {
   width: 100%;
   max-width: 100%;
   padding: 0;
-  margin-bottom: 0.5em;
+  margin-bottom: .5em;
   font-size: 1.5em;
   line-height: inherit;
   color: inherit;
@@ -244,7 +244,7 @@ template {
   display: none !important;
 }
 mark {
-  padding: 0.2em;
+  padding: .2em;
   background-color: #feffe6;
 }
 ::selection {
@@ -4321,7 +4321,7 @@ a.ant-btn-sm {
   list-style: none;
   background-color: #fff;
   background-clip: padding-box;
-  border: 1px solid #fff;
+  border: 1px solid #CCCCCC;
   border-radius: 0px;
   outline: none;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
@@ -6851,155 +6851,13 @@ form .ant-input-group-wrapper {
   position: relative;
   display: block;
 }
-.ant-col-1,
-.ant-col-xs-1,
-.ant-col-sm-1,
-.ant-col-md-1,
-.ant-col-lg-1,
-.ant-col-2,
-.ant-col-xs-2,
-.ant-col-sm-2,
-.ant-col-md-2,
-.ant-col-lg-2,
-.ant-col-3,
-.ant-col-xs-3,
-.ant-col-sm-3,
-.ant-col-md-3,
-.ant-col-lg-3,
-.ant-col-4,
-.ant-col-xs-4,
-.ant-col-sm-4,
-.ant-col-md-4,
-.ant-col-lg-4,
-.ant-col-5,
-.ant-col-xs-5,
-.ant-col-sm-5,
-.ant-col-md-5,
-.ant-col-lg-5,
-.ant-col-6,
-.ant-col-xs-6,
-.ant-col-sm-6,
-.ant-col-md-6,
-.ant-col-lg-6,
-.ant-col-7,
-.ant-col-xs-7,
-.ant-col-sm-7,
-.ant-col-md-7,
-.ant-col-lg-7,
-.ant-col-8,
-.ant-col-xs-8,
-.ant-col-sm-8,
-.ant-col-md-8,
-.ant-col-lg-8,
-.ant-col-9,
-.ant-col-xs-9,
-.ant-col-sm-9,
-.ant-col-md-9,
-.ant-col-lg-9,
-.ant-col-10,
-.ant-col-xs-10,
-.ant-col-sm-10,
-.ant-col-md-10,
-.ant-col-lg-10,
-.ant-col-11,
-.ant-col-xs-11,
-.ant-col-sm-11,
-.ant-col-md-11,
-.ant-col-lg-11,
-.ant-col-12,
-.ant-col-xs-12,
-.ant-col-sm-12,
-.ant-col-md-12,
-.ant-col-lg-12,
-.ant-col-13,
-.ant-col-xs-13,
-.ant-col-sm-13,
-.ant-col-md-13,
-.ant-col-lg-13,
-.ant-col-14,
-.ant-col-xs-14,
-.ant-col-sm-14,
-.ant-col-md-14,
-.ant-col-lg-14,
-.ant-col-15,
-.ant-col-xs-15,
-.ant-col-sm-15,
-.ant-col-md-15,
-.ant-col-lg-15,
-.ant-col-16,
-.ant-col-xs-16,
-.ant-col-sm-16,
-.ant-col-md-16,
-.ant-col-lg-16,
-.ant-col-17,
-.ant-col-xs-17,
-.ant-col-sm-17,
-.ant-col-md-17,
-.ant-col-lg-17,
-.ant-col-18,
-.ant-col-xs-18,
-.ant-col-sm-18,
-.ant-col-md-18,
-.ant-col-lg-18,
-.ant-col-19,
-.ant-col-xs-19,
-.ant-col-sm-19,
-.ant-col-md-19,
-.ant-col-lg-19,
-.ant-col-20,
-.ant-col-xs-20,
-.ant-col-sm-20,
-.ant-col-md-20,
-.ant-col-lg-20,
-.ant-col-21,
-.ant-col-xs-21,
-.ant-col-sm-21,
-.ant-col-md-21,
-.ant-col-lg-21,
-.ant-col-22,
-.ant-col-xs-22,
-.ant-col-sm-22,
-.ant-col-md-22,
-.ant-col-lg-22,
-.ant-col-23,
-.ant-col-xs-23,
-.ant-col-sm-23,
-.ant-col-md-23,
-.ant-col-lg-23,
-.ant-col-24,
-.ant-col-xs-24,
-.ant-col-sm-24,
-.ant-col-md-24,
-.ant-col-lg-24 {
+.ant-col-1, .ant-col-xs-1, .ant-col-sm-1, .ant-col-md-1, .ant-col-lg-1, .ant-col-2, .ant-col-xs-2, .ant-col-sm-2, .ant-col-md-2, .ant-col-lg-2, .ant-col-3, .ant-col-xs-3, .ant-col-sm-3, .ant-col-md-3, .ant-col-lg-3, .ant-col-4, .ant-col-xs-4, .ant-col-sm-4, .ant-col-md-4, .ant-col-lg-4, .ant-col-5, .ant-col-xs-5, .ant-col-sm-5, .ant-col-md-5, .ant-col-lg-5, .ant-col-6, .ant-col-xs-6, .ant-col-sm-6, .ant-col-md-6, .ant-col-lg-6, .ant-col-7, .ant-col-xs-7, .ant-col-sm-7, .ant-col-md-7, .ant-col-lg-7, .ant-col-8, .ant-col-xs-8, .ant-col-sm-8, .ant-col-md-8, .ant-col-lg-8, .ant-col-9, .ant-col-xs-9, .ant-col-sm-9, .ant-col-md-9, .ant-col-lg-9, .ant-col-10, .ant-col-xs-10, .ant-col-sm-10, .ant-col-md-10, .ant-col-lg-10, .ant-col-11, .ant-col-xs-11, .ant-col-sm-11, .ant-col-md-11, .ant-col-lg-11, .ant-col-12, .ant-col-xs-12, .ant-col-sm-12, .ant-col-md-12, .ant-col-lg-12, .ant-col-13, .ant-col-xs-13, .ant-col-sm-13, .ant-col-md-13, .ant-col-lg-13, .ant-col-14, .ant-col-xs-14, .ant-col-sm-14, .ant-col-md-14, .ant-col-lg-14, .ant-col-15, .ant-col-xs-15, .ant-col-sm-15, .ant-col-md-15, .ant-col-lg-15, .ant-col-16, .ant-col-xs-16, .ant-col-sm-16, .ant-col-md-16, .ant-col-lg-16, .ant-col-17, .ant-col-xs-17, .ant-col-sm-17, .ant-col-md-17, .ant-col-lg-17, .ant-col-18, .ant-col-xs-18, .ant-col-sm-18, .ant-col-md-18, .ant-col-lg-18, .ant-col-19, .ant-col-xs-19, .ant-col-sm-19, .ant-col-md-19, .ant-col-lg-19, .ant-col-20, .ant-col-xs-20, .ant-col-sm-20, .ant-col-md-20, .ant-col-lg-20, .ant-col-21, .ant-col-xs-21, .ant-col-sm-21, .ant-col-md-21, .ant-col-lg-21, .ant-col-22, .ant-col-xs-22, .ant-col-sm-22, .ant-col-md-22, .ant-col-lg-22, .ant-col-23, .ant-col-xs-23, .ant-col-sm-23, .ant-col-md-23, .ant-col-lg-23, .ant-col-24, .ant-col-xs-24, .ant-col-sm-24, .ant-col-md-24, .ant-col-lg-24 {
   position: relative;
   min-height: 1px;
   padding-right: 0;
   padding-left: 0;
 }
-.ant-col-1,
-.ant-col-2,
-.ant-col-3,
-.ant-col-4,
-.ant-col-5,
-.ant-col-6,
-.ant-col-7,
-.ant-col-8,
-.ant-col-9,
-.ant-col-10,
-.ant-col-11,
-.ant-col-12,
-.ant-col-13,
-.ant-col-14,
-.ant-col-15,
-.ant-col-16,
-.ant-col-17,
-.ant-col-18,
-.ant-col-19,
-.ant-col-20,
-.ant-col-21,
-.ant-col-22,
-.ant-col-23,
-.ant-col-24 {
+.ant-col-1, .ant-col-2, .ant-col-3, .ant-col-4, .ant-col-5, .ant-col-6, .ant-col-7, .ant-col-8, .ant-col-9, .ant-col-10, .ant-col-11, .ant-col-12, .ant-col-13, .ant-col-14, .ant-col-15, .ant-col-16, .ant-col-17, .ant-col-18, .ant-col-19, .ant-col-20, .ant-col-21, .ant-col-22, .ant-col-23, .ant-col-24 {
   flex: 0 0 auto;
   float: left;
 }
@@ -7432,30 +7290,7 @@ form .ant-input-group-wrapper {
 .ant-col-order-0 {
   order: 0;
 }
-.ant-col-xs-1,
-.ant-col-xs-2,
-.ant-col-xs-3,
-.ant-col-xs-4,
-.ant-col-xs-5,
-.ant-col-xs-6,
-.ant-col-xs-7,
-.ant-col-xs-8,
-.ant-col-xs-9,
-.ant-col-xs-10,
-.ant-col-xs-11,
-.ant-col-xs-12,
-.ant-col-xs-13,
-.ant-col-xs-14,
-.ant-col-xs-15,
-.ant-col-xs-16,
-.ant-col-xs-17,
-.ant-col-xs-18,
-.ant-col-xs-19,
-.ant-col-xs-20,
-.ant-col-xs-21,
-.ant-col-xs-22,
-.ant-col-xs-23,
-.ant-col-xs-24 {
+.ant-col-xs-1, .ant-col-xs-2, .ant-col-xs-3, .ant-col-xs-4, .ant-col-xs-5, .ant-col-xs-6, .ant-col-xs-7, .ant-col-xs-8, .ant-col-xs-9, .ant-col-xs-10, .ant-col-xs-11, .ant-col-xs-12, .ant-col-xs-13, .ant-col-xs-14, .ant-col-xs-15, .ant-col-xs-16, .ant-col-xs-17, .ant-col-xs-18, .ant-col-xs-19, .ant-col-xs-20, .ant-col-xs-21, .ant-col-xs-22, .ant-col-xs-23, .ant-col-xs-24 {
   flex: 0 0 auto;
   float: left;
 }
@@ -7889,30 +7724,7 @@ form .ant-input-group-wrapper {
   order: 0;
 }
 @media (min-width: 576px) {
-  .ant-col-sm-1,
-  .ant-col-sm-2,
-  .ant-col-sm-3,
-  .ant-col-sm-4,
-  .ant-col-sm-5,
-  .ant-col-sm-6,
-  .ant-col-sm-7,
-  .ant-col-sm-8,
-  .ant-col-sm-9,
-  .ant-col-sm-10,
-  .ant-col-sm-11,
-  .ant-col-sm-12,
-  .ant-col-sm-13,
-  .ant-col-sm-14,
-  .ant-col-sm-15,
-  .ant-col-sm-16,
-  .ant-col-sm-17,
-  .ant-col-sm-18,
-  .ant-col-sm-19,
-  .ant-col-sm-20,
-  .ant-col-sm-21,
-  .ant-col-sm-22,
-  .ant-col-sm-23,
-  .ant-col-sm-24 {
+  .ant-col-sm-1, .ant-col-sm-2, .ant-col-sm-3, .ant-col-sm-4, .ant-col-sm-5, .ant-col-sm-6, .ant-col-sm-7, .ant-col-sm-8, .ant-col-sm-9, .ant-col-sm-10, .ant-col-sm-11, .ant-col-sm-12, .ant-col-sm-13, .ant-col-sm-14, .ant-col-sm-15, .ant-col-sm-16, .ant-col-sm-17, .ant-col-sm-18, .ant-col-sm-19, .ant-col-sm-20, .ant-col-sm-21, .ant-col-sm-22, .ant-col-sm-23, .ant-col-sm-24 {
     flex: 0 0 auto;
     float: left;
   }
@@ -8347,30 +8159,7 @@ form .ant-input-group-wrapper {
   }
 }
 @media (min-width: 768px) {
-  .ant-col-md-1,
-  .ant-col-md-2,
-  .ant-col-md-3,
-  .ant-col-md-4,
-  .ant-col-md-5,
-  .ant-col-md-6,
-  .ant-col-md-7,
-  .ant-col-md-8,
-  .ant-col-md-9,
-  .ant-col-md-10,
-  .ant-col-md-11,
-  .ant-col-md-12,
-  .ant-col-md-13,
-  .ant-col-md-14,
-  .ant-col-md-15,
-  .ant-col-md-16,
-  .ant-col-md-17,
-  .ant-col-md-18,
-  .ant-col-md-19,
-  .ant-col-md-20,
-  .ant-col-md-21,
-  .ant-col-md-22,
-  .ant-col-md-23,
-  .ant-col-md-24 {
+  .ant-col-md-1, .ant-col-md-2, .ant-col-md-3, .ant-col-md-4, .ant-col-md-5, .ant-col-md-6, .ant-col-md-7, .ant-col-md-8, .ant-col-md-9, .ant-col-md-10, .ant-col-md-11, .ant-col-md-12, .ant-col-md-13, .ant-col-md-14, .ant-col-md-15, .ant-col-md-16, .ant-col-md-17, .ant-col-md-18, .ant-col-md-19, .ant-col-md-20, .ant-col-md-21, .ant-col-md-22, .ant-col-md-23, .ant-col-md-24 {
     flex: 0 0 auto;
     float: left;
   }
@@ -8805,30 +8594,7 @@ form .ant-input-group-wrapper {
   }
 }
 @media (min-width: 992px) {
-  .ant-col-lg-1,
-  .ant-col-lg-2,
-  .ant-col-lg-3,
-  .ant-col-lg-4,
-  .ant-col-lg-5,
-  .ant-col-lg-6,
-  .ant-col-lg-7,
-  .ant-col-lg-8,
-  .ant-col-lg-9,
-  .ant-col-lg-10,
-  .ant-col-lg-11,
-  .ant-col-lg-12,
-  .ant-col-lg-13,
-  .ant-col-lg-14,
-  .ant-col-lg-15,
-  .ant-col-lg-16,
-  .ant-col-lg-17,
-  .ant-col-lg-18,
-  .ant-col-lg-19,
-  .ant-col-lg-20,
-  .ant-col-lg-21,
-  .ant-col-lg-22,
-  .ant-col-lg-23,
-  .ant-col-lg-24 {
+  .ant-col-lg-1, .ant-col-lg-2, .ant-col-lg-3, .ant-col-lg-4, .ant-col-lg-5, .ant-col-lg-6, .ant-col-lg-7, .ant-col-lg-8, .ant-col-lg-9, .ant-col-lg-10, .ant-col-lg-11, .ant-col-lg-12, .ant-col-lg-13, .ant-col-lg-14, .ant-col-lg-15, .ant-col-lg-16, .ant-col-lg-17, .ant-col-lg-18, .ant-col-lg-19, .ant-col-lg-20, .ant-col-lg-21, .ant-col-lg-22, .ant-col-lg-23, .ant-col-lg-24 {
     flex: 0 0 auto;
     float: left;
   }
@@ -9263,30 +9029,7 @@ form .ant-input-group-wrapper {
   }
 }
 @media (min-width: 1200px) {
-  .ant-col-xl-1,
-  .ant-col-xl-2,
-  .ant-col-xl-3,
-  .ant-col-xl-4,
-  .ant-col-xl-5,
-  .ant-col-xl-6,
-  .ant-col-xl-7,
-  .ant-col-xl-8,
-  .ant-col-xl-9,
-  .ant-col-xl-10,
-  .ant-col-xl-11,
-  .ant-col-xl-12,
-  .ant-col-xl-13,
-  .ant-col-xl-14,
-  .ant-col-xl-15,
-  .ant-col-xl-16,
-  .ant-col-xl-17,
-  .ant-col-xl-18,
-  .ant-col-xl-19,
-  .ant-col-xl-20,
-  .ant-col-xl-21,
-  .ant-col-xl-22,
-  .ant-col-xl-23,
-  .ant-col-xl-24 {
+  .ant-col-xl-1, .ant-col-xl-2, .ant-col-xl-3, .ant-col-xl-4, .ant-col-xl-5, .ant-col-xl-6, .ant-col-xl-7, .ant-col-xl-8, .ant-col-xl-9, .ant-col-xl-10, .ant-col-xl-11, .ant-col-xl-12, .ant-col-xl-13, .ant-col-xl-14, .ant-col-xl-15, .ant-col-xl-16, .ant-col-xl-17, .ant-col-xl-18, .ant-col-xl-19, .ant-col-xl-20, .ant-col-xl-21, .ant-col-xl-22, .ant-col-xl-23, .ant-col-xl-24 {
     flex: 0 0 auto;
     float: left;
   }
@@ -9721,30 +9464,7 @@ form .ant-input-group-wrapper {
   }
 }
 @media (min-width: 1600px) {
-  .ant-col-xxl-1,
-  .ant-col-xxl-2,
-  .ant-col-xxl-3,
-  .ant-col-xxl-4,
-  .ant-col-xxl-5,
-  .ant-col-xxl-6,
-  .ant-col-xxl-7,
-  .ant-col-xxl-8,
-  .ant-col-xxl-9,
-  .ant-col-xxl-10,
-  .ant-col-xxl-11,
-  .ant-col-xxl-12,
-  .ant-col-xxl-13,
-  .ant-col-xxl-14,
-  .ant-col-xxl-15,
-  .ant-col-xxl-16,
-  .ant-col-xxl-17,
-  .ant-col-xxl-18,
-  .ant-col-xxl-19,
-  .ant-col-xxl-20,
-  .ant-col-xxl-21,
-  .ant-col-xxl-22,
-  .ant-col-xxl-23,
-  .ant-col-xxl-24 {
+  .ant-col-xxl-1, .ant-col-xxl-2, .ant-col-xxl-3, .ant-col-xxl-4, .ant-col-xxl-5, .ant-col-xxl-6, .ant-col-xxl-7, .ant-col-xxl-8, .ant-col-xxl-9, .ant-col-xxl-10, .ant-col-xxl-11, .ant-col-xxl-12, .ant-col-xxl-13, .ant-col-xxl-14, .ant-col-xxl-15, .ant-col-xxl-16, .ant-col-xxl-17, .ant-col-xxl-18, .ant-col-xxl-19, .ant-col-xxl-20, .ant-col-xxl-21, .ant-col-xxl-22, .ant-col-xxl-23, .ant-col-xxl-24 {
     flex: 0 0 auto;
     float: left;
   }
@@ -12266,7 +11986,7 @@ textarea.ant-mention-wrapper .ant-mention-editor {
 }
 @media (max-width: 767px) {
   .ant-modal {
-    max-width: calc(100vw - 16px);
+    max-width: calc(84vw);
     margin: 8px auto;
   }
   .ant-modal-centered .ant-modal {
@@ -14442,7 +14162,7 @@ span.ant-radio + * {
   bottom: 0;
   background: #fff;
   opacity: 0.3;
-  transition: all 0.3s;
+  transition: all .3s;
   z-index: 10;
 }
 .ant-spin-tip {
@@ -18955,7 +18675,7 @@ a {
   text-decoration: none;
   outline: none;
   cursor: pointer;
-  transition: color 0.3s;
+  transition: color .3s;
   -webkit-text-decoration-skip: objects;
 }
 a:focus {
@@ -19112,7 +18832,7 @@ button.ant-switch.ant-switch-checked:after {
   background-color: #fff;
 }
 .ant-slider-dot {
-  transition: 0.15s;
+  transition: .15s;
   background-color: #fff;
 }
 .ant-slider-dot-active {
@@ -19129,7 +18849,7 @@ button.ant-switch.ant-switch-checked:after {
 }
 .ant-modal-close-x {
   color: #00A9E0;
-  transition: 0.3s;
+  transition: .3s;
 }
 .ant-modal-close-x:hover {
   color: #50dbfa;
@@ -19342,4 +19062,13 @@ button.ant-switch.ant-switch-checked:after {
 }
 .ant-notification-notice {
   border: 1px solid transparent;
+}
+.ant-calendar-active-week {
+  background: #e6fdff !important;
+}
+.ant-calendar-body tr:hover {
+  background: #e6fdff !important;
+}
+.ant-calendar-picker-input {
+  line-height: 1 !important;
 }

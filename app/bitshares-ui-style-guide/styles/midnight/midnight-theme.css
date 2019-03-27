@@ -4320,7 +4320,7 @@ a.ant-btn-sm {
   list-style: none;
   background-color: #38393F;
   background-clip: padding-box;
-  border: 1px solid #fff;
+  border: 1px solid #656565;
   border-radius: 0px;
   outline: none;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
@@ -19341,4 +19341,13 @@ button.ant-switch.ant-switch-checked:after {
 }
 .ant-notification-notice {
   border: 1px solid transparent;
+}
+.ant-calendar-active-week {
+  background: #656565 !important;
+}
+.ant-calendar-body tr:hover {
+  background: #656565 !important;
+}
+.ant-calendar-picker-input {
+  line-height: 1 !important;
 }

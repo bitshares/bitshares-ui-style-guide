@@ -563,3 +563,20 @@ button.ant-switch {
 .ant-notification-notice {
   border: @notification-border;
 }
+
+// ant-calendar
+
+.ant-calendar {
+  &-active-week {
+    background: @calendar-active-week-background !important;
+  }
+
+  &-body tr {
+    &:hover {
+      background: @calendar-active-week-hover !important;
+    }
+  }
+  &-picker-input {
+    line-height: 1 !important;
+  }
+}
