@@ -19351,3 +19351,6 @@ button.ant-switch.ant-switch-checked:after {
 .ant-calendar-picker-input {
   line-height: 1 !important;
 }
+.ant-tooltip-inner {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.55);
+}
