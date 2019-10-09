@@ -62,7 +62,7 @@
     "url-loader": "1.0.0",
     "webpack": "3.11.0",
     "webpack-content-replacer-plugin": "^0.5.1",
-    "webpack-dev-server": "2.9.6"
+    "webpack-dev-server": "3.1.11"
   },
   "scripts": {
     "theme-compile": "concurrently --kill-others \"npm run theme-compile:dark\" \"npm run theme-compile:light\" \"npm run theme-compile:midnight\"",
