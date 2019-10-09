@@ -9,10 +9,14 @@ class Tooltip extends Component {
     }
 
     render() {
+        let {mouseEnterDelay, ...remaining} = this.props;
+        if (mouseEnterDelay == undefined) {
+            mouseEnterDelay = this.defaultDelay;
+        }
         return (
             <AntTooltip
-                mouseEnterDelay={this.defaultDelay}
-                {...this.props}
+                mouseEnterDelay={mouseEnterDelay}
+                {...remaining}
             >
                 {this.props.children}
             </AntTooltip>
