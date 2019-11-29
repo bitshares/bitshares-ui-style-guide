@@ -19,7 +19,7 @@ class BodyClassName extends React.Component {
         });
     }
 
-    componentWillReceiveProps(nextProps) {
+    UNSAFE_componentWillReceiveProps(nextProps) {
 
         const currentClassName = this._getList(this.props.className);
         const nextClassName = this._getList(nextProps.className);
