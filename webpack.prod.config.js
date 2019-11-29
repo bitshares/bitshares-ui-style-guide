@@ -1,68 +1,17 @@
-const {resolve} = require("path");
-const webpack = require("webpack");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
-const CopyWebpackPlugin = require("copy-webpack-plugin");
-const ExtractTextPlugin = require("extract-text-webpack-plugin");
-const path = require("path");
+const path = require('path');
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 
 const config = {
-    devtool: "cheap-module-source-map",
-
+    
+    mode: "production",
+    
     entry: [
         "./bitshares-ui-style-guide/index.js"
     ],
-
-    context: resolve(__dirname, "app"),
-
-    externals: {
-        react      : {
-            "commonjs" : "react",
-            "commonjs2": "react",
-            "amd"      : "react",
-            "root"     : "React"
-        },
-        "react-dom": {
-            "commonjs" : "react-dom",
-            "commonjs2": "react-dom",
-            "amd"      : "react-dom",
-            "root"     : "ReactDOM"
-        },
-        "antd"     : {
-            "commonjs" : "antd",
-            "commonjs2": "antd",
-            "amd"      : "antd"
-        }
-    },
-
-    output: {
-        filename      : "[name].js",
-        path          : resolve(__dirname, "dist"),
-        publicPath    : "",
-        library       : "bitshares",
-        libraryTarget : "umd",
-        umdNamedDefine: true
-    },
-
-    plugins: [
-        new webpack.optimize.ModuleConcatenationPlugin(),
-        new HtmlWebpackPlugin({
-            template: `${__dirname}/app/index.html`,
-            filename: "index.html",
-            inject  : "body",
-        }),
-        new webpack.optimize.OccurrenceOrderPlugin(),
-        new webpack.LoaderOptionsPlugin({
-            minimize: true,
-            debug   : false,
-        }),
-        new webpack.optimize.UglifyJsPlugin({
-            beautify: false
-        }),
-        new webpack.DefinePlugin({"process.env": {NODE_ENV: JSON.stringify("production")}}),
-        new ExtractTextPlugin({filename: "./styles/style.css", disable: false, allChunks: true}),
-        new CopyWebpackPlugin([{from: "./vendors", to: "vendors"}]),
-    ],
-
+    
+    context: path.resolve(__dirname, "app"),
+    
     resolve: {
         extensions: [".js", ".jsx"],
         modules   : [
@@ -70,38 +19,87 @@ const config = {
             path.resolve("./node_modules")
         ]
     },
-
-    module: {
-        loaders: [
-            {
-                test: /\.less$/,
-                use : [{
-                    loader: "style-loader" // creates style nodes from JS strings
-                }, {
-                    loader: "css-loader" // translates CSS into CommonJS
-                }, {
-                    loader : "less-loader", // compiles Less to CSS
-                    options: {
-                        javascriptEnabled: true
-                    }
-                }].concat(ExtractTextPlugin.extract({
-                    fallback  : "style-loader",
-                    use       : [
-                        "css-loader",
-                        {
-                            loader : "less-loader",
-                            options: {
-                                javascriptEnabled: true
-                            }
-                        },
-                    ],
-                    publicPath: "../"
-                }))
+    
+    externals: {
+        react             : {
+            "commonjs" : "react",
+            "commonjs2": "react",
+            "amd"      : "react",
+            "root"     : "React"
+        },
+        "react-dom"       : {
+            "commonjs" : "react-dom",
+            "commonjs2": "react-dom",
+            "amd"      : "react-dom",
+            "root"     : "ReactDOM"
+        },
+        "react-router-dom": {
+            "commonjs" : "react-router-dom",
+            "commonjs2": "react-router-dom",
+            "amd"      : "react-router-dom",
+            "root"     : "ReactDOM"
+        },
+        "antd"            : {
+            "commonjs" : "antd",
+            "commonjs2": "antd",
+            "amd"      : "antd"
+        }
+    },
+    
+    output: {
+        filename      : "[name].js",
+        path          : path.resolve(__dirname, "dist"),
+        publicPath    : "",
+        library       : "bitshares",
+        libraryTarget : "umd",
+        umdNamedDefine: true
+    },
+    
+    plugins: [
+        new MiniCssExtractPlugin({
+            filename     : 'styles/style.css',
+            chunkFilename: '[id].css',
+            ignoreOrder  : false, // Enable to remove warnings about conflicting order
+        }),
+        new OptimizeCssAssetsPlugin({
+            assetNameRegExp: /\.css$/g,
+            cssProcessor: require('cssnano'),
+            cssProcessorPluginOptions: {
+                preset: ['default', { discardComments: { removeAll: true } }],
             },
+            canPrint: true
+        })
+    ],
+    
+    module: {
+        rules: [
             {
                 test   : /\.jsx?$/,
+                loaders: [
+                    "babel-loader",
+                ],
                 exclude: /node_modules/,
-                loader : "babel-loader",
+            },
+            {
+                test: /(\.css|\.less)$/,
+                use : [
+                    {
+                        loader : MiniCssExtractPlugin.loader,
+                        options: {
+                            // you can specify a publicPath here
+                            // by default it uses publicPath in webpackOptions.output
+                            publicPath: './app/',
+                        },
+                    },
+                    {
+                        loader : 'css-loader',
+                        options: {
+                            sourceMap: true
+                        }
+                    }, {
+                        loader: 'less-loader',
+                    }
+                ]
             },
             {
                 test: /\.(png|jpg|gif)$/,
@@ -167,7 +165,8 @@ const config = {
                 ],
             },
         ]
-    },
+    }
+    
 };
 
 module.exports = config;
