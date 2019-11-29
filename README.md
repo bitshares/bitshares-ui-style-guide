@@ -16,17 +16,17 @@ Welcome to bitshares ui style-guide
 
 - `cd bitshares-ui-style-guide`
 
-- `yarn` - install dependencies
+- `npm install` - install dependencies
 
-- `yarn start` - start project for local development
+- `npm start` - start project for local development
 
 #### Make build
 
-- `yarn run build` - build project for all purposes (docs & dist)
+- `npm run build` - build project for all purposes (docs & dist)
 
-- `yarn run build:docs` - rebuild demo page for github
+- `npm run build:docs` - rebuild demo page for github
 
-- `yarn run build:dist` - rebuild library source
+- `npm run build:dist` - rebuild library source
 
 ### [Ant Design v3](https://ant.design/docs/react/introduce) components support
 

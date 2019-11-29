@@ -1,6 +1,6 @@
 {
   "name": "bitshares-ui-style-guide",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "main": "dist/main.js",
   "license": "MIT",
   "description": "Bitshares UI Style Guide ",
