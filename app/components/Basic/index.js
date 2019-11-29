@@ -625,18 +625,18 @@ class Basic extends React.Component {
                 <h2 className="helper">DatePicker & TimePicker</h2>
                 
                 <Row>
-                    <Col span="6">
+                    <Col span={6}>
                         <h3 className="helper">Date Picker</h3>
     
                         <DatePicker />
                     </Col>
-                    <Col span="6">
+                    <Col span={6}>
                         <h3 className="helper">Month Picker</h3>
     
                         <DatePicker.MonthPicker />
                     </Col>
                     
-                    <Col span="6">
+                    <Col span={6}>
                         <h3 className="helper">Range Picker</h3>
     
                         <DatePicker.RangePicker />
@@ -645,12 +645,12 @@ class Basic extends React.Component {
                 </Row>
     
                 <Row>
-                    <Col span="6">
+                    <Col span={6}>
                         <h3 className="helper">Week Picker</h3>
             
                         <DatePicker.WeekPicker />
                     </Col>
-                    <Col span="6">
+                    <Col span={6}>
                         <h3 className="helper">Show Time</h3>
             
                         <DatePicker showTime={true} />
@@ -746,9 +746,9 @@ class Basic extends React.Component {
                 <h2 className="helper">breadcrumbs</h2>
 
                 <Breadcrumb>
-                    <Breadcrumb.Item><a href="javascript:void(0)">Dashboard</a></Breadcrumb.Item>
-                    <Breadcrumb.Item><a href="javascript:void(0)">My Account</a></Breadcrumb.Item>
-                    <Breadcrumb.Item><a href="javascript:void(0)">Permissions</a></Breadcrumb.Item>
+                    <Breadcrumb.Item><a>Dashboard</a></Breadcrumb.Item>
+                    <Breadcrumb.Item><a>My Account</a></Breadcrumb.Item>
+                    <Breadcrumb.Item><a>Permissions</a></Breadcrumb.Item>
                     <Breadcrumb.Item>Owner Permissions</Breadcrumb.Item>
                 </Breadcrumb>
 

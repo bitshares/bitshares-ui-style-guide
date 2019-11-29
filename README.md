@@ -2,30 +2,31 @@
 
 Welcome to bitshares ui style-guide
 
-Available online at https://styleguide.bitshares.org/
-
-### How to use it on Bitshares-UI Project?
-
-[Instruction is provided there](https://github.com/bitshares/bitshares-ui-style-guide/blob/master/INSTRUCTIONS.md#usage-of-style-guide-in-bitshares-ui-project)
-
-### Instruction
-
-You can find instruction about usage and manage of style-guide [there](https://github.com/bitshares/bitshares-ui-style-guide/blob/master/INSTRUCTIONS.md)
-
 ### Quick Setup Guide
 
+#### Requirements
+
+- Node v12+
+- npm v6+
+- yarn (if you wish:)
+
 #### Setup localy
+
 - `git clone https://github.com/bitshares/bitshares-ui-style-guide.git`
 
 - `cd bitshares-ui-style-guide`
 
-- `npm install`
+- `npm install` - install dependencies
 
-- `npm run start`
+- `npm start` - start project for local development
 
 #### Make build
 
-- `npm run build`
+- `npm run build` - build project for all purposes (docs & dist)
+
+- `npm run build:docs` - rebuild demo page for github
+
+- `npm run build:dist` - rebuild library source
 
 ### [Ant Design v3](https://ant.design/docs/react/introduce) components support
 
@@ -46,7 +47,7 @@ You can find instruction about usage and manage of style-guide [there](https://g
 - [ ] Dropdown
 - [ ] Menu
 - [ ] Pagination
-- [x] Steps
+- [ ] Steps
 
 #### Data Entry
 
@@ -54,7 +55,7 @@ You can find instruction about usage and manage of style-guide [there](https://g
 - [ ] Cascader
 - [x] Checkbox
 - [ ] DatePicker
-- [x] Form
+- [ ] Form
 - [x] Input
 - [x] InputNumber
 - [ ] Mention
@@ -73,11 +74,11 @@ You can find instruction about usage and manage of style-guide [there](https://g
 - [ ] Avatar
 - [ ] Badge
 - [ ] Calendar
-- [x] Card (Partial support)
+- [ ] Card
 - [ ] Carousel
 - [ ] Collapse
 - [ ] List
-- [x] Popover
+- [ ] Popover
 - [ ] Tooltip
 - [x] Table
 - [x] Tabs
@@ -87,12 +88,11 @@ You can find instruction about usage and manage of style-guide [there](https://g
 
 #### Feedback
 
-- [x] Alert
+- [ ] Alert
 - [x] Modal
-- [x] Drawer
 - [ ] Message
-- [x] Notification
-- [x] Progress
+- [ ] Notification
+- [ ] Progress
 - [ ] Popconfirm
 - [ ] Spin
 

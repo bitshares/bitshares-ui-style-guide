@@ -1,52 +1,51 @@
-const {resolve} = require("path");
-
-const webpack = require("webpack");
-const ExtractTextPlugin = require("extract-text-webpack-plugin");
-const CopyWebpackPlugin = require("copy-webpack-plugin");
-const OpenBrowserPlugin = require("open-browser-webpack-plugin");
 const path = require("path");
+const webpack = require("webpack");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 const config = {
+    
     devtool: "cheap-module-eval-source-map",
-
+    
+    mode: "development",
+    
+    devServer: {
+        hot: true,
+        //     contentBase: path.resolve(__dirname, "app"),
+    },
+    
     entry: [
-        "react-hot-loader/patch",
-        "webpack-dev-server/client?http://localhost:8081",
-        "webpack/hot/only-dev-server",
-        "./main.js",
-        "./assets/scss/main.scss",
+        path.resolve(__dirname, "app/index.js"),
     ],
-
+    
     output: {
-        path      : resolve(__dirname, "dist"),
+        path      : path.resolve(__dirname, "dist"),
         publicPath: "",
     },
-
-    context: resolve(__dirname, "app"),
-
-    devServer: {
-        hot               : true,
-        contentBase       : resolve(__dirname, "build"),
-        historyApiFallback: true,
-        publicPath        : "/"
-    },
-
+    
+    context: path.resolve(__dirname, "app"),
+    
     resolve: {
         extensions: [".js", ".jsx"],
-        modules   : [
-            path.resolve("./app"),
-            path.resolve("./node_modules")
-        ]
+        
+        modules: [
+            path.resolve(__dirname, "app"),
+            path.resolve(__dirname, "node_modules"),
+        ],
+        
+        alias: {
+            'react-dom': '@hot-loader/react-dom'
+        },
     },
-
+    
+    plugins: [
+        new HtmlWebpackPlugin({     // Create HTML file that includes references to bundled CSS and JS.
+            template: 'index.html',
+            inject  : true
+        })
+    ],
+    
     module: {
         rules: [
-            // {
-            //   enforce: "pre",
-            //   test: /\.jsx?$/,
-            //   exclude: /node_modules/,
-            //   loader: "eslint-loader"
-            // },
             {
                 test   : /\.jsx?$/,
                 loaders: [
@@ -55,34 +54,37 @@ const config = {
                 exclude: /node_modules/,
             },
             {
-                test: /\.less$/,
-                use : [{
-                    loader: "style-loader" // creates style nodes from JS strings
-                }, {
-                    loader: "css-loader" // translates CSS into CommonJS
-                }, {
-                    loader : "less-loader", // compiles Less to CSS
-                    options: {
-                        javascriptEnabled: true
+                test: /(\.css|\.less)$/,
+                use : [
+                    'style-loader',
+                    {
+                        loader : 'css-loader',
+                        options: {
+                            sourceMap: true
+                        }
+                    }, {
+                        loader: 'less-loader',
                     }
-                }]
+                ]
             },
             {
                 test   : /\.scss$/,
                 exclude: /node_modules/,
-                use    : ["css-hot-loader"].concat(ExtractTextPlugin.extract({
-                    fallback  : "style-loader",
-                    use       : [
-                        "css-loader",
-                        {
-                            loader: "sass-loader",
-                            query : {
-                                sourceMap: false,
-                            },
+                use: [
+                    'style-loader',
+                    {
+                        loader : 'css-loader',
+                        options: {
+                            sourceMap: true
+                        }
+                    },
+                    {
+                        loader: "sass-loader",
+                        query : {
+                            sourceMap: false,
                         },
-                    ],
-                    publicPath: "../"
-                })),
+                    }
+                ]
             },
             {
                 test: /\.(png|jpg|gif)$/,
@@ -148,24 +150,8 @@ const config = {
                 ],
             },
         ]
-    },
-
-    plugins: [
-        new webpack.LoaderOptionsPlugin({
-            test   : /\.jsx?$/,
-            options: {
-                eslint: {
-                    configFile: resolve(__dirname, ".eslintrc"),
-                    cache     : false,
-                }
-            },
-        }),
-        new webpack.optimize.ModuleConcatenationPlugin(),
-        new ExtractTextPlugin({filename: "./styles/style.css", disable: false, allChunks: true}),
-        new CopyWebpackPlugin([{from: "vendors", to: "vendors"}]),
-        new OpenBrowserPlugin({url: "http://localhost:8080"}),
-        new webpack.HotModuleReplacementPlugin(),
-    ],
+    }
+    
 };
 
 module.exports = config;
