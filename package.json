@@ -1,6 +1,6 @@
 {
   "name": "bitshares-ui-style-guide",
-  "version": "2.0.0",
+  "version": "4.0.0",
   "main": "dist/main.js",
   "license": "MIT",
   "description": "Bitshares UI Style Guide ",
@@ -21,7 +21,7 @@
     "@babel/preset-react": "^7.7.0",
     "@hot-loader/react-dom": "^16.11.0",
     "babel-loader": "^8.0.6",
-    "concurrently": "^5.0.0",
+    "concurrently": "^5.2.0",
     "css-hot-loader": "^1.4.4",
     "css-loader": "^3.2.0",
     "cssnano": "^4.1.10",
@@ -31,7 +31,7 @@
     "less-loader": "^5.0.0",
     "less-watch-cli": "^1.0.1",
     "mini-css-extract-plugin": "^0.8.0",
-    "node-sass": "4.12",
+    "node-sass": "^4.14.1",
     "npm-watch": "^0.6.0",
     "optimize-css-assets-webpack-plugin": "^5.0.3",
     "react-hot-loader": "^4.12.18",
@@ -40,7 +40,7 @@
     "url-loader": "^2.2.0",
     "webpack": "^4.41.2",
     "webpack-cli": "^3.3.10",
-    "webpack-dev-server": "^3.9.0"
+    "webpack-dev-server": "^3.11.0"
   },
   "scripts": {
     "theme-compile": "concurrently \"npm run theme-compile:dark\" \"npm run theme-compile:light\" \"npm run theme-compile:midnight\"",
