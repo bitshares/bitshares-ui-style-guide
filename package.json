@@ -8,6 +8,7 @@
   "author": "Leroy Jethro Gibbs",
   "dependencies": {
     "antd": "^3.15.2",
+    "node-sass": "^6.0.1",
     "normalize.css": "^8.0.1",
     "prop-types": "^15.7.2",
     "react": "^16.11.0",
@@ -31,7 +32,7 @@
     "less-loader": "^5.0.0",
     "less-watch-cli": "^1.0.1",
     "mini-css-extract-plugin": "^0.8.2",
-    "node-sass": "^4.14.1",
+    "node-gyp": "^7.1.0",
     "npm-watch": "^0.7.0",
     "optimize-css-assets-webpack-plugin": "^5.0.4",
     "react-hot-loader": "^4.12.21",
