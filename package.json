@@ -40,7 +40,7 @@
     "url-loader": "^2.3.0",
     "webpack": "^5.94.0",
     "webpack-cli": "^3.3.12",
-    "webpack-dev-server": "^3.11.0"
+    "webpack-dev-server": "^5.2.1"
   },
   "scripts": {
     "theme-compile": "concurrently \"yarn run theme-compile:dark\" \"yarn run theme-compile:light\" \"yarn run theme-compile:midnight\"",
